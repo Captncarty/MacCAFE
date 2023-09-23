@@ -34,7 +34,7 @@ To start the flask application, Run: <b>run.py</b> to start the application on l
 
 
 <p align ="center">
-    <img width="500" height="300" src="landing_page/gameshot.png">
+    <img width="500" height="300" src="maccafe.png">
 </p>
 
 ### AUTHOR
