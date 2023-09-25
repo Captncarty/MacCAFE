@@ -1,7 +1,7 @@
 <h1 align="center">MacCAFE</h1>
 <h1 align="center">This is a Webstack project focused on developing an Internet Service Provider Web Application</h1>
 <p align ="center">
-    <img width="500" height="300" src="static/img/cap2.png">
+    <img width="500" height="300" src="app/static/img/cap2.png">
 </p>
 
 ---------
@@ -34,7 +34,7 @@ To start the flask application, Run the <b>run.py</b> file in order to start the
 
 
 <p align ="center">
-    <img width="500" height="300" src="static/img/maccafe.png">
+    <img width="500" height="300" src="app/static/img/maccafe.png">
 </p>
 
 ### AUTHOR
