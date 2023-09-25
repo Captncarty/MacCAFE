@@ -17,13 +17,6 @@ migrate = Migrate(app, db)
 app.secret_key = 'turtle'
 
 
-""" importing blueprints and registering application routes
-"""
-from app.views.blueprint import my_blueprint
-from app.views.view import my_views
-
-app.register_blueprint(my_blueprint)
-app.register_blueprint(my_views)
 
 """ mail service setup
 """
@@ -114,8 +107,12 @@ def simulate_activity():
     else:
         return 'Session ID not found'
 
-
-
+""" importing blueprints and registering application routes
+"""
+from app.views.blueprint import my_blueprint
+from app.views.view import my_views
+app.register_blueprint(my_blueprint)
+app.register_blueprint(my_views)
 # Start the session activity checker as a background thread
 session_checker_thread = Thread(target=check_session_activity)
 session_checker_thread.daemon = True
