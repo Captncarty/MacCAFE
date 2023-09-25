@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Welcome</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Itim&family=Mooli&family=Pacifico&display=swap" rel="stylesheet">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+              }
+            body {
+                font-family: 'Itim', cursive;
+                font-size: 17px;
+                line-height: 1.8em;
+                color: #5D6063;
+                background-color: rgb(230, 221, 222);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+
+              h1 {
+                font-family: 'Pacifico', cursive;
+              }
+              
+              li {
+                margin-top: 10px;
+                padding: 10px;
+              }
+              nav li {
+                list-style-type: none;
+                
+                padding-top: .5em;
+                padding-bottom: .5em;
+                display: flex;
+                flex-wrap: wrap;
+              }
+
+              /* styles.css */
+.countdown {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: rgb(230, 221, 222);
+}
+
+.timer span {
+    display: inline-block;
+    margin: 0 10px;
+    
+    border-radius: 4px;
+    width: 40px;
+}
+
+
+
+                  nav li.selected { /* color in-page nav */
+                    color: #54A5C4;
+                  }
+              nav {
+                background-color: #54575A;
+                width: 100%;
+                position: relative;
+              }
+              nav a:link,
+            nav a:visited {
+                color: #888F95;
+                text-decoration: none;
+                }
+  
+            nav a:hover,
+            nav a:visited:hover,
+            nav a:active,
+            nav a:visited:active {
+                color: #54A5C4;
+                text-decoration: none;
+                }
+              nav ul {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                width: 100%;
+                max-width: 900px;
+                margin: 0 auto;
+              }
+              h1 {
+                padding: 0.5em;
+                margin-top: 10em;
+                text-align: center;
+                al
+              }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/"><div class="countdown">
+                      <div class="timer">
+                          <span id="days">00</span>
+                          <span id="hours">00</span>
+                          <span id="minutes">00</span>
+                          <span id="seconds">00</span>
+                      </div>
+                  </div></a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1>Welcome Home, {{user}}!</h1>
+    <div id="result"></div>
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            // Set the target date for the countdown (YYYY-MM-DD HH:MM:SS)
+            const targetDate = new Date("2023-09-21 00:00:00").getTime();
+        
+            const daysElement = document.getElementById("days");
+            const hoursElement = document.getElementById("hours");
+            const minutesElement = document.getElementById("minutes");
+            const secondsElement = document.getElementById("seconds");
+        
+            function updateCountdown() {
+                const currentDate = new Date().getTime();
+                const timeRemaining = targetDate - currentDate;
+        
+                if (timeRemaining <= 0) {
+                  // Timer has expired
+                  daysElement.textContent = "00";
+                  hoursElement.textContent = "00";
+                  minutesElement.textContent = "00";
+                  secondsElement.textContent = "00";
+                  clearInterval(countdownInterval);
+              } else {
+                  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                  const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+      
+                  // Display the remaining time
+                  daysElement.textContent = days.toString().padStart(2, "0");
+                  hoursElement.textContent = hours.toString().padStart(2, "0");
+                  minutesElement.textContent = minutes.toString().padStart(2, "0");
+                  secondsElement.textContent = seconds.toString().padStart(2, "0");
+              }
+          }
+      
+          // Initial call to update the countdown
+          updateCountdown();
+      
+          // Update the countdown every second
+          const countdownInterval = setInterval(updateCountdown, 1000);
+        });
+        </script>
+    </body>
+</html>

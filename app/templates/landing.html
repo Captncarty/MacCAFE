@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'/>
+        <meta name="viewport" 
+                content="width=device-width", initial-scale="1.0", maximum-scale="1.0"/>
+        <title>MacCAFE</title>
+        <link rel='stylesheet' href='static/styles.css'/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Itim&family=Mooli&family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div style='background-color:rgb(230, 221, 222);'>
+
+    <header>
+        <div>
+        <nav>
+            <ul>
+                <li><a href="#" class"nav">Home</a></li>
+                <li><a href="#abt" class"nav">About</a></li>
+                <li><a href="#" class"openbtn" id="loginBtn" onclick="openNav()">Login</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+            <div class="overview">
+              <form action="/login" method="POST">
+                  <!--<label for="username">Username:</label>-->
+                  <input type="text" class='input-field' placeholder='Username' name='username' autocomplete="username" required>
+                  <!--<label for="password">Password:</label>-->
+                  <input type="password" id='password' class='input-field' name='password' placeholder="Password" autocomplete="current-password"/>
+                  <input id="sub" onclick="document.getElementById('luffy')".src='static/img/mc22.gif' type="submit" value="Login"/>
+              </form>
+          </div>
+          <img id="luffy" src="static/img/cap2.png" alt="logo"/>
+          <form id="verifyForm">
+            <label for="reference">Reference No:</label>
+            <input type="text" id="reference" required autocomplete="off"/>
+            <label for="email">Email Address</label>
+            <input type="email" id="email-addy" required required autocomplete="email"/>
+            <button type="submit">Verify Transaction</button>
+            </form>
+            <div id="result"></div>
+            <div id="loading-icon" class="hidden">
+                <img src="static/img/mc22.gif" alt="Loading..." />
+              </div>
+        </div>
+        <div class='hero'>
+        <h1>Mac-CAFÈ</h1>
+        <a href="#table" class="surf-button">Surf the Web</a>
+        {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    <ul>
+                        {% for message in messages %}
+                        <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                    {% endwith %}
+        </div>
+    </header>
+
+    <div class='page' id='main'>
+        <div class='section boost'>
+            <h2 class='speech-bubble'>Welcome</h2>
+            <p><strong>MacCAFE</strong> is a non-stop User experience portal for surfing the web at really
+                exclusive rates and speed. At MacCAFE we prioritize our customers satisfaction and overall user
+                experience, making sure they get the right amount of value desirable!
+            </p>
+            <img src="/static/img/pexel2.jpeg" alt="cafe">
+        </div>
+
+        <section class='banner'>
+            DATA PLANS
+
+            <img src="/static/img/well2.jpeg" alt="cafe">
+        </section>
+
+
+
+        <div class='section section--gray' id="table">
+            <table>
+                <div class="table-arr">
+                <tr>
+                    <h1 class="lite">Lite</h1>
+                </tr>
+                <tr>
+                    <td>1hr</td>
+                    <td><button class='btn lite' price="5" data-package="Lite" data-duration="1" onclick="openPaymentModal('Lite', '1 Hour', 5)">&#8358;5</button></td>
+                </tr>
+                <tr>
+                    <td>2hrs</td>
+                    <td><button class='btn lite' price="10" data-package="Lite" data-duration="2" onclick="openPaymentModal('Lite', '2 hour', 10)">&#8358;10</button></td>
+                </tr>
+                <tr>
+                    <td>5hrs</td>
+                    <td><button class='btn lite' price="20" data-package="Lite" data-duration="5" onclick="openPaymentModal('Lite', '5 hour', 20)">&#8358;20</button></td>
+                </tr>
+                <tr>
+                    <td>8hrs</td>
+                    <td><button class='btn lite' price="25" data-package="Lite" data-duration="8" onclick="openPaymentModal('Lite', '8 hour', 25)">&#8358;25</button></td>
+                </tr>
+                <tr>
+                    <td>12hrs</td>
+                    <td><button class='btn lite' price="45" data-package="Lite" data-duration="12" onclick="openPaymentModal('Lite', '12 hour', 45)">&#8358;45</button></td>
+                </tr>
+                <tr>
+                    <td>1day</td>
+                    <td><button class='btn lite' price="70" data-package="Lite" data-duration="24" onclick="openPaymentModal('Lite', '1 day', 70)">&#8358;70</button></td>
+                </tr>
+            </div>
+            </table>
+        </div>
+
+        <div class='section section--gray' id="table">
+        <table>
+            <div class="table-arr">
+            <tr>
+                <h1 class="fast">Fast</h1>
+            </tr>
+            <tr>
+                <td>1Hr</td>
+                <td><button class='btn fast' price="10" data-package="Fast" data-duration="1" onclick="openPaymentModal('Fast', '1 Hour', 10)">&#8358;10</button></td>
+            </tr>
+            <tr>
+                <td>2hrs</td>
+                <td><button class='btn fast' price="30" data-package="Fast" data-duration="2" onclick="openPaymentModal('Fast', '2 hour', 30)">&#8358;30</button></td>
+            </tr>
+            <tr>
+                <td>5hrs</td>
+                <td><button class='btn fast' price="50" data-package="Fast" data-duration="5" onclick="openPaymentModal('Fast', '5 hour', 50)">&#8358;50</button></td>
+            </tr>
+            <tr>
+                <td>8hrs</td>
+                <td><button class='btn fast' price="75" data-package="Fast" data-duration="8" onclick="openPaymentModal('Fast', '8 hour', 75)">&#8358;75</button></td>
+            </tr>
+            <tr>
+                <td>12hrs</td>
+                <td><button class='btn fast' price="90" data-package="Fast" data-duration="12" onclick="openPaymentModal('Fast', '12 hour', 90)">&#8358;90</button></td>
+            </tr>
+            <tr>
+                <td>1day</td>
+                <td><button class='btn fast' price="120" data-package="Fast" data-duration="24" onclick="openPaymentModal('Fast', '1 day', 120)">&#8358;120</button></td>
+            </tr>
+        </div>
+        </table>
+    </div>
+
+    <div class='section section--gray' id="table">
+        <table>
+            <div class="table-arr">
+            <tr>
+                <h1 class="cheetah">Cheetah</h1>
+            </tr>
+            <tr>
+                <td>1Hr</td>
+                <td><button class='btn cheetah' price="15" data-package="Cheetah" data-duration="1" onclick="openPaymentModal('Cheetah', '1 Hour', 15)">&#8358;15</button></td>
+            </tr>
+            <tr>
+                <td>2hrs</td>
+                <td><button class='btn cheetah' price="30" data-package="Cheetah" data-duration="2" onclick="openPaymentModal('Cheetah', '2 hour', 30)">&#8358;30</button></td>
+            </tr>
+            <tr>
+                <td>5hrs</td>
+                <td><button class='btn cheetah' price="60" data-package="Cheetah" data-duration="5" onclick="openPaymentModal('Cheetah', '5 hour', 60)">&#8358;60</button></td>
+            </tr>
+            <tr>
+                <td>8hrs</td>
+                <td><button class='btn cheetah' price="120" data-package="Cheetah" data-duration="8" onclick="openPaymentModal('Cheetah', '8 hour', 120)">&#8358;120</button></td>
+            </tr>
+            <tr>
+                <td>12hrs</td>
+                <td><button class='btn cheetah' price="175" data-package="Cheetah" data-duration="12" onclick="openPaymentModal('Cheetah', '12 hour', 175)">&#8358;175</button></td>
+            </tr>
+            <tr>
+                <td>1day</td>
+                <td><button class='btn cheetah' price="210" data-package="Cheetah" data-duration="24" onclick="openPaymentModal('Cheetah', '1 day', 210)">&#8358;210</button></td>
+            </tr>
+        </div>
+        </table>
+
+        <div id="paymentModal" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closePaymentModal()">&times;</span>
+              <h2>Payment Options</h2>
+              <div class="payment-option">
+                <button onclick="openPaymentForm('Debit Card')">Debit Card</button>
+              </div>
+              <div class="payment-option">
+                <button onclick="openPaymentForm('Bank Transfer')">Bank Transfer</button>
+              </div>
+              <div class="payment-option">
+                <button onclick="openPaymentForm('USSD')">USSD</button>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+<!--<div class="modal-content">
+    <span class="close" onclick="closePaymentFormModal()">&times;</span>
+<form id="paymentForm">
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email-address" required />
+    </div>
+    <div class="form-group">
+      <label for="amount">Amount</label>
+      <input type="tel" id="amount" required />
+    </div>
+    <div class="form-group">
+      <label for="first-name">First Name</label>
+      <input type="text" id="first-name" />
+    </div>
+    <div class="form-group">
+      <label for="last-name">Last Name</label>
+      <input type="text" id="last-name" />
+    </div>
+    <div class="form-submit">
+      <button type="submit" onclick="payWithPaystack()"> Pay </button>
+    </div>
+  </form>
+</div>-->
+  <!-- Payment Form -->
+<div id="paymentFormModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closePaymentFormModal()">&times;</span>
+      <h2>Payment Form</h2>
+      <form id="paymentForm" method="POST" action="/verify_transaction">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email-address" required required autocomplete="email"/>
+        </div>
+        <div class="form-group">
+          <label for="amount">Amount</label>
+          <input type="tel" id="amount" required autocomplete="off"/>
+        </div>
+        <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" autocomplete="given-name"/>
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" autocomplete="family-name"/>
+          </div>
+        <div class="form-submit">
+          <button type="button" onclick="payWithPaystack()"> Pay </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  
+  
+  
+
+    <div class="footer-bottom">
+    <!-- Footer Section -->
+    <footer class="dark-theme">
+        <div class="footer-content">
+            <img style="max-width: 200px; align-item: left;" id="luffy" src="static/img/logo.png" alt="logo"/>
+            <div class="footer-links">
+                <article id="abt" class="about">
+                    <p style='width:100%;'>MacCAFE is a non-stop User experience portal for surfing the web at really
+                        exclusive rates and speed. MacCAFE is in the business of securing Customers details and ensures optimum satisfaction and Privacy. MacCAFE has the fastest internet speeds boasting about 300mbps with a relatively low latency which renders optimum user experience and dependability.<br>
+                        MacCAFE is an ever growing and emergin ISP company that has a great edge over the competition which is looking after the locals and encouraging cheap internet usage and accessibility
+                    </p>
+                    <p style='font-style:italic; text-align:center; font-weight: bold; margin-top:3em;'>We're in the Business of Customer's Satisfaction!!!</p>
+                </article>
+                <address class="addy">Visit us at:<br>
+                    No 8 Gbaiye street,<br>
+                    off Porter's House<br>
+                    Warri,<br>
+                    Delta State.</address>
+            </div>
+                <ul>
+                    <li><a href="/blog" target="_blank">Blog</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+        </div>
+            <div class="social-media-icons">
+                <!-- Add social media icons and links here -->
+                <a href="https://facebook.com" target="_blank"><img src="/static/img/meta.svg" alt="facebook"></a>
+                <a href="https://instagram.com/kvngcarty" target="_blank"><img src="static/img/instagram.svg" alt="instagram"></a>
+                <a href="https://github.com/captncarty" target="_blank"><img src="static/img/github-dark.svg" alt="github"></a>
+                <a href="https://www.linkedin.com/in/kelvin-mccarty-0605b91a1" target="_blank"><img src="static/img/linkedin.svg" alt="linkedin"></a>
+                <a href="http://www.discordapp.com/captncarty" target="_blank"><img src="/static/img/discord.svg" alt="discord"></a>
+            </div>
+    </footer>
+    <div style="display:flex; justify-content:space-between; font-size:16px;">
+        <a style="align-items: center; text-decoration: none; padding-left:1em;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Terms of use | Privacy policy</a>
+        <p style="padding-right:1em;">&copy; 2023 MacCAFE. All Rights Reserved.</p>
+    </div>
+    </div>
+    <div id="scroll-to-top" class="scroll-to-top">
+        <a id='scrollUpButton' href="#top" aria-label="Scroll to top"><img src="static/img/up.svg" alt="Scroll to top"></a>
+    </div>
+
+
+    <script src='static/myscript.js'></script>
+    <script>
+    const content = document.getElementById('main');
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginRight = "0";
+      content.classList.add('blur');
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      content.classList.remove('blur');
+    }
+
+    // script.js
+/*document.addEventListener("DOMContentLoaded", function() {
+    const scrollUpButton = document.getElementById("scrollUpButton");
+
+    // Show/hide the scroll-up button based on scroll position
+    window.addEventListener("scroll", function() {
+        if (window.pageYOffset > 100) {
+            scrollUpButton.style.display = "block";
+        } else {
+            scrollUpButton.style.display = "none";
+        }
+    });
+
+    // Scroll to the top when the button is clicked
+    scrollUpButton.addEventListener("click", function() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Add smooth scrolling effect
+        });
+    });
+}); */
+document.addEventListener("DOMContentLoaded", function() {
+    const scrollUpButton = document.getElementById("scrollUpButton");
+
+    // Show/hide the scroll-up button based on scroll position
+    window.addEventListener("scroll", function() {
+        if (window.pageYOffset > 100) {
+            scrollUpButton.style.display = "block";
+        } else {
+            scrollUpButton.style.display = "none";
+        }
+    });
+
+    // Smoothly scroll to the top when the button is clicked
+    scrollUpButton.addEventListener("click", function() {
+        scrollToTop(1000); // 1000 milliseconds (1 second) for the animation
+    });
+
+    function scrollToTop(duration) {
+        const startingY = window.pageYOffset;
+        const startTime = performance.now();
+
+        function step(timestamp) {
+            const currentTime = timestamp - startTime;
+            window.scrollTo(0, easeInOutQuad(currentTime, startingY, -startingY, duration));
+
+            if (currentTime < duration) {
+                requestAnimationFrame(step);
+            }
+        }
+
+        function easeInOutQuad(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return (c / 2) * t * t + b;
+            t--;
+            return (-c / 2) * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(step);
+    }
+});
+function resetPaymentForm() {
+    document.getElementById('paymentForm').reset();
+  }
+
+var paystackPublicKey = "{{ paystack_public_key }}";
+const paymentForm = document.getElementById('paymentForm');
+paymentForm.addEventListener("submit", payWithPaystack, false);
+
+function payWithPaystack(e) {
+  console.log('payWithPaystack function called');
+
+  let handler = PaystackPop.setup({
+    key: paystackPublicKey, // Replace with your public key
+    email: document.getElementById("email-address").value,
+    amount: document.getElementById("amount").value * 100,
+    currency: 'NGN', // Use GHS for Ghana Cedis or USD for US Dollars
+    ref: ''+Math.floor((Math.random() * 1000000000) + 1), // Replace with a reference you generated
+    callback: function(response) {
+      //this happens after the payment is completed successfully
+      var reference = response.reference;
+      alert('Payment complete! Visit Login, Copy your Reference Code: ' + reference);
+      if (response.status === 'success') {
+        // Payment successful, make an AJAX request to verify the transaction
+        verifyTransaction(reference);
+        resetPaymentForm();
+      } else {
+        // Payment failed
+        alert('Payment failed.');
+      }
+    },
+    onClose: function() {
+      alert('Transaction was not completed, window closed.');
+    },
+  });
+  handler.openIframe();
+}
+
+document.getElementById('verifyForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var loadingIcon = document.getElementById('loading-icon');
+    loadingIcon.classList.remove('hidden');
+
+    // Retrieve data from sessionStorage
+    var package = sessionStorage.getItem('selectedPackage');
+    var duration = sessionStorage.getItem('selectedDuration');
+    var price = sessionStorage.getItem('selectedPrice');
+
+    console.log(package, duration, price)
+
+    var email =  document.getElementById("email-addy").value
+    var reference = document.getElementById('reference').value;
+    
+    // Make an AJAX request to the Flask endpoint to verify the transaction
+    fetch('/verify_transaction', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ reference: reference, email: email, package: package, duration: duration, price: price}),
+    })
+    .then(response => response.json())
+    .then(data => {
+        loadingIcon.classList.add('hidden');
+        // Display the result on the page
+        var resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = 'Transaction Result: ' + (data.result ? 'Verified, Check Mail' : 'Not Verified');
+        sessionStorage.clear();
+    });
+    /*.catch(error => {
+        loadingIcon.classList.remove('loading-hidden');
+    });*/
+});
+
+
+
+    </script>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    </body>
+</html>
