@@ -1,0 +1,237 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "description": "CAFE, DOCUMENTATION",
+        "version": "1.0.0",
+        "title": "CAFE API",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+
+    "tags": [
+        {
+            "name": "CAFE API",
+            "description": "Test API"
+        }
+    ],
+
+    "servers": [
+        {
+            "url": "/"
+        }
+    ],
+
+    "components": {
+        "schemas": {
+            "CAFE": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Id": {
+                "type": "integer",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    }
+                }
+            }
+        }
+    },
+
+    "paths": {
+        "/api/users": {
+            "get": {
+                "tags": ["Get All Users from API"],
+                "summary": "Get All Users",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/components/schemas/CAFE"
+                        }
+                    },
+                    "404": {
+                        "description": "NOT FOUND",
+                        "schema": {
+                            "$ref": "#/components/schemas/CAFE"
+                        }
+                    }
+                }
+            }
+        },
+
+        "/api/users/{id}": {
+            "get": {
+                "tags": ["Create New User on API"],
+                "summary": "Create New User",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Adds a new user to the database",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/components/schemas/CAFE"
+                        }
+                    },
+                    "404": {
+                        "description": "NOT FOUND",
+                        "schema": {
+                            "$ref": "#/components/schemas/CAFE"
+                        }
+                    }
+                }
+            }
+        },
+
+        "/user/{id}/delete": {
+            "delete": {
+                "tags": ["Delete User from API"],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "User id to delete",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/Id"
+                        }
+                    }
+                ],
+                "summary": "Delete User",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/components/schemas/CAFE"
+                        }
+                    },
+                    "404": {
+                        "description": "NOT FOUND",
+                        "schema": {
+                            "$ref": "#/components/schemas/CAFE"
+                        }
+                    }
+                }
+            }
+        },
+
+        "/api/create_user": {
+            "post": {
+                "tags": ["Create User"],
+                "summary": "Create a new user",
+                "description": "This endpoint allows admin users to create a new user.",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "username": {
+                                        "type": "string"
+                                    },
+                                    "password": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "User created successfully",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "id": 123,
+                                    "username": "newuser",
+                                    "password": "newpassword"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "message": "Check details"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "/transactions/{reference}": {
+            "get": {
+                "tags": ["Get Transaction by Reference"],
+                "summary": "Get Transaction Details by Reference",
+                "parameters": [
+                    {
+                        "name": "reference",
+                        "in": "path",
+                        "description": "Transaction reference ID",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/components/schemas/CAFE"
+                        }
+                    },
+                    "404": {
+                        "description": "NOT FOUND",
+                        "schema": {
+                            "$ref": "#/components/schemas/CAFE"
+                        }
+                    }
+                }
+            }
+        },
+
+        "/transactions": {
+            "get": {
+                "tags": ["Get All Transactions"],
+                "summary": "Get All Transactions",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/components/schemas/CAFE"
+                        }
+                    },
+                    "404": {
+                        "description": "NOT FOUND",
+                        "schema": {
+                            "$ref": "#/components/schemas/CAFE"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
