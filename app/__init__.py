@@ -33,9 +33,9 @@ app.config['MAIL_DEFAULT_SENDER'] = user_mail
 mail = Mail(app)
 
 
-def send_email(email, username, password):
+def send_email(email, username, password, duration, package):
     msg = Message('Your Credentials', sender='your_email@gmail.com', recipients=[email])
-    msg.body = f'Username: {username}\nPassword: {password}'
+    msg.body = f'Username: {username}\nPassword: {password}\nDuration: {duration}hour\nPackage: {package}'
     mail.send(msg)
 
 def send_email_subscribe(email):
