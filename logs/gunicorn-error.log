@@ -1,0 +1,2884 @@
+[2023-09-17 18:18:41 +0100] [8255] [DEBUG] Current configuration:
+  config: gunicorn.conf.py
+  wsgi_app: None
+  bind: ['127.0.0.1:9000']
+  backlog: 2048
+  workers: 1
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: testproject.wsgi
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x109fb6a60>
+  on_reload: <function OnReload.on_reload at 0x109fb6b80>
+  when_ready: <function WhenReady.when_ready at 0x109fb6ca0>
+  pre_fork: <function Prefork.pre_fork at 0x109fb6dc0>
+  post_fork: <function Postfork.post_fork at 0x109fb6ee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x109fcf040>
+  worker_int: <function WorkerInt.worker_int at 0x109fcf160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x109fcf280>
+  pre_exec: <function PreExec.pre_exec at 0x109fcf3a0>
+  pre_request: <function PreRequest.pre_request at 0x109fcf4c0>
+  post_request: <function PostRequest.post_request at 0x109fcf550>
+  child_exit: <function ChildExit.child_exit at 0x109fcf670>
+  worker_exit: <function WorkerExit.worker_exit at 0x109fcf790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x109fcf8b0>
+  on_exit: <function OnExit.on_exit at 0x109fcf9d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x109fcfaf0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-17 18:18:41 +0100] [8255] [INFO] Starting gunicorn 21.2.0
+[2023-09-17 18:18:41 +0100] [8255] [DEBUG] Arbiter booted
+[2023-09-17 18:18:41 +0100] [8255] [INFO] Listening at: http://127.0.0.1:9000 (8255)
+[2023-09-17 18:18:41 +0100] [8255] [INFO] Using worker: sync
+[2023-09-17 18:18:41 +0100] [8256] [INFO] Booting worker with pid: 8256
+[2023-09-17 18:18:41 +0100] [8256] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 972, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 984, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'testproject'
+[2023-09-17 18:18:41 +0100] [8256] [INFO] Worker exiting (pid: 8256)
+[2023-09-17 18:18:41 +0100] [8255] [ERROR] Worker (pid:8256) exited with code 3
+[2023-09-17 18:18:41 +0100] [8255] [ERROR] Shutting down: Master
+[2023-09-17 18:18:41 +0100] [8255] [ERROR] Reason: Worker failed to boot.
+[2023-09-17 18:19:45 +0100] [8318] [DEBUG] Current configuration:
+  config: gunicorn.conf.py
+  wsgi_app: None
+  bind: ['127.0.0.1:9000']
+  backlog: 2048
+  workers: 1
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio
+  daemon: True
+  raw_env: []
+  pidfile: /Users/captncarty/logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: testproject.wsgi
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10ebf3a60>
+  on_reload: <function OnReload.on_reload at 0x10ebf3b80>
+  when_ready: <function WhenReady.when_ready at 0x10ebf3ca0>
+  pre_fork: <function Prefork.pre_fork at 0x10ebf3dc0>
+  post_fork: <function Postfork.post_fork at 0x10ebf3ee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10ec0d040>
+  worker_int: <function WorkerInt.worker_int at 0x10ec0d160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10ec0d280>
+  pre_exec: <function PreExec.pre_exec at 0x10ec0d3a0>
+  pre_request: <function PreRequest.pre_request at 0x10ec0d4c0>
+  post_request: <function PostRequest.post_request at 0x10ec0d550>
+  child_exit: <function ChildExit.child_exit at 0x10ec0d670>
+  worker_exit: <function WorkerExit.worker_exit at 0x10ec0d790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10ec0d8b0>
+  on_exit: <function OnExit.on_exit at 0x10ec0d9d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x10ec0daf0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-17 18:19:45 +0100] [8318] [INFO] Starting gunicorn 21.2.0
+[2023-09-17 18:20:50 +0100] [8388] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:8001']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: app:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10888ea60>
+  on_reload: <function OnReload.on_reload at 0x10888eb80>
+  when_ready: <function WhenReady.when_ready at 0x10888eca0>
+  pre_fork: <function Prefork.pre_fork at 0x10888edc0>
+  post_fork: <function Postfork.post_fork at 0x10888eee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x1088a7040>
+  worker_int: <function WorkerInt.worker_int at 0x1088a7160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x1088a7280>
+  pre_exec: <function PreExec.pre_exec at 0x1088a73a0>
+  pre_request: <function PreRequest.pre_request at 0x1088a74c0>
+  post_request: <function PostRequest.post_request at 0x1088a7550>
+  child_exit: <function ChildExit.child_exit at 0x1088a7670>
+  worker_exit: <function WorkerExit.worker_exit at 0x1088a7790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x1088a78b0>
+  on_exit: <function OnExit.on_exit at 0x1088a79d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x1088a7af0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-17 18:20:50 +0100] [8388] [INFO] Starting gunicorn 21.2.0
+[2023-09-17 18:20:50 +0100] [8388] [DEBUG] Arbiter booted
+[2023-09-17 18:20:50 +0100] [8388] [INFO] Listening at: http://0.0.0.0:8001 (8388)
+[2023-09-17 18:20:50 +0100] [8388] [INFO] Using worker: sync
+[2023-09-17 18:20:50 +0100] [8389] [INFO] Booting worker with pid: 8389
+[2023-09-17 18:20:51 +0100] [8390] [INFO] Booting worker with pid: 8390
+[2023-09-17 18:20:51 +0100] [8391] [INFO] Booting worker with pid: 8391
+[2023-09-17 18:20:51 +0100] [8392] [INFO] Booting worker with pid: 8392
+[2023-09-17 18:20:51 +0100] [8388] [DEBUG] 4 workers
+[2023-09-17 18:21:15 +0100] [8388] [INFO] Handling signal: int
+[2023-09-17 18:21:15 +0100] [8389] [INFO] Worker exiting (pid: 8389)
+[2023-09-17 18:21:15 +0100] [8390] [INFO] Worker exiting (pid: 8390)
+[2023-09-17 18:21:15 +0100] [8391] [INFO] Worker exiting (pid: 8391)
+[2023-09-17 18:21:15 +0100] [8392] [INFO] Worker exiting (pid: 8392)
+[2023-09-17 18:21:15 +0100] [8388] [INFO] Shutting down: Master
+[2023-09-17 18:21:22 +0100] [8409] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:5001']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: app:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10f55ba60>
+  on_reload: <function OnReload.on_reload at 0x10f55bb80>
+  when_ready: <function WhenReady.when_ready at 0x10f55bca0>
+  pre_fork: <function Prefork.pre_fork at 0x10f55bdc0>
+  post_fork: <function Postfork.post_fork at 0x10f55bee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10f575040>
+  worker_int: <function WorkerInt.worker_int at 0x10f575160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10f575280>
+  pre_exec: <function PreExec.pre_exec at 0x10f5753a0>
+  pre_request: <function PreRequest.pre_request at 0x10f5754c0>
+  post_request: <function PostRequest.post_request at 0x10f575550>
+  child_exit: <function ChildExit.child_exit at 0x10f575670>
+  worker_exit: <function WorkerExit.worker_exit at 0x10f575790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10f5758b0>
+  on_exit: <function OnExit.on_exit at 0x10f5759d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x10f575af0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-17 18:21:22 +0100] [8409] [INFO] Starting gunicorn 21.2.0
+[2023-09-17 18:21:22 +0100] [8409] [DEBUG] Arbiter booted
+[2023-09-17 18:21:22 +0100] [8409] [INFO] Listening at: http://0.0.0.0:5001 (8409)
+[2023-09-17 18:21:22 +0100] [8409] [INFO] Using worker: sync
+[2023-09-17 18:21:22 +0100] [8410] [INFO] Booting worker with pid: 8410
+[2023-09-17 18:21:22 +0100] [8411] [INFO] Booting worker with pid: 8411
+[2023-09-17 18:21:22 +0100] [8412] [INFO] Booting worker with pid: 8412
+[2023-09-17 18:21:22 +0100] [8413] [INFO] Booting worker with pid: 8413
+[2023-09-17 18:21:22 +0100] [8409] [DEBUG] 4 workers
+[2023-09-17 18:21:29 +0100] [8413] [DEBUG] GET /
+[2023-09-17 18:21:29 +0100] [8411] [DEBUG] GET /static/styles.css
+[2023-09-17 18:21:37 +0100] [8409] [INFO] Handling signal: int
+[2023-09-17 18:21:38 +0100] [8410] [INFO] Worker exiting (pid: 8410)
+[2023-09-17 18:21:38 +0100] [8412] [INFO] Worker exiting (pid: 8412)
+[2023-09-17 18:21:38 +0100] [8413] [INFO] Worker exiting (pid: 8413)
+[2023-09-17 18:21:38 +0100] [8411] [INFO] Worker exiting (pid: 8411)
+[2023-09-17 18:21:38 +0100] [8409] [INFO] Shutting down: Master
+[2023-09-17 18:23:25 +0100] [8584] [DEBUG] Current configuration:
+  config: gunicorn.conf.py
+  wsgi_app: None
+  bind: ['127.0.0.1:9000']
+  backlog: 2048
+  workers: 1
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio/v2
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: v2.wsgi
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x106fa5a60>
+  on_reload: <function OnReload.on_reload at 0x106fa5b80>
+  when_ready: <function WhenReady.when_ready at 0x106fa5ca0>
+  pre_fork: <function Prefork.pre_fork at 0x106fa5dc0>
+  post_fork: <function Postfork.post_fork at 0x106fa5ee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x106fbf040>
+  worker_int: <function WorkerInt.worker_int at 0x106fbf160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x106fbf280>
+  pre_exec: <function PreExec.pre_exec at 0x106fbf3a0>
+  pre_request: <function PreRequest.pre_request at 0x106fbf4c0>
+  post_request: <function PostRequest.post_request at 0x106fbf550>
+  child_exit: <function ChildExit.child_exit at 0x106fbf670>
+  worker_exit: <function WorkerExit.worker_exit at 0x106fbf790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x106fbf8b0>
+  on_exit: <function OnExit.on_exit at 0x106fbf9d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x106fbfaf0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-17 18:23:25 +0100] [8584] [INFO] Starting gunicorn 21.2.0
+[2023-09-17 18:23:25 +0100] [8584] [DEBUG] Arbiter booted
+[2023-09-17 18:23:25 +0100] [8584] [INFO] Listening at: http://127.0.0.1:9000 (8584)
+[2023-09-17 18:23:25 +0100] [8584] [INFO] Using worker: sync
+[2023-09-17 18:23:25 +0100] [8584] [DEBUG] 1 workers
+[2023-09-17 18:23:25 +0100] [8585] [INFO] Booting worker with pid: 8585
+[2023-09-17 18:23:25 +0100] [8585] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 972, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 984, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'v2'
+[2023-09-17 18:23:25 +0100] [8585] [INFO] Worker exiting (pid: 8585)
+[2023-09-17 18:23:25 +0100] [8584] [ERROR] Worker (pid:8585) exited with code 3
+[2023-09-17 18:23:25 +0100] [8584] [ERROR] Shutting down: Master
+[2023-09-17 18:23:25 +0100] [8584] [ERROR] Reason: Worker failed to boot.
+[2023-09-17 18:26:45 +0100] [8842] [DEBUG] Current configuration:
+  config: gunicorn.conf.py
+  wsgi_app: None
+  bind: ['127.0.0.1:9000']
+  backlog: 2048
+  workers: 1
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio/v2
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10e2c2a60>
+  on_reload: <function OnReload.on_reload at 0x10e2c2b80>
+  when_ready: <function WhenReady.when_ready at 0x10e2c2ca0>
+  pre_fork: <function Prefork.pre_fork at 0x10e2c2dc0>
+  post_fork: <function Postfork.post_fork at 0x10e2c2ee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10e2db040>
+  worker_int: <function WorkerInt.worker_int at 0x10e2db160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10e2db280>
+  pre_exec: <function PreExec.pre_exec at 0x10e2db3a0>
+  pre_request: <function PreRequest.pre_request at 0x10e2db4c0>
+  post_request: <function PostRequest.post_request at 0x10e2db550>
+  child_exit: <function ChildExit.child_exit at 0x10e2db670>
+  worker_exit: <function WorkerExit.worker_exit at 0x10e2db790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10e2db8b0>
+  on_exit: <function OnExit.on_exit at 0x10e2db9d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x10e2dbaf0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-17 18:26:45 +0100] [8842] [INFO] Starting gunicorn 21.2.0
+[2023-09-17 18:26:45 +0100] [8842] [DEBUG] Arbiter booted
+[2023-09-17 18:26:45 +0100] [8842] [INFO] Listening at: http://127.0.0.1:9000 (8842)
+[2023-09-17 18:26:45 +0100] [8842] [INFO] Using worker: sync
+[2023-09-17 18:26:45 +0100] [8843] [INFO] Booting worker with pid: 8843
+[2023-09-17 18:26:45 +0100] [8843] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/captncarty/Desktop/Portfolio/v2/wsgi.py", line 1, in <module>
+    from myproject import application
+ModuleNotFoundError: No module named 'myproject'
+[2023-09-17 18:26:45 +0100] [8843] [INFO] Worker exiting (pid: 8843)
+[2023-09-17 18:26:45 +0100] [8842] [ERROR] Worker (pid:8843) exited with code 3
+[2023-09-17 18:26:45 +0100] [8842] [ERROR] Shutting down: Master
+[2023-09-17 18:26:45 +0100] [8842] [ERROR] Reason: Worker failed to boot.
+[2023-09-17 18:27:13 +0100] [8869] [DEBUG] Current configuration:
+  config: gunicorn.conf.py
+  wsgi_app: None
+  bind: ['127.0.0.1:9000']
+  backlog: 2048
+  workers: 1
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio/v2
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x100c53a60>
+  on_reload: <function OnReload.on_reload at 0x100c53b80>
+  when_ready: <function WhenReady.when_ready at 0x100c53ca0>
+  pre_fork: <function Prefork.pre_fork at 0x100c53dc0>
+  post_fork: <function Postfork.post_fork at 0x100c53ee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x100c6d040>
+  worker_int: <function WorkerInt.worker_int at 0x100c6d160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x100c6d280>
+  pre_exec: <function PreExec.pre_exec at 0x100c6d3a0>
+  pre_request: <function PreRequest.pre_request at 0x100c6d4c0>
+  post_request: <function PostRequest.post_request at 0x100c6d550>
+  child_exit: <function ChildExit.child_exit at 0x100c6d670>
+  worker_exit: <function WorkerExit.worker_exit at 0x100c6d790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x100c6d8b0>
+  on_exit: <function OnExit.on_exit at 0x100c6d9d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x100c6daf0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-17 18:27:13 +0100] [8869] [INFO] Starting gunicorn 21.2.0
+[2023-09-17 18:27:13 +0100] [8869] [DEBUG] Arbiter booted
+[2023-09-17 18:27:13 +0100] [8869] [INFO] Listening at: http://127.0.0.1:9000 (8869)
+[2023-09-17 18:27:13 +0100] [8869] [INFO] Using worker: sync
+[2023-09-17 18:27:13 +0100] [8870] [INFO] Booting worker with pid: 8870
+[2023-09-17 18:27:13 +0100] [8870] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/captncarty/Desktop/Portfolio/v2/wsgi.py", line 1, in <module>
+    from myproject import application
+ModuleNotFoundError: No module named 'myproject'
+[2023-09-17 18:27:13 +0100] [8870] [INFO] Worker exiting (pid: 8870)
+[2023-09-17 18:27:13 +0100] [8869] [DEBUG] 1 workers
+[2023-09-17 18:27:13 +0100] [8869] [ERROR] Worker (pid:8870) exited with code 3
+[2023-09-17 18:27:13 +0100] [8869] [ERROR] Shutting down: Master
+[2023-09-17 18:27:13 +0100] [8869] [ERROR] Reason: Worker failed to boot.
+[2023-09-17 18:27:36 +0100] [8908] [DEBUG] Current configuration:
+  config: gunicorn.conf.py
+  wsgi_app: None
+  bind: ['127.0.0.1:9000']
+  backlog: 2048
+  workers: 1
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio/v2
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: v2.wsgi
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x1076aca60>
+  on_reload: <function OnReload.on_reload at 0x1076acb80>
+  when_ready: <function WhenReady.when_ready at 0x1076acca0>
+  pre_fork: <function Prefork.pre_fork at 0x1076acdc0>
+  post_fork: <function Postfork.post_fork at 0x1076acee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x1076c7040>
+  worker_int: <function WorkerInt.worker_int at 0x1076c7160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x1076c7280>
+  pre_exec: <function PreExec.pre_exec at 0x1076c73a0>
+  pre_request: <function PreRequest.pre_request at 0x1076c74c0>
+  post_request: <function PostRequest.post_request at 0x1076c7550>
+  child_exit: <function ChildExit.child_exit at 0x1076c7670>
+  worker_exit: <function WorkerExit.worker_exit at 0x1076c7790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x1076c78b0>
+  on_exit: <function OnExit.on_exit at 0x1076c79d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x1076c7af0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-17 18:27:36 +0100] [8908] [INFO] Starting gunicorn 21.2.0
+[2023-09-17 18:27:36 +0100] [8908] [DEBUG] Arbiter booted
+[2023-09-17 18:27:36 +0100] [8908] [INFO] Listening at: http://127.0.0.1:9000 (8908)
+[2023-09-17 18:27:36 +0100] [8908] [INFO] Using worker: sync
+[2023-09-17 18:27:36 +0100] [8909] [INFO] Booting worker with pid: 8909
+[2023-09-17 18:27:36 +0100] [8909] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 972, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 984, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'v2'
+[2023-09-17 18:27:36 +0100] [8909] [INFO] Worker exiting (pid: 8909)
+[2023-09-17 18:27:36 +0100] [8908] [ERROR] Worker (pid:8909) exited with code 3
+[2023-09-17 18:27:36 +0100] [8908] [ERROR] Shutting down: Master
+[2023-09-17 18:27:36 +0100] [8908] [ERROR] Reason: Worker failed to boot.
+[2023-09-17 18:28:55 +0100] [8979] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:8001']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio/v2
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: app:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10fc43a60>
+  on_reload: <function OnReload.on_reload at 0x10fc43b80>
+  when_ready: <function WhenReady.when_ready at 0x10fc43ca0>
+  pre_fork: <function Prefork.pre_fork at 0x10fc43dc0>
+  post_fork: <function Postfork.post_fork at 0x10fc43ee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10fc5d040>
+  worker_int: <function WorkerInt.worker_int at 0x10fc5d160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10fc5d280>
+  pre_exec: <function PreExec.pre_exec at 0x10fc5d3a0>
+  pre_request: <function PreRequest.pre_request at 0x10fc5d4c0>
+  post_request: <function PostRequest.post_request at 0x10fc5d550>
+  child_exit: <function ChildExit.child_exit at 0x10fc5d670>
+  worker_exit: <function WorkerExit.worker_exit at 0x10fc5d790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10fc5d8b0>
+  on_exit: <function OnExit.on_exit at 0x10fc5d9d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x10fc5daf0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-17 18:28:55 +0100] [8979] [INFO] Starting gunicorn 21.2.0
+[2023-09-17 18:28:55 +0100] [8979] [DEBUG] Arbiter booted
+[2023-09-17 18:28:55 +0100] [8979] [INFO] Listening at: http://0.0.0.0:8001 (8979)
+[2023-09-17 18:28:55 +0100] [8979] [INFO] Using worker: sync
+[2023-09-17 18:28:55 +0100] [8980] [INFO] Booting worker with pid: 8980
+[2023-09-17 18:28:55 +0100] [8981] [INFO] Booting worker with pid: 8981
+[2023-09-17 18:28:55 +0100] [8982] [INFO] Booting worker with pid: 8982
+[2023-09-17 18:28:55 +0100] [8983] [INFO] Booting worker with pid: 8983
+[2023-09-17 18:28:55 +0100] [8979] [DEBUG] 4 workers
+[2023-09-17 18:29:14 +0100] [8979] [INFO] Handling signal: int
+[2023-09-17 18:29:14 +0100] [8983] [INFO] Worker exiting (pid: 8983)
+[2023-09-17 18:29:14 +0100] [8980] [INFO] Worker exiting (pid: 8980)
+[2023-09-17 18:29:14 +0100] [8982] [INFO] Worker exiting (pid: 8982)
+[2023-09-17 18:29:14 +0100] [8981] [INFO] Worker exiting (pid: 8981)
+[2023-09-17 18:29:14 +0100] [8979] [INFO] Shutting down: Master
+[2023-09-17 18:29:23 +0100] [9001] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:5001']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio/v2
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: app:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x107f72a60>
+  on_reload: <function OnReload.on_reload at 0x107f72b80>
+  when_ready: <function WhenReady.when_ready at 0x107f72ca0>
+  pre_fork: <function Prefork.pre_fork at 0x107f72dc0>
+  post_fork: <function Postfork.post_fork at 0x107f72ee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x107f8d040>
+  worker_int: <function WorkerInt.worker_int at 0x107f8d160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x107f8d280>
+  pre_exec: <function PreExec.pre_exec at 0x107f8d3a0>
+  pre_request: <function PreRequest.pre_request at 0x107f8d4c0>
+  post_request: <function PostRequest.post_request at 0x107f8d550>
+  child_exit: <function ChildExit.child_exit at 0x107f8d670>
+  worker_exit: <function WorkerExit.worker_exit at 0x107f8d790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x107f8d8b0>
+  on_exit: <function OnExit.on_exit at 0x107f8d9d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x107f8daf0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-17 18:29:23 +0100] [9001] [INFO] Starting gunicorn 21.2.0
+[2023-09-17 18:29:23 +0100] [9001] [DEBUG] Arbiter booted
+[2023-09-17 18:29:23 +0100] [9001] [INFO] Listening at: http://0.0.0.0:5001 (9001)
+[2023-09-17 18:29:23 +0100] [9001] [INFO] Using worker: sync
+[2023-09-17 18:29:23 +0100] [9002] [INFO] Booting worker with pid: 9002
+[2023-09-17 18:29:23 +0100] [9003] [INFO] Booting worker with pid: 9003
+[2023-09-17 18:29:23 +0100] [9004] [INFO] Booting worker with pid: 9004
+[2023-09-17 18:29:23 +0100] [9005] [INFO] Booting worker with pid: 9005
+[2023-09-17 18:29:23 +0100] [9001] [DEBUG] 4 workers
+[2023-09-17 18:29:28 +0100] [9005] [DEBUG] GET /
+[2023-09-17 18:29:28 +0100] [9005] [DEBUG] GET /static/img/cap2.png
+[2023-09-17 18:29:28 +0100] [9004] [DEBUG] GET /static/styles.css
+[2023-09-17 18:29:28 +0100] [9002] [DEBUG] GET /static/myscript.js
+[2023-09-17 18:29:28 +0100] [9002] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-17 18:29:28 +0100] [9004] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-17 18:29:28 +0100] [9005] [DEBUG] GET /static/img/logo.png
+[2023-09-17 18:29:28 +0100] [9004] [DEBUG] GET /static/img/meta.svg
+[2023-09-17 18:29:28 +0100] [9002] [DEBUG] GET /static/img/instagram.svg
+[2023-09-17 18:29:28 +0100] [9004] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-17 18:29:28 +0100] [9005] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-17 18:29:28 +0100] [9002] [DEBUG] GET /static/img/discord.svg
+[2023-09-17 18:29:28 +0100] [9005] [DEBUG] GET /static/img/up.svg
+[2023-09-17 18:29:32 +0100] [9002] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-17 18:29:59 +0100] [9001] [CRITICAL] WORKER TIMEOUT (pid:9003)
+[2023-09-17 18:29:59 +0100] [9003] [INFO] Worker exiting (pid: 9003)
+[2023-09-17 18:29:59 +0100] [9001] [ERROR] Worker (pid:9003) exited with code 1
+[2023-09-17 18:29:59 +0100] [9001] [ERROR] Worker (pid:9003) exited with code 1.
+[2023-09-17 18:29:59 +0100] [9012] [INFO] Booting worker with pid: 9012
+[2023-09-17 18:31:05 +0100] [9004] [DEBUG] POST /login
+[2023-09-17 18:31:05 +0100] [9005] [DEBUG] GET /
+[2023-09-17 18:31:05 +0100] [9004] [DEBUG] GET /dashboard
+[2023-09-17 18:31:18 +0100] [9001] [INFO] Handling signal: int
+[2023-09-17 18:31:18 +0100] [9004] [INFO] Worker exiting (pid: 9004)
+[2023-09-17 18:31:18 +0100] [9005] [INFO] Worker exiting (pid: 9005)
+[2023-09-17 18:31:18 +0100] [9012] [INFO] Worker exiting (pid: 9012)
+[2023-09-17 18:31:18 +0100] [9002] [INFO] Worker exiting (pid: 9002)
+[2023-09-17 18:31:18 +0100] [9001] [INFO] Shutting down: Master
+[2023-09-17 18:32:24 +0100] [9101] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:5001']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio/v2
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: app:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x11058aa60>
+  on_reload: <function OnReload.on_reload at 0x11058ab80>
+  when_ready: <function WhenReady.when_ready at 0x11058aca0>
+  pre_fork: <function Prefork.pre_fork at 0x11058adc0>
+  post_fork: <function Postfork.post_fork at 0x11058aee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x1105a5040>
+  worker_int: <function WorkerInt.worker_int at 0x1105a5160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x1105a5280>
+  pre_exec: <function PreExec.pre_exec at 0x1105a53a0>
+  pre_request: <function PreRequest.pre_request at 0x1105a54c0>
+  post_request: <function PostRequest.post_request at 0x1105a5550>
+  child_exit: <function ChildExit.child_exit at 0x1105a5670>
+  worker_exit: <function WorkerExit.worker_exit at 0x1105a5790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x1105a58b0>
+  on_exit: <function OnExit.on_exit at 0x1105a59d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x1105a5af0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-17 18:32:24 +0100] [9101] [INFO] Starting gunicorn 21.2.0
+[2023-09-17 18:32:24 +0100] [9101] [DEBUG] Arbiter booted
+[2023-09-17 18:32:24 +0100] [9101] [INFO] Listening at: http://0.0.0.0:5001 (9101)
+[2023-09-17 18:32:24 +0100] [9101] [INFO] Using worker: sync
+[2023-09-17 18:32:24 +0100] [9102] [INFO] Booting worker with pid: 9102
+[2023-09-17 18:32:24 +0100] [9103] [INFO] Booting worker with pid: 9103
+[2023-09-17 18:32:24 +0100] [9104] [INFO] Booting worker with pid: 9104
+[2023-09-17 18:32:24 +0100] [9105] [INFO] Booting worker with pid: 9105
+[2023-09-17 18:32:24 +0100] [9101] [DEBUG] 4 workers
+[2023-09-17 18:32:33 +0100] [9104] [DEBUG] GET /dashboard
+[2023-09-17 18:32:39 +0100] [9102] [DEBUG] GET /dashboard
+[2023-09-17 18:32:52 +0100] [9104] [DEBUG] GET /api/docs/
+[2023-09-17 18:33:01 +0100] [9104] [DEBUG] GET /api/docs/
+[2023-09-17 18:33:23 +0100] [9101] [CRITICAL] WORKER TIMEOUT (pid:9102)
+[2023-09-17 18:33:23 +0100] [9102] [INFO] Worker exiting (pid: 9102)
+[2023-09-17 18:33:23 +0100] [9103] [DEBUG] GET /api/docs/
+[2023-09-17 18:33:23 +0100] [9101] [ERROR] Worker (pid:9102) exited with code 1
+[2023-09-17 18:33:23 +0100] [9101] [ERROR] Worker (pid:9102) exited with code 1.
+[2023-09-17 18:33:23 +0100] [9112] [INFO] Booting worker with pid: 9112
+[2023-09-17 18:33:39 +0100] [9112] [DEBUG] GET /api/docs/
+[2023-09-17 18:33:53 +0100] [9101] [CRITICAL] WORKER TIMEOUT (pid:9105)
+[2023-09-17 18:33:53 +0100] [9105] [INFO] Worker exiting (pid: 9105)
+[2023-09-17 18:33:53 +0100] [9101] [ERROR] Worker (pid:9105) exited with code 1
+[2023-09-17 18:33:53 +0100] [9101] [ERROR] Worker (pid:9105) exited with code 1.
+[2023-09-17 18:33:53 +0100] [9129] [INFO] Booting worker with pid: 9129
+[2023-09-17 18:34:51 +0100] [9129] [DEBUG] GET /api/users
+[2023-09-17 18:35:14 +0100] [9129] [DEBUG] GET /
+[2023-09-17 18:35:14 +0100] [9129] [DEBUG] GET /static/styles.css
+[2023-09-17 18:35:14 +0100] [9104] [DEBUG] GET /static/img/cap2.png
+[2023-09-17 18:35:14 +0100] [9129] [DEBUG] GET /static/myscript.js
+[2023-09-17 18:35:14 +0100] [9104] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-17 18:35:14 +0100] [9129] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-17 18:35:14 +0100] [9104] [DEBUG] GET /static/img/logo.png
+[2023-09-17 18:35:14 +0100] [9129] [DEBUG] GET /static/img/meta.svg
+[2023-09-17 18:35:14 +0100] [9104] [DEBUG] GET /static/img/instagram.svg
+[2023-09-17 18:35:14 +0100] [9129] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-17 18:35:14 +0100] [9129] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-17 18:35:14 +0100] [9104] [DEBUG] GET /static/img/discord.svg
+[2023-09-17 18:35:14 +0100] [9129] [DEBUG] GET /static/img/up.svg
+[2023-09-17 18:35:21 +0100] [9101] [CRITICAL] WORKER TIMEOUT (pid:9103)
+[2023-09-17 18:35:21 +0100] [9103] [INFO] Worker exiting (pid: 9103)
+[2023-09-17 18:35:22 +0100] [9101] [ERROR] Worker (pid:9103) exited with code 1
+[2023-09-17 18:35:22 +0100] [9101] [ERROR] Worker (pid:9103) exited with code 1.
+[2023-09-17 18:35:22 +0100] [9144] [INFO] Booting worker with pid: 9144
+[2023-09-17 18:35:23 +0100] [9104] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-17 18:35:45 +0100] [9101] [CRITICAL] WORKER TIMEOUT (pid:9112)
+[2023-09-17 18:35:45 +0100] [9112] [INFO] Worker exiting (pid: 9112)
+[2023-09-17 18:35:45 +0100] [9101] [ERROR] Worker (pid:9112) exited with code 1
+[2023-09-17 18:35:45 +0100] [9101] [ERROR] Worker (pid:9112) exited with code 1.
+[2023-09-17 18:35:45 +0100] [9221] [INFO] Booting worker with pid: 9221
+[2023-09-17 18:36:02 +0100] [9101] [CRITICAL] WORKER TIMEOUT (pid:9104)
+[2023-09-17 18:36:02 +0100] [9104] [INFO] Worker exiting (pid: 9104)
+[2023-09-17 18:36:02 +0100] [9101] [ERROR] Worker (pid:9104) exited with code 1
+[2023-09-17 18:36:02 +0100] [9101] [ERROR] Worker (pid:9104) exited with code 1.
+[2023-09-17 18:36:02 +0100] [9227] [INFO] Booting worker with pid: 9227
+[2023-09-17 18:36:28 +0100] [9129] [DEBUG] GET /
+[2023-09-17 18:36:28 +0100] [9144] [DEBUG] GET /static/test.jpg
+[2023-09-17 18:36:28 +0100] [9221] [DEBUG] GET /static/styles.css
+[2023-09-17 18:36:28 +0100] [9129] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-17 18:36:28 +0100] [9144] [DEBUG] GET /static/img/discord.svg
+[2023-09-17 18:36:28 +0100] [9227] [DEBUG] GET /static/img/meta.svg
+[2023-09-17 18:36:28 +0100] [9144] [DEBUG] GET /static/img/logo.png
+[2023-09-17 18:36:28 +0100] [9129] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-17 18:36:28 +0100] [9144] [DEBUG] GET /static/myscript.js
+[2023-09-17 18:36:28 +0100] [9129] [DEBUG] GET /static/img/cap2.png
+[2023-09-17 18:36:28 +0100] [9129] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-17 18:36:28 +0100] [9144] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-17 18:36:28 +0100] [9144] [DEBUG] GET /static/img/instagram.svg
+[2023-09-17 18:36:28 +0100] [9144] [DEBUG] GET /static/img/up.svg
+[2023-09-17 18:36:28 +0100] [9221] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-17 18:36:32 +0100] [9227] [DEBUG] GET /api/docs/
+[2023-09-17 18:37:08 +0100] [9144] [DEBUG] GET /
+[2023-09-17 18:37:08 +0100] [9221] [DEBUG] GET /static/styles.css
+[2023-09-17 18:37:08 +0100] [9144] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-17 18:37:08 +0100] [9221] [DEBUG] GET /static/img/logo.png
+[2023-09-17 18:37:08 +0100] [9227] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-17 18:37:08 +0100] [9129] [DEBUG] GET /static/img/meta.svg
+[2023-09-17 18:37:08 +0100] [9221] [DEBUG] GET /static/myscript.js
+[2023-09-17 18:37:08 +0100] [9227] [DEBUG] GET /static/img/cap2.png
+[2023-09-17 18:37:08 +0100] [9144] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-17 18:37:08 +0100] [9129] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-17 18:37:08 +0100] [9221] [DEBUG] GET /static/img/up.svg
+[2023-09-17 18:37:08 +0100] [9227] [DEBUG] GET /static/img/discord.svg
+[2023-09-17 18:37:08 +0100] [9129] [DEBUG] GET /static/img/instagram.svg
+[2023-09-17 18:37:08 +0100] [9144] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-17 18:37:29 +0100] [9221] [DEBUG] POST /login
+[2023-09-17 18:37:29 +0100] [9144] [DEBUG] GET /redirect_url
+[2023-09-17 18:37:38 +0100] [9221] [DEBUG] GET /
+[2023-09-17 18:37:38 +0100] [9144] [DEBUG] GET /dashboard
+[2023-09-17 18:39:18 +0100] [9129] [DEBUG] GET /dashboard
+[2023-09-17 18:39:21 +0100] [9129] [DEBUG] GET /logout
+[2023-09-17 18:39:21 +0100] [9129] [DEBUG] GET /
+[2023-09-17 18:39:21 +0100] [9129] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-17 18:39:21 +0100] [9144] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-17 18:39:21 +0100] [9227] [DEBUG] GET /static/styles.css
+[2023-09-17 18:39:21 +0100] [9221] [DEBUG] GET /static/img/meta.svg
+[2023-09-17 18:39:21 +0100] [9129] [DEBUG] GET /static/img/logo.png
+[2023-09-17 18:39:21 +0100] [9129] [DEBUG] GET /static/img/cap2.png
+[2023-09-17 18:39:21 +0100] [9144] [DEBUG] GET /static/myscript.js
+[2023-09-17 18:39:21 +0100] [9129] [DEBUG] GET /static/img/discord.svg
+[2023-09-17 18:39:21 +0100] [9144] [DEBUG] GET /static/img/up.svg
+[2023-09-17 18:39:21 +0100] [9129] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-17 18:39:21 +0100] [9144] [DEBUG] GET /static/img/instagram.svg
+[2023-09-17 18:39:21 +0100] [9221] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-17 18:39:21 +0100] [9144] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-17 18:39:28 +0100] [9221] [DEBUG] POST /login
+[2023-09-17 18:39:28 +0100] [9227] [DEBUG] GET /
+[2023-09-17 18:39:28 +0100] [9227] [DEBUG] GET /dashboard
+[2023-09-17 18:40:06 +0100] [9221] [DEBUG] GET /logout
+[2023-09-17 18:40:06 +0100] [9144] [DEBUG] GET /
+[2023-09-17 18:40:06 +0100] [9144] [DEBUG] GET /static/styles.css
+[2023-09-17 18:40:06 +0100] [9227] [DEBUG] GET /static/img/cap2.png
+[2023-09-17 18:40:06 +0100] [9129] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-17 18:40:06 +0100] [9221] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-17 18:40:06 +0100] [9144] [DEBUG] GET /static/img/logo.png
+[2023-09-17 18:40:06 +0100] [9227] [DEBUG] GET /static/img/meta.svg
+[2023-09-17 18:40:06 +0100] [9221] [DEBUG] GET /static/myscript.js
+[2023-09-17 18:40:06 +0100] [9144] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-17 18:40:06 +0100] [9227] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-17 18:40:06 +0100] [9129] [DEBUG] GET /static/img/instagram.svg
+[2023-09-17 18:40:06 +0100] [9144] [DEBUG] GET /static/img/up.svg
+[2023-09-17 18:40:06 +0100] [9221] [DEBUG] GET /static/img/discord.svg
+[2023-09-17 18:40:06 +0100] [9227] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-17 18:40:14 +0100] [9144] [DEBUG] POST /login
+[2023-09-17 18:40:14 +0100] [9227] [DEBUG] GET /
+[2023-09-17 18:40:14 +0100] [9144] [DEBUG] GET /dashboard
+[2023-09-17 18:40:18 +0100] [9144] [DEBUG] GET /dashboard
+[2023-09-17 18:41:45 +0100] [9144] [DEBUG] GET /logout
+[2023-09-17 18:41:45 +0100] [9144] [DEBUG] GET /
+[2023-09-17 18:41:45 +0100] [9144] [DEBUG] GET /static/styles.css
+[2023-09-17 18:41:45 +0100] [9221] [DEBUG] GET /static/img/meta.svg
+[2023-09-17 18:41:45 +0100] [9129] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-17 18:41:45 +0100] [9227] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-17 18:41:45 +0100] [9144] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-17 18:41:45 +0100] [9129] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-17 18:41:45 +0100] [9221] [DEBUG] GET /static/myscript.js
+[2023-09-17 18:41:45 +0100] [9227] [DEBUG] GET /static/img/discord.svg
+[2023-09-17 18:41:45 +0100] [9129] [DEBUG] GET /static/img/up.svg
+[2023-09-17 18:41:45 +0100] [9144] [DEBUG] GET /static/img/logo.png
+[2023-09-17 18:41:45 +0100] [9221] [DEBUG] GET /static/img/cap2.png
+[2023-09-17 18:41:45 +0100] [9144] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-17 18:41:45 +0100] [9227] [DEBUG] GET /static/img/instagram.svg
+[2023-09-17 18:41:52 +0100] [9129] [DEBUG] POST /login
+[2023-09-17 18:41:52 +0100] [9227] [DEBUG] GET /
+[2023-09-17 18:41:52 +0100] [9129] [DEBUG] GET /dashboard
+[2023-09-17 18:42:17 +0100] [9227] [DEBUG] GET /logout
+[2023-09-17 18:42:17 +0100] [9221] [DEBUG] GET /
+[2023-09-17 18:42:17 +0100] [9221] [DEBUG] GET /static/styles.css
+[2023-09-17 18:42:17 +0100] [9129] [DEBUG] GET /static/img/meta.svg
+[2023-09-17 18:42:17 +0100] [9144] [DEBUG] GET /static/img/logo.png
+[2023-09-17 18:42:17 +0100] [9227] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-17 18:42:17 +0100] [9129] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-17 18:42:17 +0100] [9221] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-17 18:42:17 +0100] [9144] [DEBUG] GET /static/myscript.js
+[2023-09-17 18:42:17 +0100] [9129] [DEBUG] GET /static/img/cap2.png
+[2023-09-17 18:42:17 +0100] [9227] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-17 18:42:17 +0100] [9221] [DEBUG] GET /static/img/up.svg
+[2023-09-17 18:42:17 +0100] [9144] [DEBUG] GET /static/img/discord.svg
+[2023-09-17 18:42:17 +0100] [9129] [DEBUG] GET /static/img/instagram.svg
+[2023-09-17 18:42:17 +0100] [9227] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-17 18:42:41 +0100] [9101] [INFO] Handling signal: int
+[2023-09-17 18:42:41 +0100] [9144] [INFO] Worker exiting (pid: 9144)
+[2023-09-17 18:42:41 +0100] [9129] [INFO] Worker exiting (pid: 9129)
+[2023-09-17 18:42:41 +0100] [9221] [INFO] Worker exiting (pid: 9221)
+[2023-09-17 18:42:41 +0100] [9227] [INFO] Worker exiting (pid: 9227)
+[2023-09-17 18:42:41 +0100] [9101] [INFO] Shutting down: Master
+[2023-09-17 18:42:47 +0100] [9365] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:5001']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio/v2
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: app:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x106b84a60>
+  on_reload: <function OnReload.on_reload at 0x106b84b80>
+  when_ready: <function WhenReady.when_ready at 0x106b84ca0>
+  pre_fork: <function Prefork.pre_fork at 0x106b84dc0>
+  post_fork: <function Postfork.post_fork at 0x106b84ee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x106b9f040>
+  worker_int: <function WorkerInt.worker_int at 0x106b9f160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x106b9f280>
+  pre_exec: <function PreExec.pre_exec at 0x106b9f3a0>
+  pre_request: <function PreRequest.pre_request at 0x106b9f4c0>
+  post_request: <function PostRequest.post_request at 0x106b9f550>
+  child_exit: <function ChildExit.child_exit at 0x106b9f670>
+  worker_exit: <function WorkerExit.worker_exit at 0x106b9f790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x106b9f8b0>
+  on_exit: <function OnExit.on_exit at 0x106b9f9d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x106b9faf0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-17 18:42:47 +0100] [9365] [INFO] Starting gunicorn 21.2.0
+[2023-09-17 18:42:47 +0100] [9365] [DEBUG] Arbiter booted
+[2023-09-17 18:42:47 +0100] [9365] [INFO] Listening at: http://0.0.0.0:5001 (9365)
+[2023-09-17 18:42:47 +0100] [9365] [INFO] Using worker: sync
+[2023-09-17 18:42:47 +0100] [9366] [INFO] Booting worker with pid: 9366
+[2023-09-17 18:42:47 +0100] [9367] [INFO] Booting worker with pid: 9367
+[2023-09-17 18:42:48 +0100] [9368] [INFO] Booting worker with pid: 9368
+[2023-09-17 18:42:48 +0100] [9369] [INFO] Booting worker with pid: 9369
+[2023-09-17 18:42:48 +0100] [9365] [DEBUG] 4 workers
+[2023-09-17 18:42:55 +0100] [9369] [DEBUG] GET /
+[2023-09-17 18:42:55 +0100] [9368] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-17 18:42:55 +0100] [9366] [DEBUG] GET /static/img/meta.svg
+[2023-09-17 18:42:55 +0100] [9367] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-17 18:42:55 +0100] [9369] [DEBUG] GET /static/img/cap2.png
+[2023-09-17 18:42:55 +0100] [9369] [DEBUG] GET /static/img/logo.png
+[2023-09-17 18:42:55 +0100] [9366] [DEBUG] GET /static/styles.css
+[2023-09-17 18:42:55 +0100] [9368] [DEBUG] GET /static/myscript.js
+[2023-09-17 18:42:55 +0100] [9367] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-17 18:42:55 +0100] [9369] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-17 18:42:55 +0100] [9366] [DEBUG] GET /static/img/discord.svg
+[2023-09-17 18:42:55 +0100] [9368] [DEBUG] GET /static/img/up.svg
+[2023-09-17 18:42:55 +0100] [9367] [DEBUG] GET /static/img/instagram.svg
+[2023-09-17 18:42:55 +0100] [9369] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-17 18:43:03 +0100] [9369] [DEBUG] POST /login
+[2023-09-17 18:43:03 +0100] [9369] [DEBUG] GET /
+[2023-09-17 18:43:03 +0100] [9366] [DEBUG] GET /dashboard
+[2023-09-17 18:51:26 +0100] [9366] [DEBUG] GET /logout
+[2023-09-17 18:51:26 +0100] [9366] [DEBUG] GET /
+[2023-09-17 18:51:26 +0100] [9366] [DEBUG] GET /static/styles.css
+[2023-09-17 18:51:26 +0100] [9367] [DEBUG] GET /static/img/meta.svg
+[2023-09-17 18:51:26 +0100] [9366] [DEBUG] GET /static/img/logo.png
+[2023-09-17 18:51:26 +0100] [9369] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-17 18:51:26 +0100] [9366] [DEBUG] GET /static/img/cap2.png
+[2023-09-17 18:51:26 +0100] [9368] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-17 18:51:26 +0100] [9366] [DEBUG] GET /static/myscript.js
+[2023-09-17 18:51:26 +0100] [9366] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-17 18:51:26 +0100] [9367] [DEBUG] GET /static/img/discord.svg
+[2023-09-17 18:51:26 +0100] [9366] [DEBUG] GET /static/img/up.svg
+[2023-09-17 18:51:26 +0100] [9369] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-17 18:51:26 +0100] [9367] [DEBUG] GET /static/img/instagram.svg
+[2023-09-17 18:51:26 +0100] [9366] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-17 18:51:33 +0100] [9368] [DEBUG] POST /login
+[2023-09-17 18:51:33 +0100] [9368] [DEBUG] GET /
+[2023-09-17 18:51:33 +0100] [9369] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-17 18:51:33 +0100] [9367] [DEBUG] GET /static/styles.css
+[2023-09-17 18:51:33 +0100] [9366] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-17 18:51:33 +0100] [9368] [DEBUG] GET /static/img/cap2.png
+[2023-09-17 18:51:33 +0100] [9367] [DEBUG] GET /static/img/logo.png
+[2023-09-17 18:51:33 +0100] [9369] [DEBUG] GET /static/img/meta.svg
+[2023-09-17 18:51:33 +0100] [9367] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-17 18:51:33 +0100] [9368] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-17 18:51:33 +0100] [9366] [DEBUG] GET /static/myscript.js
+[2023-09-17 18:51:33 +0100] [9369] [DEBUG] GET /static/img/up.svg
+[2023-09-17 18:51:33 +0100] [9367] [DEBUG] GET /static/img/instagram.svg
+[2023-09-17 18:51:33 +0100] [9368] [DEBUG] GET /static/img/discord.svg
+[2023-09-17 18:51:33 +0100] [9366] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-17 18:51:42 +0100] [9367] [DEBUG] GET /dashboard
+[2023-09-17 18:51:42 +0100] [9366] [DEBUG] GET /login
+[2023-09-17 18:51:42 +0100] [9366] [DEBUG] GET /
+[2023-09-17 18:51:42 +0100] [9369] [DEBUG] GET /static/styles.css
+[2023-09-17 18:51:42 +0100] [9367] [DEBUG] GET /static/img/cap2.png
+[2023-09-17 18:51:42 +0100] [9366] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-17 18:51:42 +0100] [9368] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-17 18:51:42 +0100] [9369] [DEBUG] GET /static/img/meta.svg
+[2023-09-17 18:51:42 +0100] [9367] [DEBUG] GET /static/img/logo.png
+[2023-09-17 18:51:42 +0100] [9368] [DEBUG] GET /static/myscript.js
+[2023-09-17 18:51:42 +0100] [9366] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-17 18:51:42 +0100] [9368] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-17 18:51:42 +0100] [9367] [DEBUG] GET /static/img/instagram.svg
+[2023-09-17 18:51:42 +0100] [9369] [DEBUG] GET /static/img/discord.svg
+[2023-09-17 18:51:42 +0100] [9366] [DEBUG] GET /static/img/up.svg
+[2023-09-17 18:51:42 +0100] [9368] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-17 18:51:50 +0100] [9367] [DEBUG] GET /api/users
+[2023-09-17 18:51:50 +0100] [9369] [DEBUG] GET /login
+[2023-09-17 18:51:50 +0100] [9367] [DEBUG] GET /
+[2023-09-17 18:51:51 +0100] [9367] [DEBUG] GET /static/styles.css
+[2023-09-17 18:51:51 +0100] [9368] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-17 18:51:51 +0100] [9369] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-17 18:51:51 +0100] [9366] [DEBUG] GET /static/img/cap2.png
+[2023-09-17 18:51:51 +0100] [9367] [DEBUG] GET /static/img/logo.png
+[2023-09-17 18:51:51 +0100] [9368] [DEBUG] GET /static/img/meta.svg
+[2023-09-17 18:51:51 +0100] [9369] [DEBUG] GET /static/myscript.js
+[2023-09-17 18:51:51 +0100] [9366] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-17 18:51:51 +0100] [9367] [DEBUG] GET /static/img/instagram.svg
+[2023-09-17 18:51:51 +0100] [9368] [DEBUG] GET /static/img/discord.svg
+[2023-09-17 18:51:51 +0100] [9369] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-17 18:51:51 +0100] [9366] [DEBUG] GET /static/img/up.svg
+[2023-09-17 18:51:51 +0100] [9367] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-17 18:52:13 +0100] [9367] [DEBUG] GET /bash
+[2023-09-17 18:52:22 +0100] [9365] [INFO] Handling signal: int
+[2023-09-17 18:52:23 +0100] [9366] [INFO] Worker exiting (pid: 9366)
+[2023-09-17 18:52:23 +0100] [9369] [INFO] Worker exiting (pid: 9369)
+[2023-09-17 18:52:23 +0100] [9368] [INFO] Worker exiting (pid: 9368)
+[2023-09-17 18:52:23 +0100] [9367] [INFO] Worker exiting (pid: 9367)
+[2023-09-17 18:52:23 +0100] [9365] [INFO] Shutting down: Master
+[2023-09-17 18:53:47 +0100] [9714] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:5001']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio/v2
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: app:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x109dc7a60>
+  on_reload: <function OnReload.on_reload at 0x109dc7b80>
+  when_ready: <function WhenReady.when_ready at 0x109dc7ca0>
+  pre_fork: <function Prefork.pre_fork at 0x109dc7dc0>
+  post_fork: <function Postfork.post_fork at 0x109dc7ee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x109de1040>
+  worker_int: <function WorkerInt.worker_int at 0x109de1160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x109de1280>
+  pre_exec: <function PreExec.pre_exec at 0x109de13a0>
+  pre_request: <function PreRequest.pre_request at 0x109de14c0>
+  post_request: <function PostRequest.post_request at 0x109de1550>
+  child_exit: <function ChildExit.child_exit at 0x109de1670>
+  worker_exit: <function WorkerExit.worker_exit at 0x109de1790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x109de18b0>
+  on_exit: <function OnExit.on_exit at 0x109de19d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x109de1af0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-17 18:53:47 +0100] [9714] [INFO] Starting gunicorn 21.2.0
+[2023-09-17 18:53:47 +0100] [9714] [DEBUG] Arbiter booted
+[2023-09-17 18:53:47 +0100] [9714] [INFO] Listening at: http://0.0.0.0:5001 (9714)
+[2023-09-17 18:53:47 +0100] [9714] [INFO] Using worker: sync
+[2023-09-17 18:53:47 +0100] [9715] [INFO] Booting worker with pid: 9715
+[2023-09-17 18:53:47 +0100] [9716] [INFO] Booting worker with pid: 9716
+[2023-09-17 18:53:47 +0100] [9717] [INFO] Booting worker with pid: 9717
+[2023-09-17 18:53:47 +0100] [9718] [INFO] Booting worker with pid: 9718
+[2023-09-17 18:53:47 +0100] [9714] [DEBUG] 4 workers
+[2023-09-17 18:53:50 +0100] [9718] [DEBUG] GET /bash
+[2023-09-17 18:53:56 +0100] [9714] [INFO] Handling signal: int
+[2023-09-17 18:53:56 +0100] [9718] [INFO] Worker exiting (pid: 9718)
+[2023-09-17 18:53:56 +0100] [9715] [INFO] Worker exiting (pid: 9715)
+[2023-09-17 18:53:56 +0100] [9716] [INFO] Worker exiting (pid: 9716)
+[2023-09-17 18:53:56 +0100] [9717] [INFO] Worker exiting (pid: 9717)
+[2023-09-17 18:53:56 +0100] [9714] [INFO] Shutting down: Master
+[2023-09-17 18:54:04 +0100] [9746] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:5001']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio/v2
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: run:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10bbf3a60>
+  on_reload: <function OnReload.on_reload at 0x10bbf3b80>
+  when_ready: <function WhenReady.when_ready at 0x10bbf3ca0>
+  pre_fork: <function Prefork.pre_fork at 0x10bbf3dc0>
+  post_fork: <function Postfork.post_fork at 0x10bbf3ee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10bc0d040>
+  worker_int: <function WorkerInt.worker_int at 0x10bc0d160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10bc0d280>
+  pre_exec: <function PreExec.pre_exec at 0x10bc0d3a0>
+  pre_request: <function PreRequest.pre_request at 0x10bc0d4c0>
+  post_request: <function PostRequest.post_request at 0x10bc0d550>
+  child_exit: <function ChildExit.child_exit at 0x10bc0d670>
+  worker_exit: <function WorkerExit.worker_exit at 0x10bc0d790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10bc0d8b0>
+  on_exit: <function OnExit.on_exit at 0x10bc0d9d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x10bc0daf0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-17 18:54:04 +0100] [9746] [INFO] Starting gunicorn 21.2.0
+[2023-09-17 18:54:04 +0100] [9746] [DEBUG] Arbiter booted
+[2023-09-17 18:54:04 +0100] [9746] [INFO] Listening at: http://0.0.0.0:5001 (9746)
+[2023-09-17 18:54:04 +0100] [9746] [INFO] Using worker: sync
+[2023-09-17 18:54:04 +0100] [9747] [INFO] Booting worker with pid: 9747
+[2023-09-17 18:54:04 +0100] [9748] [INFO] Booting worker with pid: 9748
+[2023-09-17 18:54:05 +0100] [9749] [INFO] Booting worker with pid: 9749
+[2023-09-17 18:54:05 +0100] [9750] [INFO] Booting worker with pid: 9750
+[2023-09-17 18:54:05 +0100] [9746] [DEBUG] 4 workers
+[2023-09-17 18:54:08 +0100] [9749] [DEBUG] GET /bash
+[2023-09-17 18:54:18 +0100] [9750] [DEBUG] GET /api/docs/
+[2023-09-17 18:54:18 +0100] [9750] [DEBUG] GET /api/docs/index.css
+[2023-09-17 18:54:18 +0100] [9747] [DEBUG] GET /api/docs/swagger-ui.css
+[2023-09-17 18:54:18 +0100] [9748] [DEBUG] GET /api/docs/swagger-ui-standalone-preset.js
+[2023-09-17 18:54:18 +0100] [9750] [DEBUG] GET /api/docs/swagger-ui-bundle.js
+[2023-09-17 18:54:19 +0100] [9750] [DEBUG] GET /static/swagger.json
+[2023-09-17 18:54:28 +0100] [9748] [DEBUG] GET /api/docs/
+[2023-09-17 18:54:28 +0100] [9747] [DEBUG] GET /api/docs/swagger-ui.css
+[2023-09-17 18:54:28 +0100] [9748] [DEBUG] GET /api/docs/swagger-ui-standalone-preset.js
+[2023-09-17 18:54:28 +0100] [9750] [DEBUG] GET /api/docs/swagger-ui-bundle.js
+[2023-09-17 18:54:28 +0100] [9749] [DEBUG] GET /api/docs/index.css
+[2023-09-17 18:54:29 +0100] [9749] [DEBUG] GET /static/swagger.json
+[2023-09-17 18:54:29 +0100] [9750] [DEBUG] GET /api/docs/favicon-16x16.png
+[2023-09-17 18:54:39 +0100] [9747] [DEBUG] GET /api/users
+[2023-09-17 18:54:39 +0100] [9750] [DEBUG] GET /login
+[2023-09-17 18:54:39 +0100] [9749] [DEBUG] GET /
+[2023-09-17 18:54:53 +0100] [9750] [DEBUG] GET /
+[2023-09-17 18:54:54 +0100] [9750] [DEBUG] GET /static/styles.css
+[2023-09-17 18:54:54 +0100] [9750] [DEBUG] GET /static/img/logo.png
+[2023-09-17 18:54:54 +0100] [9747] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-17 18:54:54 +0100] [9748] [DEBUG] GET /static/img/cap2.png
+[2023-09-17 18:54:54 +0100] [9749] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-17 18:54:54 +0100] [9750] [DEBUG] GET /static/img/meta.svg
+[2023-09-17 18:54:54 +0100] [9750] [DEBUG] GET /static/myscript.js
+[2023-09-17 18:54:54 +0100] [9747] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-17 18:54:54 +0100] [9750] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-17 18:54:54 +0100] [9749] [DEBUG] GET /static/img/discord.svg
+[2023-09-17 18:54:54 +0100] [9747] [DEBUG] GET /static/img/up.svg
+[2023-09-17 18:54:54 +0100] [9748] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-17 18:54:54 +0100] [9750] [DEBUG] GET /static/img/instagram.svg
+[2023-09-17 18:55:02 +0100] [9747] [DEBUG] POST /login
+[2023-09-17 18:55:03 +0100] [9747] [DEBUG] GET /
+[2023-09-17 18:55:03 +0100] [9747] [DEBUG] GET /dashboard
+[2023-09-17 18:55:12 +0100] [9747] [DEBUG] GET /api/docs/
+[2023-09-17 18:55:13 +0100] [9747] [DEBUG] GET /api/docs/index.css
+[2023-09-17 18:55:13 +0100] [9750] [DEBUG] GET /api/docs/swagger-ui-standalone-preset.js
+[2023-09-17 18:55:13 +0100] [9748] [DEBUG] GET /api/docs/swagger-ui.css
+[2023-09-17 18:55:13 +0100] [9747] [DEBUG] GET /api/docs/swagger-ui-bundle.js
+[2023-09-17 18:55:13 +0100] [9748] [DEBUG] GET /static/swagger.json
+[2023-09-17 18:55:17 +0100] [9750] [DEBUG] GET /api/users
+[2023-09-17 18:55:33 +0100] [9747] [INFO] Worker exiting (pid: 9747)
+[2023-09-17 18:55:33 +0100] [9750] [INFO] Worker exiting (pid: 9750)
+[2023-09-17 18:55:33 +0100] [9746] [INFO] Handling signal: int
+[2023-09-17 18:55:34 +0100] [9746] [INFO] Shutting down: Master
+[2023-09-17 21:21:22 +0100] [11551] [DEBUG] Current configuration:
+  config: gunicorn_config.py
+  wsgi_app: None
+  bind: ['127.0.0.1:9000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio/v2
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: run:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10fc2ba60>
+  on_reload: <function OnReload.on_reload at 0x10fc2bb80>
+  when_ready: <function WhenReady.when_ready at 0x10fc2bca0>
+  pre_fork: <function Prefork.pre_fork at 0x10fc2bdc0>
+  post_fork: <function Postfork.post_fork at 0x10fc2bee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10fc45040>
+  worker_int: <function WorkerInt.worker_int at 0x10fc45160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10fc45280>
+  pre_exec: <function PreExec.pre_exec at 0x10fc453a0>
+  pre_request: <function PreRequest.pre_request at 0x10fc454c0>
+  post_request: <function PostRequest.post_request at 0x10fc45550>
+  child_exit: <function ChildExit.child_exit at 0x10fc45670>
+  worker_exit: <function WorkerExit.worker_exit at 0x10fc45790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10fc458b0>
+  on_exit: <function OnExit.on_exit at 0x10fc459d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x10fc45af0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-17 21:21:22 +0100] [11551] [INFO] Starting gunicorn 21.2.0
+[2023-09-17 21:21:22 +0100] [11551] [DEBUG] Arbiter booted
+[2023-09-17 21:21:22 +0100] [11551] [INFO] Listening at: http://127.0.0.1:9000 (11551)
+[2023-09-17 21:21:22 +0100] [11551] [INFO] Using worker: sync
+[2023-09-17 21:21:22 +0100] [11552] [INFO] Booting worker with pid: 11552
+[2023-09-17 21:21:22 +0100] [11553] [INFO] Booting worker with pid: 11553
+[2023-09-17 21:21:22 +0100] [11551] [DEBUG] 2 workers
+[2023-09-17 21:22:51 +0100] [11551] [INFO] Handling signal: int
+[2023-09-17 21:22:51 +0100] [11552] [INFO] Worker exiting (pid: 11552)
+[2023-09-17 21:22:51 +0100] [11553] [INFO] Worker exiting (pid: 11553)
+[2023-09-17 21:22:52 +0100] [11551] [INFO] Shutting down: Master
+[2023-09-17 21:23:11 +0100] [11629] [DEBUG] Current configuration:
+  config: gunicorn_config.py
+  wsgi_app: None
+  bind: ['127.0.0.1:9000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio/v2
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: run:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10c124a60>
+  on_reload: <function OnReload.on_reload at 0x10c124b80>
+  when_ready: <function WhenReady.when_ready at 0x10c124ca0>
+  pre_fork: <function Prefork.pre_fork at 0x10c124dc0>
+  post_fork: <function Postfork.post_fork at 0x10c124ee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10c13d040>
+  worker_int: <function WorkerInt.worker_int at 0x10c13d160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10c13d280>
+  pre_exec: <function PreExec.pre_exec at 0x10c13d3a0>
+  pre_request: <function PreRequest.pre_request at 0x10c13d4c0>
+  post_request: <function PostRequest.post_request at 0x10c13d550>
+  child_exit: <function ChildExit.child_exit at 0x10c13d670>
+  worker_exit: <function WorkerExit.worker_exit at 0x10c13d790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10c13d8b0>
+  on_exit: <function OnExit.on_exit at 0x10c13d9d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x10c13daf0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-17 21:23:11 +0100] [11629] [INFO] Starting gunicorn 21.2.0
+[2023-09-17 21:23:11 +0100] [11629] [DEBUG] Arbiter booted
+[2023-09-17 21:23:11 +0100] [11629] [INFO] Listening at: http://127.0.0.1:9000 (11629)
+[2023-09-17 21:23:11 +0100] [11629] [INFO] Using worker: sync
+[2023-09-17 21:23:11 +0100] [11630] [INFO] Booting worker with pid: 11630
+[2023-09-17 21:23:11 +0100] [11631] [INFO] Booting worker with pid: 11631
+[2023-09-17 21:23:11 +0100] [11629] [DEBUG] 2 workers
+[2023-09-17 21:23:17 +0100] [11631] [DEBUG] GET /
+[2023-09-17 21:23:17 +0100] [11631] [DEBUG] GET /static/styles.css
+[2023-09-17 21:23:17 +0100] [11630] [DEBUG] GET /static/img/cap2.png
+[2023-09-17 21:23:17 +0100] [11630] [DEBUG] GET /static/myscript.js
+[2023-09-17 21:23:17 +0100] [11631] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-17 21:23:17 +0100] [11630] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-17 21:23:17 +0100] [11631] [DEBUG] GET /static/img/logo.png
+[2023-09-17 21:23:17 +0100] [11630] [DEBUG] GET /static/img/meta.svg
+[2023-09-17 21:23:17 +0100] [11630] [DEBUG] GET /static/img/instagram.svg
+[2023-09-17 21:23:17 +0100] [11631] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-17 21:23:17 +0100] [11631] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-17 21:23:17 +0100] [11630] [DEBUG] GET /static/img/discord.svg
+[2023-09-17 21:23:17 +0100] [11631] [DEBUG] GET /static/img/up.svg
+[2023-09-17 21:23:19 +0100] [11630] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-17 21:23:19 +0100] [11630] [DEBUG] GET /apple-touch-icon-precomposed.png
+[2023-09-17 21:23:19 +0100] [11630] [DEBUG] GET /apple-touch-icon.png
+[2023-09-17 21:23:20 +0100] [11630] [DEBUG] GET /favicon.ico
+[2023-09-17 21:23:29 +0100] [11630] [DEBUG] GET /api/doc
+[2023-09-17 21:23:38 +0100] [11630] [DEBUG] GET /api/docs
+[2023-09-17 21:23:39 +0100] [11630] [DEBUG] GET /api/docs/
+[2023-09-17 21:23:39 +0100] [11630] [DEBUG] GET /api/docs/swagger-ui.css
+[2023-09-17 21:23:39 +0100] [11631] [DEBUG] GET /api/docs/index.css
+[2023-09-17 21:23:39 +0100] [11630] [DEBUG] GET /api/docs/swagger-ui-standalone-preset.js
+[2023-09-17 21:23:39 +0100] [11631] [DEBUG] GET /api/docs/swagger-ui-bundle.js
+[2023-09-17 21:23:39 +0100] [11630] [DEBUG] GET /static/swagger.json
+[2023-09-17 21:23:39 +0100] [11631] [DEBUG] GET /api/docs/favicon-32x32.png
+[2023-09-17 21:23:39 +0100] [11630] [DEBUG] GET /api/docs/favicon-16x16.png
+[2023-09-17 21:24:12 +0100] [11629] [INFO] Handling signal: int
+[2023-09-17 21:24:13 +0100] [11630] [INFO] Worker exiting (pid: 11630)
+[2023-09-17 21:24:13 +0100] [11631] [INFO] Worker exiting (pid: 11631)
+[2023-09-17 21:24:13 +0100] [11629] [INFO] Shutting down: Master
+[2023-09-17 23:34:10 +0100] [13618] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio/v2
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10e79aa60>
+  on_reload: <function OnReload.on_reload at 0x10e79ab80>
+  when_ready: <function WhenReady.when_ready at 0x10e79aca0>
+  pre_fork: <function Prefork.pre_fork at 0x10e79adc0>
+  post_fork: <function Postfork.post_fork at 0x10e79aee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10e7b3040>
+  worker_int: <function WorkerInt.worker_int at 0x10e7b3160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10e7b3280>
+  pre_exec: <function PreExec.pre_exec at 0x10e7b33a0>
+  pre_request: <function PreRequest.pre_request at 0x10e7b34c0>
+  post_request: <function PostRequest.post_request at 0x10e7b3550>
+  child_exit: <function ChildExit.child_exit at 0x10e7b3670>
+  worker_exit: <function WorkerExit.worker_exit at 0x10e7b3790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10e7b38b0>
+  on_exit: <function OnExit.on_exit at 0x10e7b39d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x10e7b3af0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-17 23:34:10 +0100] [13618] [INFO] Starting gunicorn 21.2.0
+[2023-09-17 23:34:10 +0100] [13618] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2023-09-17 23:34:10 +0100] [13618] [DEBUG] connection to ('0.0.0.0', 5000) failed: [Errno 48] Address already in use
+[2023-09-17 23:34:10 +0100] [13618] [ERROR] Retrying in 1 second.
+[2023-09-17 23:34:11 +0100] [13618] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2023-09-17 23:34:11 +0100] [13618] [DEBUG] connection to ('0.0.0.0', 5000) failed: [Errno 48] Address already in use
+[2023-09-17 23:34:11 +0100] [13618] [ERROR] Retrying in 1 second.
+[2023-09-17 23:34:12 +0100] [13618] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2023-09-17 23:34:12 +0100] [13618] [DEBUG] connection to ('0.0.0.0', 5000) failed: [Errno 48] Address already in use
+[2023-09-17 23:34:12 +0100] [13618] [ERROR] Retrying in 1 second.
+[2023-09-17 23:34:13 +0100] [13618] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2023-09-17 23:34:13 +0100] [13618] [DEBUG] connection to ('0.0.0.0', 5000) failed: [Errno 48] Address already in use
+[2023-09-17 23:34:13 +0100] [13618] [ERROR] Retrying in 1 second.
+[2023-09-17 23:34:14 +0100] [13618] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2023-09-17 23:34:14 +0100] [13618] [DEBUG] connection to ('0.0.0.0', 5000) failed: [Errno 48] Address already in use
+[2023-09-17 23:34:14 +0100] [13618] [ERROR] Retrying in 1 second.
+[2023-09-17 23:34:15 +0100] [13618] [ERROR] Can't connect to ('0.0.0.0', 5000)
+[2023-09-17 23:34:44 +0100] [13673] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:5001']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio/v2
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x101c8ca60>
+  on_reload: <function OnReload.on_reload at 0x101c8cb80>
+  when_ready: <function WhenReady.when_ready at 0x101c8cca0>
+  pre_fork: <function Prefork.pre_fork at 0x101c8cdc0>
+  post_fork: <function Postfork.post_fork at 0x101c8cee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x101ca5040>
+  worker_int: <function WorkerInt.worker_int at 0x101ca5160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x101ca5280>
+  pre_exec: <function PreExec.pre_exec at 0x101ca53a0>
+  pre_request: <function PreRequest.pre_request at 0x101ca54c0>
+  post_request: <function PostRequest.post_request at 0x101ca5550>
+  child_exit: <function ChildExit.child_exit at 0x101ca5670>
+  worker_exit: <function WorkerExit.worker_exit at 0x101ca5790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x101ca58b0>
+  on_exit: <function OnExit.on_exit at 0x101ca59d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x101ca5af0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-17 23:34:44 +0100] [13673] [INFO] Starting gunicorn 21.2.0
+[2023-09-17 23:34:44 +0100] [13673] [DEBUG] Arbiter booted
+[2023-09-17 23:34:44 +0100] [13673] [INFO] Listening at: http://0.0.0.0:5001 (13673)
+[2023-09-17 23:34:44 +0100] [13673] [INFO] Using worker: sync
+[2023-09-17 23:34:44 +0100] [13674] [INFO] Booting worker with pid: 13674
+[2023-09-17 23:34:44 +0100] [13674] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/captncarty/Desktop/myproject/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 984, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wsgi'
+[2023-09-17 23:34:44 +0100] [13674] [INFO] Worker exiting (pid: 13674)
+[2023-09-17 23:34:44 +0100] [13673] [ERROR] Worker (pid:13674) exited with code 3
+[2023-09-17 23:34:44 +0100] [13673] [ERROR] Shutting down: Master
+[2023-09-17 23:34:44 +0100] [13673] [ERROR] Reason: Worker failed to boot.
+[2023-09-17 23:35:36 +0100] [13718] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:5001']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio/v2
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x105c23a60>
+  on_reload: <function OnReload.on_reload at 0x105c23b80>
+  when_ready: <function WhenReady.when_ready at 0x105c23ca0>
+  pre_fork: <function Prefork.pre_fork at 0x105c23dc0>
+  post_fork: <function Postfork.post_fork at 0x105c23ee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x105c3d040>
+  worker_int: <function WorkerInt.worker_int at 0x105c3d160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x105c3d280>
+  pre_exec: <function PreExec.pre_exec at 0x105c3d3a0>
+  pre_request: <function PreRequest.pre_request at 0x105c3d4c0>
+  post_request: <function PostRequest.post_request at 0x105c3d550>
+  child_exit: <function ChildExit.child_exit at 0x105c3d670>
+  worker_exit: <function WorkerExit.worker_exit at 0x105c3d790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x105c3d8b0>
+  on_exit: <function OnExit.on_exit at 0x105c3d9d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x105c3daf0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-17 23:35:36 +0100] [13718] [INFO] Starting gunicorn 21.2.0
+[2023-09-17 23:35:36 +0100] [13718] [DEBUG] Arbiter booted
+[2023-09-17 23:35:36 +0100] [13718] [INFO] Listening at: http://0.0.0.0:5001 (13718)
+[2023-09-17 23:35:36 +0100] [13718] [INFO] Using worker: sync
+[2023-09-17 23:35:37 +0100] [13719] [INFO] Booting worker with pid: 13719
+[2023-09-17 23:35:37 +0100] [13720] [INFO] Booting worker with pid: 13720
+[2023-09-17 23:35:37 +0100] [13718] [DEBUG] 2 workers
+[2023-09-17 23:35:55 +0100] [13719] [DEBUG] GET /api/docs/
+[2023-09-17 23:35:56 +0100] [13719] [DEBUG] GET /favicon.ico
+[2023-09-17 23:36:12 +0100] [13720] [DEBUG] GET /
+[2023-09-17 23:36:12 +0100] [13720] [DEBUG] GET /static/styles.css
+[2023-09-17 23:36:12 +0100] [13719] [DEBUG] GET /static/img/cap2.png
+[2023-09-17 23:36:12 +0100] [13720] [DEBUG] GET /static/myscript.js
+[2023-09-17 23:36:12 +0100] [13720] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-17 23:36:12 +0100] [13719] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-17 23:36:12 +0100] [13719] [DEBUG] GET /static/img/logo.png
+[2023-09-17 23:36:12 +0100] [13720] [DEBUG] GET /static/img/meta.svg
+[2023-09-17 23:36:12 +0100] [13720] [DEBUG] GET /static/img/instagram.svg
+[2023-09-17 23:36:12 +0100] [13719] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-17 23:36:12 +0100] [13719] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-17 23:36:12 +0100] [13720] [DEBUG] GET /static/img/discord.svg
+[2023-09-17 23:36:12 +0100] [13719] [DEBUG] GET /static/img/up.svg
+[2023-09-17 23:36:12 +0100] [13720] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-17 23:37:09 +0100] [13718] [INFO] Handling signal: int
+[2023-09-17 23:37:09 +0100] [13719] [INFO] Worker exiting (pid: 13719)
+[2023-09-17 23:37:09 +0100] [13720] [INFO] Worker exiting (pid: 13720)
+[2023-09-17 23:37:12 +0100] [13718] [INFO] Shutting down: Master
+[2023-09-18 00:52:54 +0100] [19130] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:5001']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio/v2
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: run:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x1097fca60>
+  on_reload: <function OnReload.on_reload at 0x1097fcb80>
+  when_ready: <function WhenReady.when_ready at 0x1097fcca0>
+  pre_fork: <function Prefork.pre_fork at 0x1097fcdc0>
+  post_fork: <function Postfork.post_fork at 0x1097fcee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x109815040>
+  worker_int: <function WorkerInt.worker_int at 0x109815160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x109815280>
+  pre_exec: <function PreExec.pre_exec at 0x1098153a0>
+  pre_request: <function PreRequest.pre_request at 0x1098154c0>
+  post_request: <function PostRequest.post_request at 0x109815550>
+  child_exit: <function ChildExit.child_exit at 0x109815670>
+  worker_exit: <function WorkerExit.worker_exit at 0x109815790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x1098158b0>
+  on_exit: <function OnExit.on_exit at 0x1098159d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x109815af0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-18 00:52:54 +0100] [19130] [INFO] Starting gunicorn 21.2.0
+[2023-09-18 00:52:54 +0100] [19130] [DEBUG] Arbiter booted
+[2023-09-18 00:52:54 +0100] [19130] [INFO] Listening at: http://0.0.0.0:5001 (19130)
+[2023-09-18 00:52:54 +0100] [19130] [INFO] Using worker: sync
+[2023-09-18 00:52:54 +0100] [19132] [INFO] Booting worker with pid: 19132
+[2023-09-18 00:52:54 +0100] [19133] [INFO] Booting worker with pid: 19133
+[2023-09-18 00:52:54 +0100] [19130] [DEBUG] 2 workers
+[2023-09-18 00:53:02 +0100] [19132] [DEBUG] GET /
+[2023-09-18 00:53:03 +0100] [19133] [DEBUG] GET /dashboard
+[2023-09-18 00:53:22 +0100] [19132] [DEBUG] GET /
+[2023-09-18 00:53:22 +0100] [19133] [DEBUG] GET /dashboard
+[2023-09-18 00:53:25 +0100] [19132] [DEBUG] GET /logout
+[2023-09-18 00:53:25 +0100] [19132] [DEBUG] GET /
+[2023-09-18 00:53:26 +0100] [19132] [DEBUG] GET /static/styles.css
+[2023-09-18 00:53:26 +0100] [19133] [DEBUG] GET /static/img/meta.svg
+[2023-09-18 00:53:26 +0100] [19132] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-18 00:53:26 +0100] [19133] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-18 00:53:26 +0100] [19132] [DEBUG] GET /static/img/cap2.png
+[2023-09-18 00:53:26 +0100] [19133] [DEBUG] GET /static/img/logo.png
+[2023-09-18 00:53:26 +0100] [19132] [DEBUG] GET /static/myscript.js
+[2023-09-18 00:53:26 +0100] [19133] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-18 00:53:26 +0100] [19132] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-18 00:53:26 +0100] [19133] [DEBUG] GET /static/img/up.svg
+[2023-09-18 00:53:26 +0100] [19132] [DEBUG] GET /static/img/discord.svg
+[2023-09-18 00:53:26 +0100] [19132] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-18 00:53:26 +0100] [19133] [DEBUG] GET /static/img/instagram.svg
+[2023-09-18 00:53:35 +0100] [19133] [DEBUG] POST /login
+[2023-09-18 00:53:35 +0100] [19133] [DEBUG] GET /
+[2023-09-18 00:53:35 +0100] [19132] [DEBUG] GET /dashboard
+[2023-09-18 00:53:37 +0100] [19132] [DEBUG] GET /logout
+[2023-09-18 00:53:37 +0100] [19132] [DEBUG] GET /
+[2023-09-18 00:53:38 +0100] [19133] [DEBUG] GET /static/img/meta.svg
+[2023-09-18 00:53:38 +0100] [19132] [DEBUG] GET /static/styles.css
+[2023-09-18 00:53:38 +0100] [19133] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-18 00:53:38 +0100] [19132] [DEBUG] GET /static/img/logo.png
+[2023-09-18 00:53:38 +0100] [19132] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-18 00:53:38 +0100] [19133] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-18 00:53:38 +0100] [19132] [DEBUG] GET /static/myscript.js
+[2023-09-18 00:53:38 +0100] [19133] [DEBUG] GET /static/img/cap2.png
+[2023-09-18 00:53:38 +0100] [19132] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-18 00:53:38 +0100] [19133] [DEBUG] GET /static/img/up.svg
+[2023-09-18 00:53:38 +0100] [19132] [DEBUG] GET /static/img/discord.svg
+[2023-09-18 00:53:38 +0100] [19133] [DEBUG] GET /static/img/instagram.svg
+[2023-09-18 00:53:38 +0100] [19132] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-18 00:54:04 +0100] [19133] [DEBUG] GET /api/docs/
+[2023-09-18 00:54:04 +0100] [19132] [DEBUG] GET /api/docs/index.css
+[2023-09-18 00:54:04 +0100] [19133] [DEBUG] GET /api/docs/swagger-ui.css
+[2023-09-18 00:54:04 +0100] [19133] [DEBUG] GET /api/docs/swagger-ui-standalone-preset.js
+[2023-09-18 00:54:04 +0100] [19133] [DEBUG] GET /api/docs/swagger-ui-bundle.js
+[2023-09-18 00:54:05 +0100] [19133] [DEBUG] GET /static/swagger.json
+[2023-09-18 00:54:11 +0100] [19132] [DEBUG] GET /api/users
+[2023-09-18 00:54:11 +0100] [19132] [DEBUG] GET /login
+[2023-09-18 00:54:11 +0100] [19132] [DEBUG] GET /
+[2023-09-18 00:54:33 +0100] [19132] [DEBUG] GET /
+[2023-09-18 00:54:33 +0100] [19132] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-18 00:54:33 +0100] [19133] [DEBUG] GET /static/styles.css
+[2023-09-18 00:54:33 +0100] [19132] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-18 00:54:33 +0100] [19132] [DEBUG] GET /static/img/cap2.png
+[2023-09-18 00:54:33 +0100] [19132] [DEBUG] GET /static/img/logo.png
+[2023-09-18 00:54:33 +0100] [19133] [DEBUG] GET /static/img/meta.svg
+[2023-09-18 00:54:33 +0100] [19132] [DEBUG] GET /static/myscript.js
+[2023-09-18 00:54:33 +0100] [19133] [DEBUG] GET /static/img/discord.svg
+[2023-09-18 00:54:33 +0100] [19132] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-18 00:54:33 +0100] [19133] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-18 00:54:33 +0100] [19132] [DEBUG] GET /static/img/up.svg
+[2023-09-18 00:54:33 +0100] [19133] [DEBUG] GET /static/img/instagram.svg
+[2023-09-18 00:54:33 +0100] [19132] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-18 00:54:41 +0100] [19132] [DEBUG] POST /login
+[2023-09-18 00:54:41 +0100] [19132] [DEBUG] GET /
+[2023-09-18 00:54:41 +0100] [19132] [DEBUG] GET /dashboard
+[2023-09-18 00:54:47 +0100] [19133] [DEBUG] GET /api/users
+[2023-09-18 00:54:57 +0100] [19133] [DEBUG] GET /logout
+[2023-09-18 00:54:57 +0100] [19132] [DEBUG] GET /
+[2023-09-18 00:54:57 +0100] [19132] [DEBUG] GET /static/styles.css
+[2023-09-18 00:54:57 +0100] [19133] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-18 00:54:57 +0100] [19132] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-18 00:54:57 +0100] [19133] [DEBUG] GET /static/img/meta.svg
+[2023-09-18 00:54:57 +0100] [19132] [DEBUG] GET /static/img/logo.png
+[2023-09-18 00:54:57 +0100] [19133] [DEBUG] GET /static/myscript.js
+[2023-09-18 00:54:57 +0100] [19132] [DEBUG] GET /static/img/cap2.png
+[2023-09-18 00:54:57 +0100] [19132] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-18 00:54:57 +0100] [19133] [DEBUG] GET /static/img/up.svg
+[2023-09-18 00:54:57 +0100] [19132] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-18 00:54:57 +0100] [19133] [DEBUG] GET /static/img/discord.svg
+[2023-09-18 00:54:57 +0100] [19132] [DEBUG] GET /static/img/instagram.svg
+[2023-09-18 00:54:57 +0100] [19133] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-18 00:55:17 +0100] [19133] [DEBUG] POST /login
+[2023-09-18 00:55:17 +0100] [19132] [DEBUG] GET /redirect_url
+[2023-09-18 00:55:32 +0100] [19132] [DEBUG] GET /api/docs/
+[2023-09-18 00:55:32 +0100] [19133] [DEBUG] GET /api/docs/index.css
+[2023-09-18 00:55:32 +0100] [19132] [DEBUG] GET /api/docs/swagger-ui.css
+[2023-09-18 00:55:32 +0100] [19132] [DEBUG] GET /api/docs/swagger-ui-standalone-preset.js
+[2023-09-18 00:55:32 +0100] [19133] [DEBUG] GET /api/docs/swagger-ui-bundle.js
+[2023-09-18 00:55:33 +0100] [19133] [DEBUG] GET /static/swagger.json
+[2023-09-18 00:55:38 +0100] [19133] [DEBUG] GET /api/users
+[2023-09-18 00:55:54 +0100] [19133] [DEBUG] GET /users
+[2023-09-18 00:56:04 +0100] [19133] [DEBUG] GET /api/users
+[2023-09-18 00:56:11 +0100] [19133] [DEBUG] GET /
+[2023-09-18 00:56:11 +0100] [19133] [DEBUG] GET /dashboard
+[2023-09-18 00:56:15 +0100] [19132] [DEBUG] GET /logout
+[2023-09-18 00:56:15 +0100] [19133] [DEBUG] GET /
+[2023-09-18 00:56:15 +0100] [19133] [DEBUG] GET /static/styles.css
+[2023-09-18 00:56:15 +0100] [19132] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-18 00:56:15 +0100] [19133] [DEBUG] GET /static/img/meta.svg
+[2023-09-18 00:56:15 +0100] [19132] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-18 00:56:15 +0100] [19133] [DEBUG] GET /static/img/logo.png
+[2023-09-18 00:56:15 +0100] [19132] [DEBUG] GET /static/img/cap2.png
+[2023-09-18 00:56:15 +0100] [19133] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-18 00:56:15 +0100] [19132] [DEBUG] GET /static/myscript.js
+[2023-09-18 00:56:15 +0100] [19133] [DEBUG] GET /static/img/up.svg
+[2023-09-18 00:56:15 +0100] [19132] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-18 00:56:16 +0100] [19132] [DEBUG] GET /static/img/instagram.svg
+[2023-09-18 00:56:16 +0100] [19133] [DEBUG] GET /static/img/discord.svg
+[2023-09-18 00:56:16 +0100] [19132] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-18 00:56:22 +0100] [19132] [DEBUG] POST /login
+[2023-09-18 00:56:22 +0100] [19132] [DEBUG] GET /
+[2023-09-18 00:56:22 +0100] [19133] [DEBUG] GET /dashboard
+[2023-09-18 00:56:31 +0100] [19133] [DEBUG] GET /api/users/1
+[2023-09-18 10:22:17 +0100] [19130] [CRITICAL] WORKER TIMEOUT (pid:19133)
+[2023-09-18 10:22:18 +0100] [19133] [INFO] Worker exiting (pid: 19133)
+[2023-09-18 10:22:20 +0100] [19130] [ERROR] Worker (pid:19133) exited with code 1
+[2023-09-18 10:22:20 +0100] [19130] [ERROR] Worker (pid:19133) exited with code 1.
+[2023-09-18 10:22:20 +0100] [29509] [INFO] Booting worker with pid: 29509
+[2023-09-18 10:22:21 +0100] [19130] [CRITICAL] WORKER TIMEOUT (pid:19132)
+[2023-09-18 10:22:21 +0100] [19132] [INFO] Worker exiting (pid: 19132)
+[2023-09-18 10:22:22 +0100] [19130] [ERROR] Worker (pid:19132) exited with code 1
+[2023-09-18 10:22:22 +0100] [19130] [ERROR] Worker (pid:19132) exited with code 1.
+[2023-09-18 10:22:22 +0100] [29510] [INFO] Booting worker with pid: 29510
+[2023-09-18 10:23:15 +0100] [19130] [CRITICAL] WORKER TIMEOUT (pid:29509)
+[2023-09-18 10:23:15 +0100] [19130] [CRITICAL] WORKER TIMEOUT (pid:29510)
+[2023-09-18 10:23:15 +0100] [29510] [INFO] Worker exiting (pid: 29510)
+[2023-09-18 10:23:15 +0100] [29509] [INFO] Worker exiting (pid: 29509)
+[2023-09-18 10:23:16 +0100] [19130] [ERROR] Worker (pid:29510) was sent SIGKILL! Perhaps out of memory?
+[2023-09-18 10:23:16 +0100] [19130] [ERROR] Worker (pid:29509) was sent SIGKILL! Perhaps out of memory?
+[2023-09-18 10:23:16 +0100] [29519] [INFO] Booting worker with pid: 29519
+[2023-09-18 10:23:16 +0100] [29520] [INFO] Booting worker with pid: 29520
+[2023-09-18 10:24:08 +0100] [19130] [CRITICAL] WORKER TIMEOUT (pid:29519)
+[2023-09-18 10:24:09 +0100] [19130] [CRITICAL] WORKER TIMEOUT (pid:29520)
+[2023-09-18 10:24:09 +0100] [29519] [INFO] Worker exiting (pid: 29519)
+[2023-09-18 10:24:09 +0100] [29520] [INFO] Worker exiting (pid: 29520)
+[2023-09-18 10:24:09 +0100] [19130] [ERROR] Worker (pid:29520) exited with code 1
+[2023-09-18 10:24:09 +0100] [19130] [ERROR] Worker (pid:29520) exited with code 1.
+[2023-09-18 10:24:09 +0100] [19130] [ERROR] Worker (pid:29519) exited with code 1
+[2023-09-18 10:24:09 +0100] [19130] [ERROR] Worker (pid:29519) exited with code 1.
+[2023-09-18 10:24:09 +0100] [29533] [INFO] Booting worker with pid: 29533
+[2023-09-18 10:24:09 +0100] [29534] [INFO] Booting worker with pid: 29534
+[2023-09-18 10:25:04 +0100] [19130] [CRITICAL] WORKER TIMEOUT (pid:29533)
+[2023-09-18 10:25:04 +0100] [29533] [INFO] Worker exiting (pid: 29533)
+[2023-09-18 10:25:04 +0100] [19130] [ERROR] Worker (pid:29533) exited with code 1
+[2023-09-18 10:25:04 +0100] [19130] [ERROR] Worker (pid:29533) exited with code 1.
+[2023-09-18 10:25:04 +0100] [29542] [INFO] Booting worker with pid: 29542
+[2023-09-18 10:26:00 +0100] [19130] [CRITICAL] WORKER TIMEOUT (pid:29542)
+[2023-09-18 10:26:00 +0100] [29542] [INFO] Worker exiting (pid: 29542)
+[2023-09-18 10:26:00 +0100] [19130] [ERROR] Worker (pid:29542) exited with code 1
+[2023-09-18 10:26:00 +0100] [19130] [ERROR] Worker (pid:29542) exited with code 1.
+[2023-09-18 10:26:00 +0100] [29552] [INFO] Booting worker with pid: 29552
+[2023-09-18 10:26:05 +0100] [19130] [CRITICAL] WORKER TIMEOUT (pid:29534)
+[2023-09-18 10:26:05 +0100] [29534] [INFO] Worker exiting (pid: 29534)
+[2023-09-18 10:26:05 +0100] [19130] [ERROR] Worker (pid:29534) exited with code 1
+[2023-09-18 10:26:05 +0100] [19130] [ERROR] Worker (pid:29534) exited with code 1.
+[2023-09-18 10:26:05 +0100] [29555] [INFO] Booting worker with pid: 29555
+[2023-09-18 10:26:55 +0100] [19130] [CRITICAL] WORKER TIMEOUT (pid:29552)
+[2023-09-18 10:26:55 +0100] [19130] [CRITICAL] WORKER TIMEOUT (pid:29555)
+[2023-09-18 10:26:55 +0100] [29555] [INFO] Worker exiting (pid: 29555)
+[2023-09-18 10:26:55 +0100] [29552] [INFO] Worker exiting (pid: 29552)
+[2023-09-18 10:26:56 +0100] [19130] [ERROR] Worker (pid:29555) exited with code 1
+[2023-09-18 10:26:56 +0100] [19130] [ERROR] Worker (pid:29555) exited with code 1.
+[2023-09-18 10:26:56 +0100] [19130] [ERROR] Worker (pid:29552) exited with code 1
+[2023-09-18 10:26:56 +0100] [19130] [ERROR] Worker (pid:29552) exited with code 1.
+[2023-09-18 10:26:56 +0100] [29563] [INFO] Booting worker with pid: 29563
+[2023-09-18 10:26:56 +0100] [29564] [INFO] Booting worker with pid: 29564
+[2023-09-18 11:51:30 +0100] [19130] [CRITICAL] WORKER TIMEOUT (pid:29563)
+[2023-09-18 11:51:30 +0100] [19130] [CRITICAL] WORKER TIMEOUT (pid:29564)
+[2023-09-18 11:51:30 +0100] [29563] [INFO] Worker exiting (pid: 29563)
+[2023-09-18 11:51:30 +0100] [29564] [INFO] Worker exiting (pid: 29564)
+[2023-09-18 11:51:30 +0100] [19130] [ERROR] Worker (pid:29563) exited with code 1
+[2023-09-18 11:51:30 +0100] [19130] [ERROR] Worker (pid:29563) exited with code 1.
+[2023-09-18 11:51:30 +0100] [19130] [ERROR] Worker (pid:29564) exited with code 1
+[2023-09-18 11:51:30 +0100] [19130] [ERROR] Worker (pid:29564) exited with code 1.
+[2023-09-18 11:51:31 +0100] [29573] [INFO] Booting worker with pid: 29573
+[2023-09-18 11:51:31 +0100] [29575] [INFO] Booting worker with pid: 29575
+[2023-09-18 11:53:24 +0100] [29575] [DEBUG] GET /api/users/2
+[2023-09-18 11:53:59 +0100] [29575] [INFO] Worker exiting (pid: 29575)
+[2023-09-18 11:53:59 +0100] [19130] [INFO] Handling signal: int
+[2023-09-18 11:54:02 +0100] [19130] [INFO] Shutting down: Master
+[2023-09-18 12:41:31 +0100] [33248] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:5001']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio/v2
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: run:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x107e94a60>
+  on_reload: <function OnReload.on_reload at 0x107e94b80>
+  when_ready: <function WhenReady.when_ready at 0x107e94ca0>
+  pre_fork: <function Prefork.pre_fork at 0x107e94dc0>
+  post_fork: <function Postfork.post_fork at 0x107e94ee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x107ead040>
+  worker_int: <function WorkerInt.worker_int at 0x107ead160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x107ead280>
+  pre_exec: <function PreExec.pre_exec at 0x107ead3a0>
+  pre_request: <function PreRequest.pre_request at 0x107ead4c0>
+  post_request: <function PostRequest.post_request at 0x107ead550>
+  child_exit: <function ChildExit.child_exit at 0x107ead670>
+  worker_exit: <function WorkerExit.worker_exit at 0x107ead790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x107ead8b0>
+  on_exit: <function OnExit.on_exit at 0x107ead9d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x107eadaf0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-18 12:41:31 +0100] [33248] [INFO] Starting gunicorn 21.2.0
+[2023-09-18 12:41:31 +0100] [33248] [DEBUG] Arbiter booted
+[2023-09-18 12:41:31 +0100] [33248] [INFO] Listening at: http://0.0.0.0:5001 (33248)
+[2023-09-18 12:41:31 +0100] [33248] [INFO] Using worker: sync
+[2023-09-18 12:41:31 +0100] [33249] [INFO] Booting worker with pid: 33249
+[2023-09-18 12:41:32 +0100] [33250] [INFO] Booting worker with pid: 33250
+[2023-09-18 12:41:32 +0100] [33248] [DEBUG] 2 workers
+[2023-09-18 12:42:12 +0100] [33250] [DEBUG] Ignored premature client disconnection. No more data after: b"\x16\x03\x01\x02\x00\x01\x00\x01\xfc\x03\x03XXd<*#\x87\xef\xdeY\xa1v9\xe5\x15>\x08\x8ap\x96\xc2\x9f*%\x80W\xd1\x13\xf8\xb9\xbf\x0c 1\xa64dM\xae\xe4Vf\x0b\xa1\x8d\xff\xee\x07\xb7\xf2W\xaa\xc5\x11B\x11\xe3\xfcX>\xb0n\xabS.\x00>\x13\x02\x13\x03\x13\x01\xc0,\xc00\x00\x9f\xcc\xa9\xcc\xa8\xcc\xaa\xc0+\xc0/\x00\x9e\xc0$\xc0(\x00k\xc0#\xc0'\x00g\xc0\n\xc0\x14\x009\xc0\t\xc0\x13\x003\x00\x9d\x00\x9c\x00=\x00<\x005\x00/\x00\xff\x01\x00\x01u\x00\x0b\x00\x04\x03\x00\x01\x02\x00\n\x00\x0c\x00\n\x00\x1d\x00\x17\x00\x1e\x00\x19\x00\x18\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x16\x00\x00\x00\x17\x00\x00\x001\x00\x00\x00\r\x000\x00.\x04\x03\x05\x03\x06\x03\x08\x07\x08\x08\x08\t\x08\n\x08\x0b\x08\x04\x08\x05\x08\x06\x04\x01\x05\x01\x06\x01\x03\x03\x02\x03\x03\x01\x02\x01\x03\x02\x02\x02\x04\x02\x05\x02\x06\x02\x00+\x00\t\x08\x03\x04\x03\x03\x03\x02\x03\x01\x00-\x00\x02\x01\x01\x003\x00&\x00$\x00\x1d\x00 \x95\x10\xd1\x00py\xbf\x9d\x0bkP\x14\x06\xa1\xcf\x87t\xba\xa2\n\xe0\xc9#\x9eK\xed\xd5Q\xbd_kw\x00\x15\x00\xca\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+[2023-09-18 12:42:50 +0100] [33249] [DEBUG] Ignored premature client disconnection. No more data after: b'\x16\x03\x01\x02\x00\x01\x00\x01\xfc\x03\x03\xc2\xfc\xac\xe2qg"\xed\xbah \x9f\x1b_\x88-\xf6\xfc\x85\xd84\xf7un\xdf\xbe5\xe7#\xb6\xc2\xa4 \xf67\xcc\x08\xe2r\xe5)\xe0V5\x93\x86}\xb44\\\xbf<\xb4G\x8d\x13JY\x02\x07\xe7\xaag\x1d|\x00>\x13\x02\x13\x03\x13\x01\xc0,\xc00\x00\x9f\xcc\xa9\xcc\xa8\xcc\xaa\xc0+\xc0/\x00\x9e\xc0$\xc0(\x00k\xc0#\xc0\'\x00g\xc0\n\xc0\x14\x009\xc0\t\xc0\x13\x003\x00\x9d\x00\x9c\x00=\x00<\x005\x00/\x00\xff\x01\x00\x01u\x00\x0b\x00\x04\x03\x00\x01\x02\x00\n\x00\x0c\x00\n\x00\x1d\x00\x17\x00\x1e\x00\x19\x00\x18\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x16\x00\x00\x00\x17\x00\x00\x001\x00\x00\x00\r\x000\x00.\x04\x03\x05\x03\x06\x03\x08\x07\x08\x08\x08\t\x08\n\x08\x0b\x08\x04\x08\x05\x08\x06\x04\x01\x05\x01\x06\x01\x03\x03\x02\x03\x03\x01\x02\x01\x03\x02\x02\x02\x04\x02\x05\x02\x06\x02\x00+\x00\t\x08\x03\x04\x03\x03\x03\x02\x03\x01\x00-\x00\x02\x01\x01\x003\x00&\x00$\x00\x1d\x00 \x00_"_0\xf5\xad\xd0"\xa2\xa6~-\x86\xdc\t:\x16\x98\xab"\x1b8B\xaf\xb5\xf8\'\x1f\x8e\xfc6\x00\x15\x00\xca\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+[2023-09-18 12:44:57 +0100] [33250] [DEBUG] Ignored premature client disconnection. No more data after: b"\x16\x03\x01\x02\x00\x01\x00\x01\xfc\x03\x03\x19\xd7W/\xf8\xf5\xe5M=\xbe\xe4;\xbbBd\x04\xacN\x83H\x05g\x8eh\xb0\x8a\xc1\xfbEU\xbd3 \xd4\x92$\xf1\xcef\xb6\xf3.J\xe8\xe6%\xcc\xbcC\xfb.(K\x0c8\xdc[\x0c\x85]\xe1\xfb \x89D\x00>\x13\x02\x13\x03\x13\x01\xc0,\xc00\x00\x9f\xcc\xa9\xcc\xa8\xcc\xaa\xc0+\xc0/\x00\x9e\xc0$\xc0(\x00k\xc0#\xc0'\x00g\xc0\n\xc0\x14\x009\xc0\t\xc0\x13\x003\x00\x9d\x00\x9c\x00=\x00<\x005\x00/\x00\xff\x01\x00\x01u\x00\x0b\x00\x04\x03\x00\x01\x02\x00\n\x00\x0c\x00\n\x00\x1d\x00\x17\x00\x1e\x00\x19\x00\x18\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x16\x00\x00\x00\x17\x00\x00\x001\x00\x00\x00\r\x000\x00.\x04\x03\x05\x03\x06\x03\x08\x07\x08\x08\x08\t\x08\n\x08\x0b\x08\x04\x08\x05\x08\x06\x04\x01\x05\x01\x06\x01\x03\x03\x02\x03\x03\x01\x02\x01\x03\x02\x02\x02\x04\x02\x05\x02\x06\x02\x00+\x00\t\x08\x03\x04\x03\x03\x03\x02\x03\x01\x00-\x00\x02\x01\x01\x003\x00&\x00$\x00\x1d\x00 \xb9W\xac\x87\xbaZ\xc6y\x03\xdd\xca\x86+\x19\x9f\xe9\x9b\xafU\x18\xf9j\x7f9\xa0i\x8c\xd0\xa5\x84\x03W\x00\x15\x00\xca\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+[2023-09-18 12:45:06 +0100] [33248] [INFO] Handling signal: int
+[2023-09-18 12:45:06 +0100] [33249] [INFO] Worker exiting (pid: 33249)
+[2023-09-18 12:45:06 +0100] [33250] [INFO] Worker exiting (pid: 33250)
+[2023-09-18 12:45:06 +0100] [33248] [INFO] Shutting down: Master
+[2023-09-18 23:42:22 +0100] [37123] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:5001']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio/v2
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/v2/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: run:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x103294a60>
+  on_reload: <function OnReload.on_reload at 0x103294b80>
+  when_ready: <function WhenReady.when_ready at 0x103294ca0>
+  pre_fork: <function Prefork.pre_fork at 0x103294dc0>
+  post_fork: <function Postfork.post_fork at 0x103294ee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x1032ad040>
+  worker_int: <function WorkerInt.worker_int at 0x1032ad160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x1032ad280>
+  pre_exec: <function PreExec.pre_exec at 0x1032ad3a0>
+  pre_request: <function PreRequest.pre_request at 0x1032ad4c0>
+  post_request: <function PostRequest.post_request at 0x1032ad550>
+  child_exit: <function ChildExit.child_exit at 0x1032ad670>
+  worker_exit: <function WorkerExit.worker_exit at 0x1032ad790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x1032ad8b0>
+  on_exit: <function OnExit.on_exit at 0x1032ad9d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x1032adaf0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-18 23:42:22 +0100] [37123] [INFO] Starting gunicorn 21.2.0
+[2023-09-18 23:42:22 +0100] [37123] [DEBUG] Arbiter booted
+[2023-09-18 23:42:22 +0100] [37123] [INFO] Listening at: http://0.0.0.0:5001 (37123)
+[2023-09-18 23:42:22 +0100] [37123] [INFO] Using worker: sync
+[2023-09-18 23:42:22 +0100] [37124] [INFO] Booting worker with pid: 37124
+[2023-09-18 23:42:22 +0100] [37125] [INFO] Booting worker with pid: 37125
+[2023-09-18 23:42:22 +0100] [37123] [DEBUG] 2 workers
+[2023-09-18 23:42:57 +0100] [37124] [DEBUG] GET /
+[2023-09-18 23:42:58 +0100] [37125] [DEBUG] GET /static/styles.css
+[2023-09-18 23:42:58 +0100] [37124] [DEBUG] GET /static/img/meta.svg
+[2023-09-18 23:42:58 +0100] [37125] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-18 23:42:58 +0100] [37124] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-18 23:42:58 +0100] [37125] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-18 23:42:58 +0100] [37124] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-18 23:42:58 +0100] [37125] [DEBUG] GET /static/myscript.js
+[2023-09-18 23:42:58 +0100] [37124] [DEBUG] GET /static/img/logo.png
+[2023-09-18 23:42:58 +0100] [37125] [DEBUG] GET /static/img/discord.svg
+[2023-09-18 23:42:58 +0100] [37124] [DEBUG] GET /static/img/up.svg
+[2023-09-18 23:42:58 +0100] [37125] [DEBUG] GET /static/img/cap2.png
+[2023-09-18 23:42:58 +0100] [37124] [DEBUG] GET /static/img/instagram.svg
+[2023-09-18 23:42:58 +0100] [37125] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-18 23:43:10 +0100] [37125] [DEBUG] POST /login
+[2023-09-18 23:43:10 +0100] [37124] [DEBUG] GET /
+[2023-09-18 23:43:10 +0100] [37125] [DEBUG] GET /dashboard
+[2023-09-18 23:43:16 +0100] [37125] [DEBUG] GET /api/users
+[2023-09-18 23:43:17 +0100] [37125] [DEBUG] GET /api/users
+[2023-09-18 23:44:08 +0100] [37123] [INFO] Handling signal: int
+[2023-09-18 23:44:08 +0100] [37124] [INFO] Worker exiting (pid: 37124)
+[2023-09-18 23:44:08 +0100] [37125] [INFO] Worker exiting (pid: 37125)
+[2023-09-18 23:44:08 +0100] [37123] [INFO] Shutting down: Master
