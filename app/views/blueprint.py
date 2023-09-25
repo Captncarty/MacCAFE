@@ -2,7 +2,7 @@ import logging
 import requests
 from os import environ as env
 import requests
-from flask import Blueprint, render_template, jsonify, request, flash, redirect, url_for, abort
+from flask import Blueprint, render_template, jsonify, request, flash, redirect, url_for, abort, session
 from flask_login import login_user, current_user, login_required, logout_user
 from flask_login import LoginManager
 from app.models.gen_user import generate_username, generate_password
@@ -26,15 +26,11 @@ login_manager.login_view = "my_blueprint.login"
 @login_manager.user_loader
 
 def load_user(user_id):
-    """AI is creating summary for load_user
-
-    Args:
-        user_id ([type]): [description]
-
+    """Args:
+        user_id int
     Returns:
-        [type]: [description]
+        user object from your database based on user_id
     """
-    # Load a user object from your database based on user_id
     return User.query.get(int(user_id))
 
 # def delete_expired_users():
@@ -62,6 +58,8 @@ my_blueprint = Blueprint('my_blueprint', __name__)
 
 @my_blueprint.route('/')
 def index():
+    """ returns landing page or dashboard if user is logged in
+    """
     if current_user.is_authenticated:
         return redirect(url_for('my_blueprint.dashboard'))
     return render_template('landing.html', paystack_public_key=public_key)
@@ -69,16 +67,22 @@ def index():
 
 @my_blueprint.route('/redirect_url', methods=['GET', 'POST'])
 def redirect_url():
+    """ redirect user to the internet upon successful login"""
     return redirect("http://www.google.com")
 
 
 @my_blueprint.route('/stats', strict_slashes=False)
 def stats():
+    """ test route
+    """
     return jsonify('working alright') 
 
 
 @app.route('/verify_transaction', methods=['POST'])
 def verify_transaction():
+    """ verify transaction from paystack
+    upon successful verification, create user and send email
+    """
     data = request.get_json()
     reference = data.get('reference')
     email = data.get('email')
@@ -117,6 +121,9 @@ def verify_transaction():
 
 @my_blueprint.route('/create_user', methods=['GET', 'POST'])
 def create_user():
+    """ Create a new user and send email,
+    initial setup
+    """
     if request.method == 'POST':
         email = request.form.get('email')
     
@@ -140,6 +147,10 @@ def create_user():
 
 @my_blueprint.route('/login', methods=['GET', 'POST'])
 def login():
+    """ login method
+    checks if user has expired,
+    if valid login in user else delete user from database
+    """
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
@@ -162,7 +173,6 @@ def login():
             if current_user.is_admin:
                 app.logger.info('logged in Admin')
                 return redirect(url_for('admin_dashboard'))
-                #return redirect("http://www.google.com")
             else:
                 logging.info('User logged in: {username}'.format(username=username))
                 
@@ -178,13 +188,17 @@ def login():
 
 @my_blueprint.route('/logout')
 def logout():
+    """ Logout method
+    if from an active user, end session and redirect
+    back to landing page
+    """
     if current_user:
         logging.info('User logged out: %s', current_user.username)
         logout_user()
         flash('Logout successful', 'success')
         return redirect(url_for('my_blueprint.index'))
     flash("You're not logged in", 'fail')
-    return render_template("welcome.html")
+    return render_template("landing.html")
 
 
 # @my_blueprint.route('/logout_inactive')
@@ -216,26 +230,29 @@ def logout():
 @my_blueprint.route('/dashboard')
 @login_required
 def dashboard():
-    if current_user:
+    """ User access page after authentication
+    """
+    if current_user.is_admin:
+        user = current_user.username
+        return render_template("admin_dashboard.html", user=user)
+    else:
         user = current_user.username
         return render_template("welcome.html", user=user)
 
 
 @my_blueprint.route('/delete_user/<int:user_id>', methods=['POST'])
 def delete_user(user_id):
-    # Ensure that only the logged-in user can delete their own account
-    # if current_user.id != user_id:
-    #     flash("You don't have permission to delete this user.", 'danger')
-    #     return redirect(url_for('my_blueprint.dashboard'))
-
-    # Delete the user from the database
-    user = User.query.get(user_id)
-    if user:
+    """ an api access to delete users by admin
+    """
+    if current_user.is_admin:
+        user = User.query.get(user_id)
+        if not user:
+            abort(404)
         db.session.delete(user)
         db.session.commit()
         flash('User deleted successfully.', 'success')
-
-    return redirect(url_for('my_blueprint.logout'))
+        return redirect(url_for('my_blueprint.logout'))
+    return abort(403)
 
 # @my_blueprint.route('/api/users', methods=['GET'])
 # def view_users():
@@ -249,6 +266,9 @@ def delete_user(user_id):
 
 @my_blueprint.route('/subscribe', methods=['GET', 'POST'])
 def subscribe():
+    """if form is filled correctly,
+    retrieve mail and send notification
+    """
     if request.method == 'POST':
         email = request.form.get('email')
         

@@ -4,18 +4,26 @@ import requests
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_mail import Mail, Message
-import threading
+from threading import Thread
 import time
 
 
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///User.db'  # Change this to your database URI
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///User.db'
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 app.secret_key = 'turtle'
 
+
+""" importing blueprints and registering application routes
+"""
+from app.views.blueprint import my_blueprint
+from app.views.view import my_views
+
+app.register_blueprint(my_blueprint)
+app.register_blueprint(my_views)
 
 """ mail service setup
 """
@@ -33,17 +41,39 @@ app.config['MAIL_DEFAULT_SENDER'] = user_mail
 mail = Mail(app)
 
 
+""" store session activity in dict and inactivity period
+"""
+session_activity = {}
+
+INACTIVITY_PERIOD = 1800
+
+
+
+
+
 def send_email(email, username, password, duration, package):
+    """ send email to login details and info toverified subscriber
+    """
     msg = Message('Your Credentials', sender='your_email@gmail.com', recipients=[email])
     msg.body = f'Username: {username}\nPassword: {password}\nDuration: {duration}hour\nPackage: {package}'
     mail.send(msg)
 
 def send_email_subscribe(email):
+    """ send email to verified subscriber
+    """
     msg = Message("Welcome to MacCAFE", sender='your_email@gmail.com', recipients=[email])
     msg.body = f'Stay Tuned to the best deals and latest updates. Great to have you here \U0001F601!'
     mail.send(msg)
 
 def get_paystack_transaction(reference, secret_key):
+    """ verify paystack transaction
+    Args:
+        reference no
+        secret_key from paystack API
+
+    Returns:
+        A status code of 200 if transaction is successful
+    """
     url = f"https://api.paystack.co/transaction/verify/{reference}"
 
     headers = {
@@ -61,32 +91,33 @@ def get_paystack_transaction(reference, secret_key):
     except requests.exceptions.RequestException as e:
         return None  # Return None for request exceptions
 
-from app.views.blueprint import my_blueprint
-from app.views.view import my_views
-
-
-session_activity = {}
-
-# Periodically check session activity and log out inactive users
+ 
 def check_session_activity():
+    """ Periodically check session activity and log out inactive users
+    Inactivity period (e.g., 1 hour)
+    Mark the user as logged out
+    """
     while True:
-        for session_id, last_activity_time in session_activity.copy().items():
-            if time.time() - last_activity_time > 3600:  # Inactivity period (e.g., 1 hour)
-                # Mark the user as logged out (you can implement your own logic)
-                session_activity.pop(session_id)
-        time.sleep(1800)  # Check every 30 minutes
+        current_time = time.time()
+        sessions_to_remove = [session_id for session_id, last_activity_time in session_activity.items() if current_time - last_activity_time > INACTIVITY_PERIOD]
+        for session_id in sessions_to_remove:
+            session_activity.pop(session_id)
+        time.sleep(900)
 
-# A route to simulate user activity (update session activity)
 @app.route('/simulate_activity')
 def simulate_activity():
-    session_activity[session.get('id')] = time.time()
-    return 'Activity recorded'
+    """Simulate user activity and record it."""
+    session_id = session.get('id')
+    if session_id:
+        session_activity[session_id] = time.time()
+        return 'Activity recorded'
+    else:
+        return 'Session ID not found'
 
 
-app.register_blueprint(my_blueprint)
-app.register_blueprint(my_views)
+
 # Start the session activity checker as a background thread
-session_checker_thread = threading.Thread(target=check_session_activity)
+session_checker_thread = Thread(target=check_session_activity)
 session_checker_thread.daemon = True
 session_checker_thread.start()
 
