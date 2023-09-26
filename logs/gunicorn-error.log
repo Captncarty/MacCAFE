@@ -3014,3 +3014,178 @@ ModuleNotFoundError: No module named 'wsgi'
 [2023-09-26 10:37:05 +0100] [56090] [INFO] Worker exiting (pid: 56090)
 [2023-09-26 10:37:05 +0100] [56091] [INFO] Worker exiting (pid: 56091)
 [2023-09-26 10:37:05 +0100] [56089] [INFO] Shutting down: Master
+[2023-09-26 15:10:05 +0100] [57929] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:5001']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/captncarty/Desktop/Portfolio/MacCAFE
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/captncarty/Desktop/Portfolio/MacCAFE/logs/gunicorn-access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/captncarty/Desktop/Portfolio/MacCAFE/logs/gunicorn-error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: run:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x108344a60>
+  on_reload: <function OnReload.on_reload at 0x108344b80>
+  when_ready: <function WhenReady.when_ready at 0x108344ca0>
+  pre_fork: <function Prefork.pre_fork at 0x108344dc0>
+  post_fork: <function Postfork.post_fork at 0x108344ee0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10835d040>
+  worker_int: <function WorkerInt.worker_int at 0x10835d160>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10835d280>
+  pre_exec: <function PreExec.pre_exec at 0x10835d3a0>
+  pre_request: <function PreRequest.pre_request at 0x10835d4c0>
+  post_request: <function PostRequest.post_request at 0x10835d550>
+  child_exit: <function ChildExit.child_exit at 0x10835d670>
+  worker_exit: <function WorkerExit.worker_exit at 0x10835d790>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10835d8b0>
+  on_exit: <function OnExit.on_exit at 0x10835d9d0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x10835daf0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2023-09-26 15:10:05 +0100] [57929] [INFO] Starting gunicorn 21.2.0
+[2023-09-26 15:10:05 +0100] [57929] [DEBUG] Arbiter booted
+[2023-09-26 15:10:05 +0100] [57929] [INFO] Listening at: http://0.0.0.0:5001 (57929)
+[2023-09-26 15:10:05 +0100] [57929] [INFO] Using worker: sync
+[2023-09-26 15:10:05 +0100] [57930] [INFO] Booting worker with pid: 57930
+[2023-09-26 15:10:05 +0100] [57931] [INFO] Booting worker with pid: 57931
+[2023-09-26 15:10:05 +0100] [57929] [DEBUG] 2 workers
+[2023-09-26 15:10:09 +0100] [57930] [DEBUG] GET /
+[2023-09-26 15:10:09 +0100] [57931] [DEBUG] GET /static/styles.css
+[2023-09-26 15:10:09 +0100] [57931] [DEBUG] GET /static/myscript.js
+[2023-09-26 15:10:09 +0100] [57931] [DEBUG] GET /static/img/cap2.png
+[2023-09-26 15:10:09 +0100] [57930] [DEBUG] GET /static/img/mc22.gif
+[2023-09-26 15:10:09 +0100] [57930] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-26 15:10:09 +0100] [57931] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-26 15:10:09 +0100] [57930] [DEBUG] GET /static/img/logo.png
+[2023-09-26 15:10:09 +0100] [57931] [DEBUG] GET /static/img/meta.svg
+[2023-09-26 15:10:09 +0100] [57931] [DEBUG] GET /static/img/instagram.svg
+[2023-09-26 15:10:09 +0100] [57931] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-26 15:10:09 +0100] [57930] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-26 15:10:09 +0100] [57931] [DEBUG] GET /static/img/discord.svg
+[2023-09-26 15:10:09 +0100] [57930] [DEBUG] GET /static/img/up.svg
+[2023-09-26 15:10:09 +0100] [57931] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-26 15:11:38 +0100] [57930] [DEBUG] POST /verify_transaction
+[2023-09-26 15:11:38 +0100] [57929] [ERROR] Worker (pid:57930) was sent SIGSEGV!
+[2023-09-26 15:11:38 +0100] [58011] [INFO] Booting worker with pid: 58011
+[2023-09-26 15:11:43 +0100] [58011] [DEBUG] POST /verify_transaction
+[2023-09-26 15:11:43 +0100] [57929] [ERROR] Worker (pid:58011) was sent SIGSEGV!
+[2023-09-26 15:11:43 +0100] [58013] [INFO] Booting worker with pid: 58013
+[2023-09-26 15:16:01 +0100] [57931] [DEBUG] GET /
+[2023-09-26 15:16:01 +0100] [58013] [DEBUG] GET /static/styles.css
+[2023-09-26 15:16:01 +0100] [57931] [DEBUG] GET /static/img/cap2.png
+[2023-09-26 15:16:01 +0100] [57931] [DEBUG] GET /static/img/mc22.gif
+[2023-09-26 15:16:01 +0100] [57931] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-26 15:16:01 +0100] [57931] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-26 15:16:01 +0100] [58013] [DEBUG] GET /static/img/logo.png
+[2023-09-26 15:16:01 +0100] [57931] [DEBUG] GET /static/myscript.js
+[2023-09-26 15:16:01 +0100] [58013] [DEBUG] GET /static/img/meta.svg
+[2023-09-26 15:16:01 +0100] [58013] [DEBUG] GET /static/img/instagram.svg
+[2023-09-26 15:16:01 +0100] [57931] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-26 15:16:01 +0100] [58013] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-26 15:16:01 +0100] [57931] [DEBUG] GET /static/img/discord.svg
+[2023-09-26 15:16:01 +0100] [57931] [DEBUG] GET /static/img/up.svg
+[2023-09-26 15:16:01 +0100] [58013] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-26 15:16:04 +0100] [57931] [DEBUG] POST /verify_transaction
+[2023-09-26 15:16:04 +0100] [57929] [ERROR] Worker (pid:57931) was sent SIGSEGV!
+[2023-09-26 15:16:04 +0100] [58156] [INFO] Booting worker with pid: 58156
+[2023-09-26 15:16:52 +0100] [58013] [DEBUG] POST /verify_transaction
+[2023-09-26 15:16:52 +0100] [57929] [ERROR] Worker (pid:58013) was sent SIGSEGV!
+[2023-09-26 15:16:52 +0100] [58156] [DEBUG] POST /verify_transaction
+[2023-09-26 15:16:52 +0100] [58167] [INFO] Booting worker with pid: 58167
+[2023-09-26 15:16:52 +0100] [57929] [ERROR] Worker (pid:58156) was sent SIGSEGV!
+[2023-09-26 15:16:52 +0100] [58168] [INFO] Booting worker with pid: 58168
+[2023-09-26 15:17:33 +0100] [58168] [DEBUG] GET /
+[2023-09-26 15:17:33 +0100] [58167] [DEBUG] GET /static/styles.css
+[2023-09-26 15:17:33 +0100] [58167] [DEBUG] GET /static/img/cap2.png
+[2023-09-26 15:17:33 +0100] [58168] [DEBUG] GET /static/myscript.js
+[2023-09-26 15:17:33 +0100] [58167] [DEBUG] GET /static/img/mc22.gif
+[2023-09-26 15:17:33 +0100] [58167] [DEBUG] GET /static/img/pexel2.jpeg
+[2023-09-26 15:17:33 +0100] [58168] [DEBUG] GET /static/img/well2.jpeg
+[2023-09-26 15:17:33 +0100] [58168] [DEBUG] GET /static/img/logo.png
+[2023-09-26 15:17:33 +0100] [58167] [DEBUG] GET /static/img/meta.svg
+[2023-09-26 15:17:33 +0100] [58168] [DEBUG] GET /static/img/instagram.svg
+[2023-09-26 15:17:34 +0100] [58168] [DEBUG] GET /static/img/github-dark.svg
+[2023-09-26 15:17:34 +0100] [58168] [DEBUG] GET /static/img/discord.svg
+[2023-09-26 15:17:34 +0100] [58167] [DEBUG] GET /static/img/linkedin.svg
+[2023-09-26 15:17:34 +0100] [58168] [DEBUG] GET /static/img/up.svg
+[2023-09-26 15:17:34 +0100] [58168] [DEBUG] GET /static/img/exc2.jpeg
+[2023-09-26 15:17:57 +0100] [58168] [DEBUG] POST /verify_transaction
+[2023-09-26 15:17:57 +0100] [57929] [ERROR] Worker (pid:58168) was sent SIGSEGV!
+[2023-09-26 15:17:57 +0100] [58167] [DEBUG] POST /verify_transaction
+[2023-09-26 15:17:57 +0100] [58184] [INFO] Booting worker with pid: 58184
+[2023-09-26 15:17:57 +0100] [57929] [ERROR] Worker (pid:58167) was sent SIGSEGV!
+[2023-09-26 15:17:57 +0100] [58185] [INFO] Booting worker with pid: 58185
+[2023-09-26 15:18:21 +0100] [58184] [DEBUG] POST /login
+[2023-09-26 15:18:21 +0100] [58185] [DEBUG] GET /admin_dashboard
+[2023-09-26 15:18:27 +0100] [58184] [DEBUG] GET /api/docs/
+[2023-09-26 15:18:28 +0100] [58185] [DEBUG] GET /api/docs/index.css
+[2023-09-26 15:18:28 +0100] [58184] [DEBUG] GET /api/docs/swagger-ui.css
+[2023-09-26 15:18:28 +0100] [58185] [DEBUG] GET /api/docs/swagger-ui-bundle.js
+[2023-09-26 15:18:28 +0100] [58184] [DEBUG] GET /api/docs/swagger-ui-standalone-preset.js
+[2023-09-26 15:18:28 +0100] [58184] [DEBUG] GET /static/swagger.json
+[2023-09-26 15:18:28 +0100] [58185] [DEBUG] GET /api/docs/favicon-32x32.png
+[2023-09-26 15:18:36 +0100] [58184] [DEBUG] GET /api/users
+[2023-09-26 15:22:46 +0100] [57929] [INFO] Handling signal: int
+[2023-09-26 15:22:46 +0100] [58185] [INFO] Worker exiting (pid: 58185)
+[2023-09-26 15:22:46 +0100] [58184] [INFO] Worker exiting (pid: 58184)
+[2023-09-26 15:22:47 +0100] [57929] [INFO] Shutting down: Master

@@ -200,30 +200,7 @@
           </div>
     </div>
 </div>
-<!--<div class="modal-content">
-    <span class="close" onclick="closePaymentFormModal()">&times;</span>
-<form id="paymentForm">
-    <div class="form-group">
-      <label for="email">Email Address</label>
-      <input type="email" id="email-address" required />
-    </div>
-    <div class="form-group">
-      <label for="amount">Amount</label>
-      <input type="tel" id="amount" required />
-    </div>
-    <div class="form-group">
-      <label for="first-name">First Name</label>
-      <input type="text" id="first-name" />
-    </div>
-    <div class="form-group">
-      <label for="last-name">Last Name</label>
-      <input type="text" id="last-name" />
-    </div>
-    <div class="form-submit">
-      <button type="submit" onclick="payWithPaystack()"> Pay </button>
-    </div>
-  </form>
-</div>-->
+
   <!-- Payment Form -->
 <div id="paymentFormModal" class="modal">
     <div class="modal-content">
@@ -256,9 +233,8 @@
   
   
   
-
-    <div class="footer-bottom">
     <!-- Footer Section -->
+    <div class="footer-bottom">
     <footer class="dark-theme">
         <div class="footer-content">
             <img style="max-width: 200px; align-item: left;" id="luffy" src="static/img/logo.png" alt="logo"/>
@@ -283,7 +259,6 @@
                 </ul>
         </div>
             <div class="social-media-icons">
-                <!-- Add social media icons and links here -->
                 <a href="https://facebook.com" target="_blank"><img src="/static/img/meta.svg" alt="facebook"></a>
                 <a href="https://instagram.com/kvngcarty" target="_blank"><img src="static/img/instagram.svg" alt="instagram"></a>
                 <a href="https://github.com/captncarty" target="_blank"><img src="static/img/github-dark.svg" alt="github"></a>
@@ -316,27 +291,6 @@
       content.classList.remove('blur');
     }
 
-    // script.js
-/*document.addEventListener("DOMContentLoaded", function() {
-    const scrollUpButton = document.getElementById("scrollUpButton");
-
-    // Show/hide the scroll-up button based on scroll position
-    window.addEventListener("scroll", function() {
-        if (window.pageYOffset > 100) {
-            scrollUpButton.style.display = "block";
-        } else {
-            scrollUpButton.style.display = "none";
-        }
-    });
-
-    // Scroll to the top when the button is clicked
-    scrollUpButton.addEventListener("click", function() {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth" // Add smooth scrolling effect
-        });
-    });
-}); */
 document.addEventListener("DOMContentLoaded", function() {
     const scrollUpButton = document.getElementById("scrollUpButton");
 
@@ -449,9 +403,6 @@ document.getElementById('verifyForm').addEventListener('submit', function(e) {
         loadingIcon.classList.remove('loading-hidden');
     });*/
 });
-
-
-
 
     </script>
     <script src="https://js.paystack.co/v1/inline.js"></script>

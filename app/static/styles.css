@@ -4,21 +4,19 @@
     box-sizing: border-box;
   }
 
-  /* Add this CSS to your existing styles.css file */
-
 html {
   scroll-behavior: smooth;
 }
 
-/* Optional: Style your anchor links to indicate that they're clickable */
+
 a[href^="#"] {
   text-decoration: none;
-  color: #007BFF; /* Change to your preferred link color */
+  color: #007BFF;
   transition: color 0.3s;
 }
 
 a[href^="#"]:hover {
-  color: #0056b3; /* Change to your preferred link color on hover */
+  color: #0056b3;
 }
 
 
@@ -45,7 +43,7 @@ a[href^="#"]:hover {
     border-radius: 10px;
     border: none;
     color: white;
-    position: relative; /* Add relative positioning for the icon */
+    position: relative;
 }
 
 #loading-icon {
@@ -61,7 +59,7 @@ a[href^="#"]:hover {
   text-align: center;
 }
 
-/* CSS to hide the loading icon */
+/* hide the loading icon */
 .hidden {
   display: none;
 }
@@ -281,7 +279,7 @@ li {
   }
 
   footer {
-    background-color: rgb(32, 33, 36);  /* Dark theme */
+    background-color: rgb(32, 33, 36); 
     color: #fff;
     padding: 15px;
     margin: 0;
@@ -331,7 +329,7 @@ color: rgb(41, 22, 111);
   margin: 0;
   width: 65%;
   padding: 0;
-  text-align: justify; /* To justify the text */
+  text-align: justify;
   align-items: left;
 }
 
@@ -409,7 +407,7 @@ address {
   }
   
   nav li {
-    list-style-type: none; /* removes the associated dottings */
+    list-style-type: none;
   
     width: 50%;
     padding-top: .5em;
@@ -427,7 +425,7 @@ address {
     border-left: 1px solid #888F95;
   } /* division of select-menu in mobile layout */
   
-  nav li.selected { /* color in-page nav */
+  nav li.selected {
     color: #54A5C4;
   }
   
@@ -447,7 +445,7 @@ address {
   }
 
   .surf-button {
-    background-color: rgb(70, 56, 132); /* Custom button color */
+    background-color: rgb(70, 56, 132);
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -666,7 +664,7 @@ address {
   .justify {
     text-align: justify;
   }
-/* Right alignment: consider relationship with surrounding element */
+
   figcaption {
     display: none;
   }

@@ -3,6 +3,8 @@ from app.models.user import User
 from datetime import datetime, timedelta
 
 def create_admin_user():
+    """ Create a new admin user and stored in database
+    """
     with app.app_context():
     # Create an admin user
         admin_user = User(

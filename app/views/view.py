@@ -28,6 +28,8 @@ def run():
 @app.route('/api/users', methods=['GET'])
 @login_required
 def view_users():
+    """ view registered users stored in database
+    """
     if not current_user.is_admin:
         abort(403)
     users = User.query.all()
@@ -51,6 +53,8 @@ def view_users():
 @app.route('/api/users/<int:user_id>', methods=['GET'])
 @login_required
 def users_by_id(user_id):
+    """ Search for user with given id
+    """
     if not current_user.is_admin:
         abort(403)
     user = User.query.get(user_id)
@@ -62,6 +66,8 @@ def users_by_id(user_id):
 @app.route('/api/create_user', methods=['GET', 'POST'])
 @login_required
 def create_user():
+    """ Create new user as an Admin
+    """
     if current_user.is_admin:
         username = generate_username()
         password = generate_password()
@@ -84,6 +90,8 @@ def create_user():
 @app.route('/admin_dashboard')
 @login_required
 def admin_dashboard():
+    """ Admin specified dashboard
+    """
     if current_user.is_admin:
         # Only allow admin users to access the admin dashboard
         return render_template('admin_dashboard.html')
@@ -93,6 +101,8 @@ def admin_dashboard():
 @app.route('/user/<int:user_id>/delete', methods=['DELETE'])
 @login_required
 def delete_user(user_id):
+    """ Delete user with given id
+    """
     if not current_user.is_admin:
         abort(403)  # Forbidden for non-admin users
     user_to_delete = User.query.get(user_id)
@@ -107,6 +117,8 @@ def delete_user(user_id):
 @app.route('/api/user/search', methods=['GET', 'POST'])
 @login_required
 def search():
+    """search for user with their username via html form
+    """
     if request.method == 'POST':
         if not current_user.is_admin:
             abort(403)
@@ -122,6 +134,8 @@ def search():
 @app.route('/api/search/<string:username>', methods=['GET'])
 @login_required
 def users_by(username):
+    """search for user with their username
+    """
     if not current_user.is_admin:
         abort(403)
     user = User.query.filter_by(username=username).first()
@@ -132,6 +146,8 @@ def users_by(username):
 @app.route('/transactions/<string:reference>', methods=['GET'])
 @login_required
 def get_transaction_by_reference(reference):
+    """ search and verify transaction by reference no
+    """
     if not current_user.is_admin:
         abort(403)
     # Verify the transaction using the verify_transaction function
@@ -155,6 +171,8 @@ def get_transaction_by_reference(reference):
 @app.route('/transactions', methods=['GET'])
 @login_required
 def get_all_transactions():
+    """ Search for all transactions on paystack
+    """
     if not current_user.is_admin:
         abort(403)
     secret_key = env.get('PAYSTACK_SECRET_KEY')
@@ -176,10 +194,13 @@ def get_all_transactions():
             
 @app.route('/blog')
 def blog_page():
+    """ blog page
+    """
     return render_template('blog.html')
 
 @app.route('/api/verify', methods=['POST'])
 def verify():
+    """ Admin dashboard transaction verification mtd"""
     if not current_user.is_admin:
         abort(403)
     data = request.get_json()

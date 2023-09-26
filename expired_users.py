@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 
 
 def delete_expired_users():
+    """Checks and deletes all expired users"""
     while True:
         # expiration_time = datetime.utcnow() - timedelta(hours=24)
         with app.app_context():

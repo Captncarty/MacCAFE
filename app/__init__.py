@@ -113,12 +113,17 @@ from app.views.blueprint import my_blueprint
 from app.views.view import my_views
 app.register_blueprint(my_blueprint)
 app.register_blueprint(my_views)
-# Start the session activity checker as a background thread
+
+
+""" Start the session activity checker as a background thread
+"""
 session_checker_thread = Thread(target=check_session_activity)
 session_checker_thread.daemon = True
 session_checker_thread.start()
 
-# Additional configuration options (optional)
-# app.config['DEBUG'] = True  # Enable debug mode (for development)
-# app.config['SQLALCHEMY_ECHO'] = True  # Print SQL statements (for debugging)
+"""
+Additional configuration options (optional)
+app.config['DEBUG'] = True  # Enable debug mode (for development)
+app.config['SQLALCHEMY_ECHO'] = True  # Print SQL statements (for debugging)
+"""
 

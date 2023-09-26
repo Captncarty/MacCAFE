@@ -3,6 +3,8 @@ from flask_login import UserMixin
 from datetime import datetime, timedelta
 
 class User(db.Model, UserMixin):
+    """ User model for the flask app
+    """
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True, nullable=False)
     password = db.Column(db.String(120), unique=True, nullable=False)
@@ -17,6 +19,8 @@ class User(db.Model, UserMixin):
 
 
     def __init__(self, username, password, reference, package, duration, price, is_admin):
+        """ Constructor for the User model
+        """
         self.username = username
         self.password = password
         self.created_at = datetime.utcnow()
@@ -30,6 +34,8 @@ class User(db.Model, UserMixin):
         self.is_admin = is_admin
 
     def calculate_expiration(self, duration):
+        """ Calculate the expiration date based on the duration
+        """
         data_duration = int(duration)
         if data_duration == 1:
             return self.created_at + timedelta(days=1)
@@ -45,6 +51,8 @@ class User(db.Model, UserMixin):
             return self.created_at + timedelta(days=7)
     
     def calculate_speed(self, package):
+        """ Calculates the speed based on the package
+        """
         package_speed = package
         if package_speed == "Lite":
             return f'80mbps'

@@ -63,3 +63,375 @@
 2023-09-26 10:36:24,830 - INFO - Scheduler started
 2023-09-26 10:36:54,298 - INFO - logged in Admin
 2023-09-26 10:37:01,146 - INFO - User logged out: admin
+2023-09-26 15:10:07,176 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 15:10:07,176 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 15:10:07,180 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 15:10:07,180 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 15:10:07,181 - INFO - Scheduler started
+2023-09-26 15:10:07,182 - INFO - Scheduler started
+2023-09-26 15:11:39,829 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 15:11:39,831 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 15:11:39,832 - INFO - Scheduler started
+2023-09-26 15:11:44,158 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 15:11:44,160 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 15:11:44,161 - INFO - Scheduler started
+2023-09-26 15:16:05,729 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 15:16:05,731 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 15:16:05,732 - INFO - Scheduler started
+2023-09-26 15:16:53,651 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 15:16:53,651 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 15:16:53,654 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 15:16:53,654 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 15:16:53,654 - INFO - Scheduler started
+2023-09-26 15:16:53,654 - INFO - Scheduler started
+2023-09-26 15:17:58,961 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 15:17:58,961 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 15:17:58,964 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 15:17:58,964 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 15:17:58,965 - INFO - Scheduler started
+2023-09-26 15:17:58,965 - INFO - Scheduler started
+2023-09-26 15:18:21,238 - INFO - logged in Admin
+2023-09-26 15:22:56,145 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 15:22:56,147 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 15:22:56,148 - INFO - Scheduler started
+2023-09-26 15:22:56,170 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2023-09-26 15:22:56,170 - INFO - [33mPress CTRL+C to quit[0m
+2023-09-26 15:22:56,172 - INFO -  * Restarting with stat
+2023-09-26 15:22:57,185 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 15:22:57,186 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 15:22:57,186 - INFO - Scheduler started
+2023-09-26 15:22:57,191 - WARNING -  * Debugger is active!
+2023-09-26 15:22:57,210 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 15:23:06,944 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:06] "GET /blog HTTP/1.1" 200 -
+2023-09-26 15:23:06,983 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:06] "GET /static/img/exc.jpg HTTP/1.1" 200 -
+2023-09-26 15:23:07,020 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:07] "GET /static/img/pexel.jpg HTTP/1.1" 200 -
+2023-09-26 15:23:07,037 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:07] "GET /static/img/well.jpg HTTP/1.1" 200 -
+2023-09-26 15:23:07,052 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:07] "[36mGET /static/img/meta.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:23:07,063 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:07] "[36mGET /static/img/instagram.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:23:07,071 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:07] "[36mGET /static/img/github-dark.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:23:07,094 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:07] "[36mGET /static/img/linkedin.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:23:07,098 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:07] "[36mGET /static/img/discord.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:23:13,876 - INFO - User logged out: admin
+2023-09-26 15:23:13,878 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:13] "[32mGET /logout HTTP/1.1[0m" 302 -
+2023-09-26 15:23:13,894 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:13] "GET / HTTP/1.1" 200 -
+2023-09-26 15:23:13,959 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:13] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-09-26 15:23:13,978 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:13] "[36mGET /static/myscript.js HTTP/1.1[0m" 304 -
+2023-09-26 15:23:13,981 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:13] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2023-09-26 15:23:13,986 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:13] "[36mGET /static/img/well2.jpeg HTTP/1.1[0m" 304 -
+2023-09-26 15:23:13,992 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:13] "[36mGET /static/img/cap2.png HTTP/1.1[0m" 304 -
+2023-09-26 15:23:13,997 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:13] "[36mGET /static/img/meta.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:23:14,001 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:14] "[36mGET /static/img/pexel2.jpeg HTTP/1.1[0m" 304 -
+2023-09-26 15:23:14,004 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:14] "[36mGET /static/img/instagram.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:23:14,006 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:14] "[36mGET /static/img/mc22.gif HTTP/1.1[0m" 304 -
+2023-09-26 15:23:14,012 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:14] "[36mGET /static/img/github-dark.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:23:14,021 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:14] "[36mGET /static/img/linkedin.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:23:14,037 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:14] "[36mGET /static/img/exc2.jpeg HTTP/1.1[0m" 304 -
+2023-09-26 15:23:14,044 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:14] "[36mGET /static/img/up.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:23:14,052 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:14] "[36mGET /static/img/discord.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:23:24,203 - INFO - Verifying transaction with reference: 394061299
+2023-09-26 15:23:29,518 - INFO - Transaction verified! User ID: 2 Username: PpZXfrkA Package: Fast Duration: 1
+2023-09-26 15:23:29,519 - INFO - 127.0.0.1 - - [26/Sep/2023 15:23:29] "POST /verify_transaction HTTP/1.1" 200 -
+2023-09-26 15:24:08,284 - INFO - User logged in: PpZXfrkA
+2023-09-26 15:24:08,289 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:08] "[32mPOST /login HTTP/1.1[0m" 302 -
+2023-09-26 15:24:08,295 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:08] "[32mGET /redirect_url HTTP/1.1[0m" 302 -
+2023-09-26 15:24:24,594 - INFO - User logged out: PpZXfrkA
+2023-09-26 15:24:24,597 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:24] "[32mGET /logout HTTP/1.1[0m" 302 -
+2023-09-26 15:24:24,609 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:24] "GET / HTTP/1.1" 200 -
+2023-09-26 15:24:24,715 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-09-26 15:24:24,778 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:24] "[36mGET /static/myscript.js HTTP/1.1[0m" 304 -
+2023-09-26 15:24:24,807 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:24] "[36mGET /static/img/cap2.png HTTP/1.1[0m" 304 -
+2023-09-26 15:24:24,811 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:24] "[36mGET /static/img/mc22.gif HTTP/1.1[0m" 304 -
+2023-09-26 15:24:24,813 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:24] "[36mGET /static/img/pexel2.jpeg HTTP/1.1[0m" 304 -
+2023-09-26 15:24:24,814 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:24] "[36mGET /static/img/well2.jpeg HTTP/1.1[0m" 304 -
+2023-09-26 15:24:24,820 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:24] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2023-09-26 15:24:24,821 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:24] "[36mGET /static/img/meta.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:24:24,825 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:24] "[36mGET /static/img/instagram.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:24:24,834 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:24] "[36mGET /static/img/github-dark.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:24:24,835 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:24] "[36mGET /static/img/linkedin.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:24:24,839 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:24] "[36mGET /static/img/discord.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:24:24,841 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:24] "[36mGET /static/img/exc2.jpeg HTTP/1.1[0m" 304 -
+2023-09-26 15:24:24,842 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:24] "[36mGET /static/img/up.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:24:35,028 - INFO - logged in Admin
+2023-09-26 15:24:35,046 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:35] "[32mPOST /login HTTP/1.1[0m" 302 -
+2023-09-26 15:24:35,064 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:35] "GET /admin_dashboard HTTP/1.1" 200 -
+2023-09-26 15:24:39,141 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:39] "GET /api/docs/ HTTP/1.1" 200 -
+2023-09-26 15:24:39,179 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:39] "[36mGET /api/docs/swagger-ui.css HTTP/1.1[0m" 304 -
+2023-09-26 15:24:39,181 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:39] "[36mGET /api/docs/index.css HTTP/1.1[0m" 304 -
+2023-09-26 15:24:39,186 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:39] "[36mGET /api/docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2023-09-26 15:24:39,187 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:39] "[36mGET /api/docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2023-09-26 15:24:39,487 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:39] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+2023-09-26 15:24:39,500 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:39] "[36mGET /api/docs/favicon-32x32.png HTTP/1.1[0m" 304 -
+2023-09-26 15:24:42,759 - INFO - 127.0.0.1 - - [26/Sep/2023 15:24:42] "GET /api/users HTTP/1.1" 200 -
+2023-09-26 15:26:53,213 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-09-26 15:26:53,214 - INFO - [33mPress CTRL+C to quit[0m
+2023-09-26 15:27:25,055 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 15:27:25,059 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 15:27:25,059 - INFO - Scheduler started
+2023-09-26 15:27:25,061 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-09-26 15:27:25,061 - INFO - [33mPress CTRL+C to quit[0m
+2023-09-26 15:30:17,903 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 15:30:17,907 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 15:30:17,907 - INFO - Scheduler started
+2023-09-26 15:30:17,910 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-09-26 15:30:17,910 - INFO - [33mPress CTRL+C to quit[0m
+2023-09-26 15:32:32,390 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 15:32:32,393 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 15:32:32,393 - INFO - Scheduler started
+2023-09-26 15:32:32,406 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.129:5001
+2023-09-26 15:32:32,406 - INFO - [33mPress CTRL+C to quit[0m
+2023-09-26 15:32:36,119 - INFO - 127.0.0.1 - - [26/Sep/2023 15:32:36] "[32mGET / HTTP/1.1[0m" 302 -
+2023-09-26 15:32:36,132 - INFO - 127.0.0.1 - - [26/Sep/2023 15:32:36] "GET /dashboard HTTP/1.1" 200 -
+2023-09-26 15:34:21,018 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 15:34:21,020 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 15:34:21,020 - INFO - Scheduler started
+2023-09-26 15:34:21,023 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-09-26 15:34:21,023 - INFO - [33mPress CTRL+C to quit[0m
+2023-09-26 15:34:54,295 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 15:34:54,297 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 15:34:54,297 - INFO - Scheduler started
+2023-09-26 15:34:54,310 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.129:5001
+2023-09-26 15:34:54,310 - INFO - [33mPress CTRL+C to quit[0m
+2023-09-26 15:35:20,078 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 15:35:20,080 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 15:35:20,080 - INFO - Scheduler started
+2023-09-26 15:35:20,107 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.129:5001
+2023-09-26 15:35:20,107 - INFO - [33mPress CTRL+C to quit[0m
+2023-09-26 15:35:20,109 - INFO -  * Restarting with stat
+2023-09-26 15:35:20,944 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 15:35:20,945 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 15:35:20,945 - INFO - Scheduler started
+2023-09-26 15:35:20,949 - WARNING -  * Debugger is active!
+2023-09-26 15:35:20,965 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 15:35:23,192 - INFO - 127.0.0.1 - - [26/Sep/2023 15:35:23] "GET /dashboard HTTP/1.1" 200 -
+2023-09-26 15:57:38,904 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 15:57:38,907 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 15:57:38,908 - INFO - Scheduler started
+2023-09-26 15:57:38,921 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2023-09-26 15:57:38,921 - INFO - [33mPress CTRL+C to quit[0m
+2023-09-26 15:57:38,923 - INFO -  * Restarting with stat
+2023-09-26 15:57:39,928 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 15:57:39,929 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 15:57:39,929 - INFO - Scheduler started
+2023-09-26 15:57:39,934 - WARNING -  * Debugger is active!
+2023-09-26 15:57:39,947 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 15:57:50,773 - INFO - User logged out: admin
+2023-09-26 15:57:50,776 - INFO - 127.0.0.1 - - [26/Sep/2023 15:57:50] "[32mGET /logout HTTP/1.1[0m" 302 -
+2023-09-26 15:57:50,795 - INFO - 127.0.0.1 - - [26/Sep/2023 15:57:50] "GET / HTTP/1.1" 200 -
+2023-09-26 15:57:50,905 - INFO - 127.0.0.1 - - [26/Sep/2023 15:57:50] "GET /static/myscript.js HTTP/1.1" 200 -
+2023-09-26 15:57:50,910 - INFO - 127.0.0.1 - - [26/Sep/2023 15:57:50] "[36mGET /static/img/cap2.png HTTP/1.1[0m" 304 -
+2023-09-26 15:57:50,928 - INFO - 127.0.0.1 - - [26/Sep/2023 15:57:50] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-09-26 15:57:50,938 - INFO - 127.0.0.1 - - [26/Sep/2023 15:57:50] "[36mGET /static/img/mc22.gif HTTP/1.1[0m" 304 -
+2023-09-26 15:57:50,943 - INFO - 127.0.0.1 - - [26/Sep/2023 15:57:50] "[36mGET /static/img/pexel2.jpeg HTTP/1.1[0m" 304 -
+2023-09-26 15:57:50,948 - INFO - 127.0.0.1 - - [26/Sep/2023 15:57:50] "[36mGET /static/img/well2.jpeg HTTP/1.1[0m" 304 -
+2023-09-26 15:57:50,968 - INFO - 127.0.0.1 - - [26/Sep/2023 15:57:50] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2023-09-26 15:57:50,975 - INFO - 127.0.0.1 - - [26/Sep/2023 15:57:50] "[36mGET /static/img/meta.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:57:50,981 - INFO - 127.0.0.1 - - [26/Sep/2023 15:57:50] "[36mGET /static/img/instagram.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:57:51,013 - INFO - 127.0.0.1 - - [26/Sep/2023 15:57:51] "[36mGET /static/img/linkedin.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:57:51,013 - INFO - 127.0.0.1 - - [26/Sep/2023 15:57:51] "[36mGET /static/img/github-dark.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:57:51,014 - INFO - 127.0.0.1 - - [26/Sep/2023 15:57:51] "[36mGET /static/img/discord.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:57:51,021 - INFO - 127.0.0.1 - - [26/Sep/2023 15:57:51] "[36mGET /static/img/exc2.jpeg HTTP/1.1[0m" 304 -
+2023-09-26 15:57:51,023 - INFO - 127.0.0.1 - - [26/Sep/2023 15:57:51] "[36mGET /static/img/up.svg HTTP/1.1[0m" 304 -
+2023-09-26 15:57:57,589 - INFO - logged in Admin
+2023-09-26 15:57:57,590 - INFO - 127.0.0.1 - - [26/Sep/2023 15:57:57] "[32mPOST /login HTTP/1.1[0m" 302 -
+2023-09-26 15:57:57,601 - INFO - 127.0.0.1 - - [26/Sep/2023 15:57:57] "GET /admin_dashboard HTTP/1.1" 200 -
+2023-09-26 15:58:03,274 - INFO - 127.0.0.1 - - [26/Sep/2023 15:58:03] "GET /api/docs/ HTTP/1.1" 200 -
+2023-09-26 15:58:03,333 - INFO - 127.0.0.1 - - [26/Sep/2023 15:58:03] "[36mGET /api/docs/index.css HTTP/1.1[0m" 304 -
+2023-09-26 15:58:03,338 - INFO - 127.0.0.1 - - [26/Sep/2023 15:58:03] "[36mGET /api/docs/swagger-ui.css HTTP/1.1[0m" 304 -
+2023-09-26 15:58:03,342 - INFO - 127.0.0.1 - - [26/Sep/2023 15:58:03] "[36mGET /api/docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2023-09-26 15:58:03,345 - INFO - 127.0.0.1 - - [26/Sep/2023 15:58:03] "[36mGET /api/docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2023-09-26 15:58:03,602 - INFO - 127.0.0.1 - - [26/Sep/2023 15:58:03] "GET /static/swagger.json HTTP/1.1" 200 -
+2023-09-26 15:58:03,615 - INFO - 127.0.0.1 - - [26/Sep/2023 15:58:03] "[36mGET /api/docs/favicon-32x32.png HTTP/1.1[0m" 304 -
+2023-09-26 16:00:00,010 - INFO - Running job "delete_expired_users (trigger: cron[hour='*', minute='0'], next run at: 2023-09-26 16:00:00 WAT)" (scheduled at 2023-09-26 16:00:00+01:00)
+2023-09-26 16:00:00,014 - INFO - Running job "delete_expired_users (trigger: cron[hour='*', minute='0'], next run at: 2023-09-26 16:00:00 WAT)" (scheduled at 2023-09-26 16:00:00+01:00)
+2023-09-26 16:00:00,032 - INFO - Job "delete_expired_users (trigger: cron[hour='*', minute='0'], next run at: 2023-09-26 17:00:00 WAT)" executed successfully
+2023-09-26 16:00:00,063 - INFO - Job "delete_expired_users (trigger: cron[hour='*', minute='0'], next run at: 2023-09-26 17:00:00 WAT)" executed successfully
+2023-09-26 16:06:04,474 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/gen_user.py', reloading
+2023-09-26 16:06:04,692 - INFO -  * Restarting with stat
+2023-09-26 16:06:06,433 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:06:06,435 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:06:06,436 - INFO - Scheduler started
+2023-09-26 16:06:06,446 - WARNING -  * Debugger is active!
+2023-09-26 16:06:06,461 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:06:07,500 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/gen_user.py', reloading
+2023-09-26 16:06:07,673 - INFO -  * Restarting with stat
+2023-09-26 16:06:08,655 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:06:08,656 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:06:08,656 - INFO - Scheduler started
+2023-09-26 16:06:08,662 - WARNING -  * Debugger is active!
+2023-09-26 16:06:08,673 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:06:10,740 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/gen_user.py', reloading
+2023-09-26 16:06:11,107 - INFO -  * Restarting with stat
+2023-09-26 16:06:12,036 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:06:12,037 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:06:12,037 - INFO - Scheduler started
+2023-09-26 16:06:12,042 - WARNING -  * Debugger is active!
+2023-09-26 16:06:12,053 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:06:15,150 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/gen_user.py', reloading
+2023-09-26 16:06:15,350 - INFO -  * Restarting with stat
+2023-09-26 16:06:16,286 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:06:16,287 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:06:16,287 - INFO - Scheduler started
+2023-09-26 16:06:16,292 - WARNING -  * Debugger is active!
+2023-09-26 16:06:16,303 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:06:25,485 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/gen_user.py', reloading
+2023-09-26 16:06:25,642 - INFO -  * Restarting with stat
+2023-09-26 16:06:26,664 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:06:26,666 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:06:26,666 - INFO - Scheduler started
+2023-09-26 16:06:26,675 - WARNING -  * Debugger is active!
+2023-09-26 16:06:26,709 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:06:27,762 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/gen_user.py', reloading
+2023-09-26 16:06:27,902 - INFO -  * Restarting with stat
+2023-09-26 16:06:28,807 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:06:28,808 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:06:28,808 - INFO - Scheduler started
+2023-09-26 16:06:28,813 - WARNING -  * Debugger is active!
+2023-09-26 16:06:28,825 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:06:42,082 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/user.py', reloading
+2023-09-26 16:06:42,220 - INFO -  * Restarting with stat
+2023-09-26 16:06:43,659 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:06:43,661 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:06:43,662 - INFO - Scheduler started
+2023-09-26 16:06:43,674 - WARNING -  * Debugger is active!
+2023-09-26 16:06:43,687 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:06:46,761 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/user.py', reloading
+2023-09-26 16:06:46,907 - INFO -  * Restarting with stat
+2023-09-26 16:06:48,071 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:06:48,072 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:06:48,072 - INFO - Scheduler started
+2023-09-26 16:06:48,077 - WARNING -  * Debugger is active!
+2023-09-26 16:06:48,089 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:06:52,183 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/user.py', reloading
+2023-09-26 16:06:52,313 - INFO -  * Restarting with stat
+2023-09-26 16:06:53,223 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:06:53,224 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:06:53,224 - INFO - Scheduler started
+2023-09-26 16:06:53,228 - WARNING -  * Debugger is active!
+2023-09-26 16:06:53,241 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:07:09,551 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/user.py', reloading
+2023-09-26 16:07:09,759 - INFO -  * Restarting with stat
+2023-09-26 16:07:11,099 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:07:11,101 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:07:11,101 - INFO - Scheduler started
+2023-09-26 16:07:11,112 - WARNING -  * Debugger is active!
+2023-09-26 16:07:11,124 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:07:14,190 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/user.py', reloading
+2023-09-26 16:07:14,350 - INFO -  * Restarting with stat
+2023-09-26 16:07:15,326 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:07:15,327 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:07:15,327 - INFO - Scheduler started
+2023-09-26 16:07:15,332 - WARNING -  * Debugger is active!
+2023-09-26 16:07:15,347 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:07:16,393 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/user.py', reloading
+2023-09-26 16:07:16,527 - INFO -  * Restarting with stat
+2023-09-26 16:07:17,476 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:07:17,477 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:07:17,477 - INFO - Scheduler started
+2023-09-26 16:07:17,482 - WARNING -  * Debugger is active!
+2023-09-26 16:07:17,493 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:07:23,634 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/user.py', reloading
+2023-09-26 16:07:23,774 - INFO -  * Restarting with stat
+2023-09-26 16:07:24,816 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:07:24,817 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:07:24,818 - INFO - Scheduler started
+2023-09-26 16:07:24,827 - WARNING -  * Debugger is active!
+2023-09-26 16:07:24,840 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:07:25,883 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/user.py', reloading
+2023-09-26 16:07:26,046 - INFO -  * Restarting with stat
+2023-09-26 16:07:27,054 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:07:27,055 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:07:27,055 - INFO - Scheduler started
+2023-09-26 16:07:27,061 - WARNING -  * Debugger is active!
+2023-09-26 16:07:27,074 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:07:29,143 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/user.py', reloading
+2023-09-26 16:07:29,261 - INFO -  * Restarting with stat
+2023-09-26 16:07:30,129 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:07:30,130 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:07:30,130 - INFO - Scheduler started
+2023-09-26 16:07:30,135 - WARNING -  * Debugger is active!
+2023-09-26 16:07:30,146 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:07:31,183 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/user.py', reloading
+2023-09-26 16:07:31,348 - INFO -  * Restarting with stat
+2023-09-26 16:07:32,262 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:07:32,264 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:07:32,264 - INFO - Scheduler started
+2023-09-26 16:07:32,269 - WARNING -  * Debugger is active!
+2023-09-26 16:07:32,282 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:07:37,391 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/user.py', reloading
+2023-09-26 16:07:37,544 - INFO -  * Restarting with stat
+2023-09-26 16:07:38,532 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:07:38,533 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:07:38,534 - INFO - Scheduler started
+2023-09-26 16:07:38,539 - WARNING -  * Debugger is active!
+2023-09-26 16:07:38,554 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:07:42,662 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/user.py', reloading
+2023-09-26 16:07:42,814 - INFO -  * Restarting with stat
+2023-09-26 16:07:43,760 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:07:43,760 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:07:43,760 - INFO - Scheduler started
+2023-09-26 16:07:43,765 - WARNING -  * Debugger is active!
+2023-09-26 16:07:43,776 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:07:45,832 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/user.py', reloading
+2023-09-26 16:07:45,964 - INFO -  * Restarting with stat
+2023-09-26 16:07:46,810 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:07:46,811 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:07:46,811 - INFO - Scheduler started
+2023-09-26 16:07:46,816 - WARNING -  * Debugger is active!
+2023-09-26 16:07:46,828 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:07:48,892 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/user.py', reloading
+2023-09-26 16:07:49,072 - INFO -  * Restarting with stat
+2023-09-26 16:07:49,966 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:07:49,967 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:07:49,967 - INFO - Scheduler started
+2023-09-26 16:07:49,971 - WARNING -  * Debugger is active!
+2023-09-26 16:07:49,984 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:07:52,048 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/user.py', reloading
+2023-09-26 16:07:52,188 - INFO -  * Restarting with stat
+2023-09-26 16:07:53,143 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:07:53,145 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:07:53,145 - INFO - Scheduler started
+2023-09-26 16:07:53,149 - WARNING -  * Debugger is active!
+2023-09-26 16:07:53,161 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:07:57,268 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/user.py', reloading
+2023-09-26 16:07:57,396 - INFO -  * Restarting with stat
+2023-09-26 16:07:58,525 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:07:58,526 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:07:58,526 - INFO - Scheduler started
+2023-09-26 16:07:58,532 - WARNING -  * Debugger is active!
+2023-09-26 16:07:58,545 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:07:59,588 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/user.py', reloading
+2023-09-26 16:07:59,744 - INFO -  * Restarting with stat
+2023-09-26 16:08:00,714 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:08:00,714 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:08:00,715 - INFO - Scheduler started
+2023-09-26 16:08:00,719 - WARNING -  * Debugger is active!
+2023-09-26 16:08:00,730 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:08:01,771 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/user.py', reloading
+2023-09-26 16:08:01,908 - INFO -  * Restarting with stat
+2023-09-26 16:08:02,827 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:08:02,828 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:08:02,828 - INFO - Scheduler started
+2023-09-26 16:08:02,832 - WARNING -  * Debugger is active!
+2023-09-26 16:08:02,843 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 16:08:04,910 - INFO -  * Detected change in '/Users/captncarty/Desktop/Portfolio/MacCAFE/app/models/user.py', reloading
+2023-09-26 16:08:05,128 - INFO -  * Restarting with stat
+2023-09-26 16:08:05,992 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 16:08:05,993 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 16:08:05,993 - INFO - Scheduler started
+2023-09-26 16:08:05,998 - WARNING -  * Debugger is active!
+2023-09-26 16:08:06,011 - INFO -  * Debugger PIN: 906-654-931

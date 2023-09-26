@@ -78,7 +78,7 @@ def unauthorized(err):
     ---
     response:
         401:
-            description: client user can’t be identified
+            description: client user can't be identified
     """
     return make_response(jsonify({'error': "unauthorized"}), 405)
 

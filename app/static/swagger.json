@@ -71,13 +71,13 @@
 
         "/api/users/{id}": {
             "get": {
-                "tags": ["Create New User on API"],
-                "summary": "Create New User",
+                "tags": ["Search User"],
+                "summary": "Search for User on API",
                 "parameters": [
                     {
                         "name": "id",
                         "in": "path",
-                        "description": "Adds a new user to the database",
+                        "description": "looks for a user in database using User ID",
                         "required": true,
                         "schema": {
                             "$ref": "#/components/schemas/Id"
