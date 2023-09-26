@@ -4,6 +4,24 @@
     box-sizing: border-box;
   }
 
+  /* Add this CSS to your existing styles.css file */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: Style your anchor links to indicate that they're clickable */
+a[href^="#"] {
+  text-decoration: none;
+  color: #007BFF; /* Change to your preferred link color */
+  transition: color 0.3s;
+}
+
+a[href^="#"]:hover {
+  color: #0056b3; /* Change to your preferred link color on hover */
+}
+
+
   
   body {
     font-family: 'Itim', cursive;

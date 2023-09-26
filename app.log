@@ -1,0 +1,65 @@
+2023-09-26 10:32:31,999 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 10:32:32,002 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 10:32:32,002 - INFO - Scheduler started
+2023-09-26 10:32:32,017 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2023-09-26 10:32:32,017 - INFO - [33mPress CTRL+C to quit[0m
+2023-09-26 10:32:32,018 - INFO -  * Restarting with stat
+2023-09-26 10:32:32,877 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 10:32:32,878 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 10:32:32,878 - INFO - Scheduler started
+2023-09-26 10:32:32,882 - WARNING -  * Debugger is active!
+2023-09-26 10:32:32,902 - INFO -  * Debugger PIN: 906-654-931
+2023-09-26 10:32:34,980 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:34] "GET / HTTP/1.1" 200 -
+2023-09-26 10:32:35,202 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:35] "GET /static/styles.css HTTP/1.1" 200 -
+2023-09-26 10:32:35,234 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:35] "GET /static/img/mc22.gif HTTP/1.1" 200 -
+2023-09-26 10:32:35,236 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:35] "GET /static/myscript.js HTTP/1.1" 200 -
+2023-09-26 10:32:35,237 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:35] "GET /static/img/pexel2.jpeg HTTP/1.1" 200 -
+2023-09-26 10:32:35,237 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:35] "GET /static/img/cap2.png HTTP/1.1" 200 -
+2023-09-26 10:32:35,246 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:35] "GET /static/img/logo.png HTTP/1.1" 200 -
+2023-09-26 10:32:35,251 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:35] "GET /static/img/well2.jpeg HTTP/1.1" 200 -
+2023-09-26 10:32:35,252 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:35] "GET /static/img/meta.svg HTTP/1.1" 200 -
+2023-09-26 10:32:35,267 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:35] "GET /static/img/instagram.svg HTTP/1.1" 200 -
+2023-09-26 10:32:35,281 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:35] "GET /static/img/discord.svg HTTP/1.1" 200 -
+2023-09-26 10:32:35,282 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:35] "GET /static/img/github-dark.svg HTTP/1.1" 200 -
+2023-09-26 10:32:35,283 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:35] "GET /static/img/linkedin.svg HTTP/1.1" 200 -
+2023-09-26 10:32:35,297 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:35] "GET /static/img/up.svg HTTP/1.1" 200 -
+2023-09-26 10:32:35,346 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:35] "GET /static/img/exc2.jpeg HTTP/1.1" 200 -
+2023-09-26 10:32:38,558 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:38] "GET / HTTP/1.1" 200 -
+2023-09-26 10:32:38,589 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-09-26 10:32:38,615 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:38] "[36mGET /static/myscript.js HTTP/1.1[0m" 304 -
+2023-09-26 10:32:38,619 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:38] "[36mGET /static/img/mc22.gif HTTP/1.1[0m" 304 -
+2023-09-26 10:32:38,626 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:38] "[36mGET /static/img/pexel2.jpeg HTTP/1.1[0m" 304 -
+2023-09-26 10:32:38,631 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:38] "[36mGET /static/img/cap2.png HTTP/1.1[0m" 304 -
+2023-09-26 10:32:38,636 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:38] "[36mGET /static/img/well2.jpeg HTTP/1.1[0m" 304 -
+2023-09-26 10:32:38,642 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:38] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2023-09-26 10:32:38,647 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:38] "[36mGET /static/img/meta.svg HTTP/1.1[0m" 304 -
+2023-09-26 10:32:38,678 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:38] "[36mGET /static/img/instagram.svg HTTP/1.1[0m" 304 -
+2023-09-26 10:32:38,689 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:38] "[36mGET /static/img/exc2.jpeg HTTP/1.1[0m" 304 -
+2023-09-26 10:32:38,696 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:38] "[36mGET /static/img/up.svg HTTP/1.1[0m" 304 -
+2023-09-26 10:32:38,707 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:38] "[36mGET /static/img/github-dark.svg HTTP/1.1[0m" 304 -
+2023-09-26 10:32:38,711 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:38] "[36mGET /static/img/linkedin.svg HTTP/1.1[0m" 304 -
+2023-09-26 10:32:38,717 - INFO - 127.0.0.1 - - [26/Sep/2023 10:32:38] "[36mGET /static/img/discord.svg HTTP/1.1[0m" 304 -
+2023-09-26 10:33:36,473 - INFO - 127.0.0.1 - - [26/Sep/2023 10:33:36] "GET / HTTP/1.1" 200 -
+2023-09-26 10:33:36,508 - INFO - 127.0.0.1 - - [26/Sep/2023 10:33:36] "GET /static/styles.css HTTP/1.1" 200 -
+2023-09-26 10:33:36,526 - INFO - 127.0.0.1 - - [26/Sep/2023 10:33:36] "[36mGET /static/img/cap2.png HTTP/1.1[0m" 304 -
+2023-09-26 10:33:36,529 - INFO - 127.0.0.1 - - [26/Sep/2023 10:33:36] "GET /static/myscript.js HTTP/1.1" 200 -
+2023-09-26 10:33:36,530 - INFO - 127.0.0.1 - - [26/Sep/2023 10:33:36] "[36mGET /static/img/mc22.gif HTTP/1.1[0m" 304 -
+2023-09-26 10:33:36,535 - INFO - 127.0.0.1 - - [26/Sep/2023 10:33:36] "[36mGET /static/img/well2.jpeg HTTP/1.1[0m" 304 -
+2023-09-26 10:33:36,537 - INFO - 127.0.0.1 - - [26/Sep/2023 10:33:36] "[36mGET /static/img/pexel2.jpeg HTTP/1.1[0m" 304 -
+2023-09-26 10:33:36,543 - INFO - 127.0.0.1 - - [26/Sep/2023 10:33:36] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2023-09-26 10:33:36,547 - INFO - 127.0.0.1 - - [26/Sep/2023 10:33:36] "[36mGET /static/img/meta.svg HTTP/1.1[0m" 304 -
+2023-09-26 10:33:36,550 - INFO - 127.0.0.1 - - [26/Sep/2023 10:33:36] "[36mGET /static/img/instagram.svg HTTP/1.1[0m" 304 -
+2023-09-26 10:33:36,570 - INFO - 127.0.0.1 - - [26/Sep/2023 10:33:36] "[36mGET /static/img/github-dark.svg HTTP/1.1[0m" 304 -
+2023-09-26 10:33:36,574 - INFO - 127.0.0.1 - - [26/Sep/2023 10:33:36] "[36mGET /static/img/up.svg HTTP/1.1[0m" 304 -
+2023-09-26 10:33:36,578 - INFO - 127.0.0.1 - - [26/Sep/2023 10:33:36] "[36mGET /static/img/discord.svg HTTP/1.1[0m" 304 -
+2023-09-26 10:33:36,583 - INFO - 127.0.0.1 - - [26/Sep/2023 10:33:36] "[36mGET /static/img/linkedin.svg HTTP/1.1[0m" 304 -
+2023-09-26 10:33:36,586 - INFO - 127.0.0.1 - - [26/Sep/2023 10:33:36] "[36mGET /static/img/exc2.jpeg HTTP/1.1[0m" 304 -
+2023-09-26 10:36:24,827 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 10:36:24,827 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-26 10:36:24,829 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 10:36:24,829 - INFO - Added job "delete_expired_users" to job store "default"
+2023-09-26 10:36:24,830 - INFO - Scheduler started
+2023-09-26 10:36:24,830 - INFO - Scheduler started
+2023-09-26 10:36:54,298 - INFO - logged in Admin
+2023-09-26 10:37:01,146 - INFO - User logged out: admin
