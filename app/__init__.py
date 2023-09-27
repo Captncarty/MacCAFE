@@ -1,5 +1,6 @@
 from os import environ as env
-from flask import Flask, session
+import smtplib
+from flask import Flask, session, jsonify
 import requests
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -54,9 +55,12 @@ def send_email(email, username, password, duration, package):
 def send_email_subscribe(email):
     """ send email to verified subscriber
     """
-    msg = Message("Welcome to MacCAFE", sender='your_email@gmail.com', recipients=[email])
-    msg.body = f'Stay Tuned to the best deals and latest updates. Great to have you here \U0001F601!'
-    mail.send(msg)
+    try:
+        msg = Message("Welcome to MacCAFE", sender='your_email@gmail.com', recipients=[email])
+        msg.body = f'Stay Tuned to the best deals and latest updates. Great to have you here \U0001F601!'
+        mail.send(msg)
+    except smtplib.SMTPException as e:
+            return jsonify(f"Error: {e}", "check network")
 
 def get_paystack_transaction(reference, secret_key):
     """ verify paystack transaction

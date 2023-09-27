@@ -413,7 +413,7 @@ address {
     padding-top: .5em;
     padding-bottom: .5em;
     
-    border-top: 1px solid #888F95;
+    /* border-top: 1px solid #888F95; */
   }
   
   nav li:nth-of-type(1),
@@ -421,9 +421,9 @@ address {
     border-top: none;
   }
   
-  nav li:nth-of-type(2n) {
+  /* nav li:nth-of-type(2n) {
     border-left: 1px solid #888F95;
-  } /* division of select-menu in mobile layout */
+  } division of select-menu in mobile layout */
   
   nav li.selected {
     color: #54A5C4;
@@ -431,7 +431,7 @@ address {
   
   nav a:link,
   nav a:visited {
-    color: #888F95;
+    color: #007BFF;
     text-decoration: none;
   }
   
@@ -440,7 +440,7 @@ address {
   nav a:active,
   nav a:visited:active {
     /*color: #54A5C4;*/
-    color:rgb(41, 22, 111);
+    color:#0056b3;
     text-decoration: none;
   }
 
@@ -480,7 +480,6 @@ address {
     margin: 0 auto;
     max-width: 700px;
     font-family: 'Croissant One', cursive;
-    
   }
   
   .section h2 {
@@ -708,15 +707,17 @@ address {
 
 .payment-option button {
   background-color: #007bff;
+  font-family: 'Itim', cursive;
   color: white;
   border: none;
-  padding: 5px 10px;
+  padding: 10px;
+  margin-bottom: 5px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 14px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: background-color 0.3s ease;
   margin-top: 5px;
 }

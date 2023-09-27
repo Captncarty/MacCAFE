@@ -14,7 +14,7 @@ function openPaymentModal(speed, duration, price) {
     const modalContent = modal.querySelector(".modal-content");
     modalContent.innerHTML = `
       <span class="close" onclick="closePaymentModal()">&times;</span>
-        <h2>Payment Options for ${speed} (${duration})</h2>
+        <h2 style="font-family: 'Itim', cursive;">Payment Options for ${speed} (${duration})</h2>
         <p>Price: &#8358;${price}</p>
         <div class="payment-option">
           <button onclick="openPaymentForm('Debit Card')">Debit Card</button>
