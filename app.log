@@ -2501,3 +2501,157 @@
 2023-10-02 02:30:32,402 - INFO - 127.0.0.1 - - [02/Oct/2023 02:30:32] "[36mGET /api/docs/favicon-32x32.png HTTP/1.1[0m" 304 -
 2023-10-02 02:30:32,403 - INFO - 127.0.0.1 - - [02/Oct/2023 02:30:32] "GET /api/docs/favicon-16x16.png HTTP/1.1" 200 -
 2023-10-02 02:30:44,783 - INFO - 127.0.0.1 - - [02/Oct/2023 02:30:44] "GET /api/users HTTP/1.1" 200 -
+2023-10-02 10:15:25,256 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-10-02 10:15:25,264 - INFO - Added job "delete_expired_users" to job store "default"
+2023-10-02 10:15:25,264 - INFO - Scheduler started
+2023-10-02 10:15:25,281 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2023-10-02 10:15:25,281 - INFO - [33mPress CTRL+C to quit[0m
+2023-10-02 10:15:25,282 - INFO -  * Restarting with stat
+2023-10-02 10:15:26,147 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-10-02 10:15:26,148 - INFO - Added job "delete_expired_users" to job store "default"
+2023-10-02 10:15:26,148 - INFO - Scheduler started
+2023-10-02 10:15:26,153 - WARNING -  * Debugger is active!
+2023-10-02 10:15:26,177 - INFO -  * Debugger PIN: 906-654-931
+2023-10-02 11:11:01,221 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-10-02 11:11:01,225 - INFO - Added job "delete_expired_users" to job store "default"
+2023-10-02 11:11:01,225 - INFO - Scheduler started
+2023-10-02 11:11:01,236 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2023-10-02 11:11:01,237 - INFO - [33mPress CTRL+C to quit[0m
+2023-10-02 11:11:01,238 - INFO -  * Restarting with stat
+2023-10-02 11:11:02,311 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-10-02 11:11:02,312 - INFO - Added job "delete_expired_users" to job store "default"
+2023-10-02 11:11:02,312 - INFO - Scheduler started
+2023-10-02 11:11:02,317 - WARNING -  * Debugger is active!
+2023-10-02 11:11:02,337 - INFO -  * Debugger PIN: 906-654-931
+2023-10-02 11:11:16,454 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:16] "[32mGET / HTTP/1.1[0m" 302 -
+2023-10-02 11:11:16,481 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:16] "GET /dashboard HTTP/1.1" 200 -
+2023-10-02 11:11:16,712 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-10-02 11:11:19,115 - INFO - User logged out: admin
+2023-10-02 11:11:19,117 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:19] "[32mGET /logout HTTP/1.1[0m" 302 -
+2023-10-02 11:11:19,135 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:19] "GET / HTTP/1.1" 200 -
+2023-10-02 11:11:19,227 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-10-02 11:11:19,248 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:19] "[36mGET /static/img/mc22.gif HTTP/1.1[0m" 304 -
+2023-10-02 11:11:19,257 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:19] "[36mGET /static/img/well2.jpeg HTTP/1.1[0m" 304 -
+2023-10-02 11:11:19,258 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:19] "[36mGET /static/myscript.js HTTP/1.1[0m" 304 -
+2023-10-02 11:11:19,260 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:19] "[36mGET /static/img/cap2.png HTTP/1.1[0m" 304 -
+2023-10-02 11:11:19,268 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:19] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2023-10-02 11:11:19,273 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:19] "[36mGET /static/img/meta.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:11:19,278 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:19] "[36mGET /static/img/pexel2.jpeg HTTP/1.1[0m" 304 -
+2023-10-02 11:11:19,281 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:19] "[36mGET /static/img/instagram.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:11:19,281 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:19] "[36mGET /static/img/github-dark.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:11:19,289 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:19] "[36mGET /static/img/discord.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:11:19,291 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:19] "[36mGET /static/img/linkedin.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:11:19,300 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:19] "[36mGET /static/img/up.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:11:19,304 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:19] "[36mGET /static/img/exc2.jpeg HTTP/1.1[0m" 304 -
+2023-10-02 11:11:21,456 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:21] "GET / HTTP/1.1" 200 -
+2023-10-02 11:11:21,497 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:21] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-10-02 11:11:21,504 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:21] "[36mGET /static/img/cap2.png HTTP/1.1[0m" 304 -
+2023-10-02 11:11:21,513 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:21] "[36mGET /static/img/mc22.gif HTTP/1.1[0m" 304 -
+2023-10-02 11:11:21,521 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:21] "[36mGET /static/img/pexel2.jpeg HTTP/1.1[0m" 304 -
+2023-10-02 11:11:21,522 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:21] "[36mGET /static/myscript.js HTTP/1.1[0m" 304 -
+2023-10-02 11:11:21,524 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:21] "[36mGET /static/img/well2.jpeg HTTP/1.1[0m" 304 -
+2023-10-02 11:11:21,525 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:21] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2023-10-02 11:11:21,541 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:21] "[36mGET /static/img/meta.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:11:21,548 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:21] "[36mGET /static/img/instagram.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:11:21,553 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:21] "[36mGET /static/img/github-dark.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:11:21,595 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:21] "[36mGET /static/img/linkedin.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:11:21,604 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:21] "[36mGET /static/img/discord.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:11:21,609 - INFO - 127.0.0.1 - - [02/Oct/2023 11:11:21] "[36mGET /static/img/up.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:12:00,630 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:00] "GET /blog HTTP/1.1" 200 -
+2023-10-02 11:12:00,703 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:00] "[36mGET /static/img/coffee.jpeg HTTP/1.1[0m" 304 -
+2023-10-02 11:12:00,732 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:00] "GET /static/img/fam.jpeg HTTP/1.1" 200 -
+2023-10-02 11:12:00,734 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:00] "GET /static/img/view.jpeg HTTP/1.1" 200 -
+2023-10-02 11:12:00,742 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:00] "GET /static/img/eating.jpeg HTTP/1.1" 200 -
+2023-10-02 11:12:00,745 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:00] "[36mGET /static/img/night.jpeg HTTP/1.1[0m" 304 -
+2023-10-02 11:12:00,758 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:00] "[36mGET /static/img/meta.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:12:00,765 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:00] "[36mGET /static/img/instagram.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:12:00,823 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:00] "[36mGET /static/img/github-dark.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:12:00,826 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:00] "[36mGET /static/img/linkedin.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:12:00,830 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:00] "[36mGET /static/img/discord.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:12:29,159 - INFO - New subscriber: kelvinmac7@outlook.com
+2023-10-02 11:12:29,160 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:29] "[32mPOST /subscribe HTTP/1.1[0m" 302 -
+2023-10-02 11:12:29,165 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:29] "GET / HTTP/1.1" 200 -
+2023-10-02 11:12:29,220 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-10-02 11:12:29,225 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:29] "[36mGET /static/myscript.js HTTP/1.1[0m" 304 -
+2023-10-02 11:12:29,226 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:29] "[36mGET /static/img/cap2.png HTTP/1.1[0m" 304 -
+2023-10-02 11:12:29,231 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:29] "[36mGET /static/img/mc22.gif HTTP/1.1[0m" 304 -
+2023-10-02 11:12:29,239 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:29] "[36mGET /static/img/well2.jpeg HTTP/1.1[0m" 304 -
+2023-10-02 11:12:29,246 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:29] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2023-10-02 11:12:29,248 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:29] "[36mGET /static/img/pexel2.jpeg HTTP/1.1[0m" 304 -
+2023-10-02 11:12:29,252 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:29] "[36mGET /static/img/meta.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:12:29,255 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:29] "[36mGET /static/img/instagram.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:12:29,261 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:29] "[36mGET /static/img/github-dark.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:12:29,264 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:29] "[36mGET /static/img/linkedin.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:12:29,270 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:29] "[36mGET /static/img/discord.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:12:29,277 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:29] "[36mGET /static/img/up.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:12:29,278 - INFO - 127.0.0.1 - - [02/Oct/2023 11:12:29] "[36mGET /static/img/exc2.jpeg HTTP/1.1[0m" 304 -
+2023-10-02 11:13:05,647 - INFO - Verifying transaction with reference: None
+2023-10-02 11:13:05,648 - INFO - 127.0.0.1 - - [02/Oct/2023 11:13:05] "POST /verify_transaction HTTP/1.1" 200 -
+2023-10-02 11:14:18,089 - INFO - Verifying transaction with reference: 150810126
+2023-10-02 11:14:22,158 - INFO - Transaction verified! User ID: 13 Username: dDKqGoMI Package: Lite Duration: 1
+2023-10-02 11:14:22,160 - INFO - 127.0.0.1 - - [02/Oct/2023 11:14:22] "POST /verify_transaction HTTP/1.1" 200 -
+2023-10-02 11:14:55,449 - INFO - User logged in: dDKqGoMI
+2023-10-02 11:14:55,452 - INFO - 127.0.0.1 - - [02/Oct/2023 11:14:55] "[32mPOST /login HTTP/1.1[0m" 302 -
+2023-10-02 11:14:55,459 - INFO - 127.0.0.1 - - [02/Oct/2023 11:14:55] "[32mGET /redirect_url HTTP/1.1[0m" 302 -
+2023-10-02 11:15:10,552 - INFO - 127.0.0.1 - - [02/Oct/2023 11:15:10] "[32mGET / HTTP/1.1[0m" 302 -
+2023-10-02 11:15:10,621 - INFO - 127.0.0.1 - - [02/Oct/2023 11:15:10] "GET /dashboard HTTP/1.1" 200 -
+2023-10-02 11:15:43,666 - INFO - User logged out: dDKqGoMI
+2023-10-02 11:15:43,668 - INFO - 127.0.0.1 - - [02/Oct/2023 11:15:43] "[32mGET /logout HTTP/1.1[0m" 302 -
+2023-10-02 11:15:43,675 - INFO - 127.0.0.1 - - [02/Oct/2023 11:15:43] "GET / HTTP/1.1" 200 -
+2023-10-02 11:15:43,741 - INFO - 127.0.0.1 - - [02/Oct/2023 11:15:43] "[36mGET /static/myscript.js HTTP/1.1[0m" 304 -
+2023-10-02 11:15:43,742 - INFO - 127.0.0.1 - - [02/Oct/2023 11:15:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-10-02 11:15:43,749 - INFO - 127.0.0.1 - - [02/Oct/2023 11:15:43] "[36mGET /static/img/mc22.gif HTTP/1.1[0m" 304 -
+2023-10-02 11:15:43,754 - INFO - 127.0.0.1 - - [02/Oct/2023 11:15:43] "[36mGET /static/img/cap2.png HTTP/1.1[0m" 304 -
+2023-10-02 11:15:43,768 - INFO - 127.0.0.1 - - [02/Oct/2023 11:15:43] "[36mGET /static/img/pexel2.jpeg HTTP/1.1[0m" 304 -
+2023-10-02 11:15:43,783 - INFO - 127.0.0.1 - - [02/Oct/2023 11:15:43] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2023-10-02 11:15:43,790 - INFO - 127.0.0.1 - - [02/Oct/2023 11:15:43] "[36mGET /static/img/well2.jpeg HTTP/1.1[0m" 304 -
+2023-10-02 11:15:43,803 - INFO - 127.0.0.1 - - [02/Oct/2023 11:15:43] "[36mGET /static/img/meta.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:15:43,824 - INFO - 127.0.0.1 - - [02/Oct/2023 11:15:43] "[36mGET /static/img/instagram.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:15:43,852 - INFO - 127.0.0.1 - - [02/Oct/2023 11:15:43] "[36mGET /static/img/github-dark.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:15:43,862 - INFO - 127.0.0.1 - - [02/Oct/2023 11:15:43] "[36mGET /static/img/linkedin.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:15:43,870 - INFO - 127.0.0.1 - - [02/Oct/2023 11:15:43] "[36mGET /static/img/up.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:15:43,871 - INFO - 127.0.0.1 - - [02/Oct/2023 11:15:43] "[36mGET /static/img/discord.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:15:43,877 - INFO - 127.0.0.1 - - [02/Oct/2023 11:15:43] "[36mGET /static/img/exc2.jpeg HTTP/1.1[0m" 304 -
+2023-10-02 11:16:26,560 - INFO - logged in Admin
+2023-10-02 11:16:26,562 - INFO - 127.0.0.1 - - [02/Oct/2023 11:16:26] "[32mPOST /login HTTP/1.1[0m" 302 -
+2023-10-02 11:16:26,570 - INFO - 127.0.0.1 - - [02/Oct/2023 11:16:26] "GET /admin_dashboard HTTP/1.1" 200 -
+2023-10-02 11:16:39,564 - INFO - 127.0.0.1 - - [02/Oct/2023 11:16:39] "GET /api/docs/ HTTP/1.1" 200 -
+2023-10-02 11:16:39,612 - INFO - 127.0.0.1 - - [02/Oct/2023 11:16:39] "[36mGET /api/docs/index.css HTTP/1.1[0m" 304 -
+2023-10-02 11:16:39,620 - INFO - 127.0.0.1 - - [02/Oct/2023 11:16:39] "[36mGET /api/docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2023-10-02 11:16:39,622 - INFO - 127.0.0.1 - - [02/Oct/2023 11:16:39] "[36mGET /api/docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2023-10-02 11:16:39,623 - INFO - 127.0.0.1 - - [02/Oct/2023 11:16:39] "[36mGET /api/docs/swagger-ui.css HTTP/1.1[0m" 304 -
+2023-10-02 11:16:39,918 - INFO - 127.0.0.1 - - [02/Oct/2023 11:16:39] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+2023-10-02 11:16:40,031 - INFO - 127.0.0.1 - - [02/Oct/2023 11:16:40] "[36mGET /api/docs/favicon-32x32.png HTTP/1.1[0m" 304 -
+2023-10-02 11:16:52,065 - INFO - 127.0.0.1 - - [02/Oct/2023 11:16:52] "GET /api/users HTTP/1.1" 200 -
+2023-10-02 11:17:35,353 - INFO - 127.0.0.1 - - [02/Oct/2023 11:17:35] "GET /api/users/13 HTTP/1.1" 200 -
+2023-10-02 11:17:46,647 - INFO - 127.0.0.1 - - [02/Oct/2023 11:17:46] "DELETE /user/12/delete HTTP/1.1" 200 -
+2023-10-02 11:18:12,635 - INFO - 127.0.0.1 - - [02/Oct/2023 11:18:12] "GET /transactions/150810126 HTTP/1.1" 200 -
+2023-10-02 11:18:33,255 - INFO - 127.0.0.1 - - [02/Oct/2023 11:18:33] "GET /transactions HTTP/1.1" 200 -
+2023-10-02 11:18:57,806 - INFO - 127.0.0.1 - - [02/Oct/2023 11:18:57] "[32mGET / HTTP/1.1[0m" 302 -
+2023-10-02 11:18:57,814 - INFO - 127.0.0.1 - - [02/Oct/2023 11:18:57] "GET /dashboard HTTP/1.1" 200 -
+2023-10-02 11:19:05,443 - INFO - Verifying transaction with reference: 150810126
+2023-10-02 11:19:05,443 - INFO - Transaction verified!
+2023-10-02 11:19:05,443 - INFO - 127.0.0.1 - - [02/Oct/2023 11:19:05] "POST /api/verify HTTP/1.1" 200 -
+2023-10-02 11:22:44,436 - INFO - User logged out: admin
+2023-10-02 11:22:44,438 - INFO - 127.0.0.1 - - [02/Oct/2023 11:22:44] "[32mGET /logout HTTP/1.1[0m" 302 -
+2023-10-02 11:22:44,448 - INFO - 127.0.0.1 - - [02/Oct/2023 11:22:44] "GET / HTTP/1.1" 200 -
+2023-10-02 11:22:44,509 - INFO - 127.0.0.1 - - [02/Oct/2023 11:22:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-10-02 11:22:44,517 - INFO - 127.0.0.1 - - [02/Oct/2023 11:22:44] "[36mGET /static/myscript.js HTTP/1.1[0m" 304 -
+2023-10-02 11:22:44,521 - INFO - 127.0.0.1 - - [02/Oct/2023 11:22:44] "[36mGET /static/img/cap2.png HTTP/1.1[0m" 304 -
+2023-10-02 11:22:44,526 - INFO - 127.0.0.1 - - [02/Oct/2023 11:22:44] "[36mGET /static/img/mc22.gif HTTP/1.1[0m" 304 -
+2023-10-02 11:22:44,536 - INFO - 127.0.0.1 - - [02/Oct/2023 11:22:44] "[36mGET /static/img/pexel2.jpeg HTTP/1.1[0m" 304 -
+2023-10-02 11:22:44,540 - INFO - 127.0.0.1 - - [02/Oct/2023 11:22:44] "[36mGET /static/img/well2.jpeg HTTP/1.1[0m" 304 -
+2023-10-02 11:22:44,547 - INFO - 127.0.0.1 - - [02/Oct/2023 11:22:44] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2023-10-02 11:22:44,555 - INFO - 127.0.0.1 - - [02/Oct/2023 11:22:44] "[36mGET /static/img/meta.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:22:44,561 - INFO - 127.0.0.1 - - [02/Oct/2023 11:22:44] "[36mGET /static/img/instagram.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:22:44,569 - INFO - 127.0.0.1 - - [02/Oct/2023 11:22:44] "[36mGET /static/img/github-dark.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:22:44,582 - INFO - 127.0.0.1 - - [02/Oct/2023 11:22:44] "[36mGET /static/img/discord.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:22:44,590 - INFO - 127.0.0.1 - - [02/Oct/2023 11:22:44] "[36mGET /static/img/linkedin.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:22:44,595 - INFO - 127.0.0.1 - - [02/Oct/2023 11:22:44] "[36mGET /static/img/up.svg HTTP/1.1[0m" 304 -
+2023-10-02 11:22:44,603 - INFO - 127.0.0.1 - - [02/Oct/2023 11:22:44] "[36mGET /static/img/exc2.jpeg HTTP/1.1[0m" 304 -
+2023-10-03 01:20:18,486 - WARNING - Run time of job "delete_expired_users (trigger: cron[hour='*', minute='0'], next run at: 2023-10-03 02:00:00 WAT)" was missed by 0:20:18.484548
+2023-10-03 01:20:18,496 - WARNING - Run time of job "delete_expired_users (trigger: cron[hour='*', minute='0'], next run at: 2023-10-03 02:00:00 WAT)" was missed by 0:20:18.490049
+2023-10-03 17:07:42,973 - WARNING - Run time of job "delete_expired_users (trigger: cron[hour='*', minute='0'], next run at: 2023-10-03 18:00:00 WAT)" was missed by 0:07:42.972099
+2023-10-03 17:07:42,969 - WARNING - Run time of job "delete_expired_users (trigger: cron[hour='*', minute='0'], next run at: 2023-10-03 18:00:00 WAT)" was missed by 0:07:42.968524
